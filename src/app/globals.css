@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-blush: var(--bg);
+  --color-blush-deep: var(--bg-deep);
+  --color-rose: var(--muted-line);
+  --color-rose-light: var(--muted-soft);
+  --color-raspberry: var(--accent);
+  --color-raspberry-deep: var(--accent-deep);
+  --color-plum: var(--fg);
+  --color-gold: var(--muted-accent);
+  --color-lavender: var(--bg-deep);
+  --color-ink: var(--fg);
+
+  --font-script: var(--font-great-vibes);
+  --font-serif-display: var(--font-cormorant);
+  --font-body: var(--font-quicksand);
+
+  --shadow-petal: 0 24px 60px -20px rgba(0, 0, 0, 0.18);
+  --shadow-petal-sm: 0 10px 28px -14px rgba(0, 0, 0, 0.14);
+}
+
+:root {
+  --bg: #f7f7f5;
+  --bg-deep: #efefec;
+  --fg: #0a0a0a;
+  --accent: #171717;
+  --accent-deep: #0a0a0a;
+  --muted-line: #d4d4d0;
+  --muted-soft: #e8e8e4;
+  --muted-accent: #737373;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.78);
+  --night-1: #0a0a0a;
+  --night-2: #141414;
+  --night-glow: rgba(255, 255, 255, 0.06);
+  --phone-bezel: #0a0a0a;
+  --theme-color: #f7f7f5;
+}
+
+html.dark {
+  --bg: #0a0a0a;
+  --bg-deep: #141414;
+  --fg: #f7f7f5;
+  --accent: #f0f0ee;
+  --accent-deep: #ffffff;
+  --muted-line: #2a2a2a;
+  --muted-soft: #1c1c1c;
+  --muted-accent: #a3a3a3;
+  --surface: #141414;
+  --surface-soft: rgba(20, 20, 20, 0.85);
+  --night-1: #050505;
+  --night-2: #0f0f0f;
+  --night-glow: rgba(255, 255, 255, 0.05);
+  --phone-bezel: #1a1a1a;
+  --theme-color: #0a0a0a;
+  --shadow-petal: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  --shadow-petal-sm: 0 10px 28px -14px rgba(0, 0, 0, 0.45);
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-quicksand), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+.font-script {
+  font-family: var(--font-great-vibes), cursive;
+}
+.font-serif-display {
+  font-family: var(--font-cormorant), serif;
+}
+.font-body {
+  font-family: var(--font-quicksand), system-ui, sans-serif;
+}
+
+.dream-bg {
+  background:
+    radial-gradient(ellipse 70% 50% at 15% -10%, color-mix(in srgb, var(--bg-deep) 80%, transparent) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 100% 0%, color-mix(in srgb, var(--muted-soft) 90%, transparent) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+}
+
+.night-bg {
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, var(--night-glow) 0%, transparent 70%),
+    linear-gradient(180deg, var(--night-1) 0%, var(--night-2) 100%);
+}
+
+.gold-shimmer {
+  background: linear-gradient(100deg, #737373 20%, #d4d4d4 40%, #a3a3a3 55%, #737373 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+.float-slow-delay {
+  animation: float-slow 5.5s ease-in-out 0.6s infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+.glow-pulse {
+  animation: glow-pulse 2.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(var(--drift), 27vh, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate3d(calc(var(--drift) * -0.5), 55vh, 0) rotate(180deg);
+  }
+  75% {
+    transform: translate3d(calc(var(--drift) * 0.4), 82vh, 0) rotate(270deg);
+  }
+  100% {
+    transform: translate3d(0, 112vh, 0) rotate(360deg);
+  }
+}
+.petal {
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.bloom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.bloom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--muted-line);
+  border-radius: 999px;
+}
+
+/* In-phone app chrome — SF-like system UI, independent of marketing fonts */
+.ios-app {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "SF Pro Display",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  color: #fff;
+  user-select: none;
+}
+
+.ios-glass {
+  background: linear-gradient(135deg, rgba(42, 47, 55, 0.72), rgba(20, 22, 27, 0.56));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 8px 22px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+}
+
+.ios-surface {
+  background: linear-gradient(135deg, rgba(38, 40, 47, 0.96), rgba(25, 26, 31, 0.94));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 12px 28px rgba(0, 0, 0, 0.15);
+  outline: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.ios-app-background {
+  background:
+    radial-gradient(ellipse 75% 38% at 90% -8%, rgba(38, 83, 107, 0.34), transparent 62%),
+    radial-gradient(ellipse 55% 40% at -12% 52%, rgba(28, 75, 59, 0.20), transparent 65%),
+    #0b0c0f;
+}
+
+.ios-lock-screen {
+  background:
+    radial-gradient(ellipse 90% 60% at 10% 20%, rgba(115, 221, 165, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse 75% 65% at 85% 25%, rgba(52, 126, 193, 0.85) 0%, transparent 58%),
+    linear-gradient(160deg, #104a3e 0%, #155a51 37%, #16364d 70%, #0e1b30 100%);
+}
+
+.ios-lock-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(4px);
+  opacity: 0.72;
+}
+.ios-lock-orb-one {
+  width: 10rem;
+  height: 10rem;
+  top: 29%;
+  left: -4.5rem;
+  background: rgba(247, 212, 116, 0.52);
+}
+.ios-lock-orb-two {
+  width: 13rem;
+  height: 13rem;
+  right: -7rem;
+  bottom: 8%;
+  background: rgba(29, 103, 183, 0.58);
+}
+.ios-lock-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: linear-gradient(rgba(255,255,255,.36) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.36) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, black, transparent 70%);
+}
+.ios-lock-notification {
+  background: rgba(21, 31, 39, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 8px 24px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(26px) saturate(150%);
+  -webkit-backdrop-filter: blur(26px) saturate(150%);
+}
+
+.ios-app button {
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow,
+  .float-slow-delay,
+  .glow-pulse,
+  .petal,
+  .gold-shimmer {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.15s !important;
+    scroll-behavior: auto !important;
+  }
+}
