@@ -1,32 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Great_Vibes, Cormorant_Garamond, Quicksand } from "next/font/google";
+import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const greatVibes = Great_Vibes({
-  weight: "400",
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-great-vibes",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const quicksand = Quicksand({
+const interTight = Inter_Tight({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-quicksand",
+  variable: "--font-inter-tight",
   display: "swap",
 });
 
-const title = "Help Me · Your community starts here";
+const title = "Help Me · See Beyond";
 const description =
-  "Help Me connects people with the places and people around them. Discover local events, ask for help, and build stronger community ties one place at a time.";
+  "Someone nearby needs a hand. Someone nearby would give one. Help Me connects people in need with trusted Helpers nearby. Now on TestFlight for iPhone.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://helpme.app"),
@@ -49,16 +40,20 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7f7f5",
+  themeColor: "#08090b",
 };
 
+/*
+ * Dark is the default, matching the app. Only an explicit "light" choice
+ * opts out, and it is applied before first paint so the page never flashes.
+ */
 const themeInit = `
 (function () {
   try {
-    var stored = localStorage.getItem('helpme-theme');
-    var dark = stored === 'dark';
-    if (dark) document.documentElement.classList.add('dark');
-    document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+    if (localStorage.getItem('helpme-theme') === 'light') {
+      document.documentElement.classList.add('light');
+      document.documentElement.style.colorScheme = 'light';
+    }
   } catch (e) {}
 })();
 `;
@@ -67,11 +62,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        {/*
+          suppressHydrationWarning because browser extensions commonly rewrite or
+          replace <script> tags in <head> before React hydrates. suppressHydrationWarning
+          on <html> covers that element's own attributes only, not its descendants.
+        */}
+        <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className={`${greatVibes.variable} ${cormorant.variable} ${quicksand.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${inter.variable} ${interTight.variable} antialiased`}>{children}</body>
     </html>
   );
 }

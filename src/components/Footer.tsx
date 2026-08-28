@@ -1,37 +1,37 @@
 import Link from "next/link";
-import BloomMark from "@/components/BloomMark";
-import { SUPPORT_EMAIL } from "@/lib/constants";
+import Mark from "@/components/Mark";
+import { REGION, SUPPORT_EMAIL } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-rose-light/60 bg-blush">
-      <div className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[1.5fr_1fr_1fr]">
+    <footer className="border-t border-line bg-bg">
+      <div className="mx-auto max-w-6xl px-5 py-16">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-[1.6fr_1fr_1fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <BloomMark size={44} />
+              <Mark size={40} />
               <span className="flex flex-col leading-none">
-                <span className="font-serif-display text-2xl font-semibold text-plum">Help Me</span>
-                <span className="mt-1 font-body text-[10px] font-semibold uppercase tracking-[0.16em] text-plum/40">
-                  Community starts here
+                <span className="font-display text-xl font-semibold text-ink">Help Me</span>
+                <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                  See Beyond
                 </span>
               </span>
             </Link>
-            <p className="mt-4 max-w-xs font-body text-sm leading-relaxed text-plum/60">
-              Your community starts here. Connect with the places and people around you.
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
+              Connecting people in need with trusted Helpers nearby. Built in {REGION}.
             </p>
           </div>
 
           <div>
-            <p className="font-body text-xs font-bold uppercase tracking-[0.2em] text-plum/45">Legal</p>
-            <ul className="mt-3 flex flex-col gap-2.5">
+            <p className="eyebrow text-muted">Legal</p>
+            <ul className="mt-4 flex flex-col gap-3">
               <li>
-                <Link href="/legal/terms" className="font-body text-sm text-plum/70 hover:text-raspberry-deep">
+                <Link href="/legal/terms" className="text-sm text-muted transition-colors hover:text-ink">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/legal/privacy" className="font-body text-sm text-plum/70 hover:text-raspberry-deep">
+                <Link href="/legal/privacy" className="text-sm text-muted transition-colors hover:text-ink">
                   Privacy Policy
                 </Link>
               </li>
@@ -39,20 +39,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-body text-xs font-bold uppercase tracking-[0.2em] text-plum/45">Support</p>
-            <ul className="mt-3 flex flex-col gap-2.5">
+            <p className="eyebrow text-muted">Support</p>
+            <ul className="mt-4 flex flex-col gap-3">
               <li>
-                <Link href="/support/help" className="font-body text-sm text-plum/70 hover:text-raspberry-deep">
+                <Link href="/support/help" className="text-sm text-muted transition-colors hover:text-ink">
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link href="/support/contact" className="font-body text-sm text-plum/70 hover:text-raspberry-deep">
-                  Contact Us
+                <Link href="/support/contact" className="text-sm text-muted transition-colors hover:text-ink">
+                  Contact
                 </Link>
               </li>
               <li>
-                <a href={`mailto:${SUPPORT_EMAIL}`} className="font-body text-sm text-plum/70 hover:text-raspberry-deep">
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="text-sm text-muted transition-colors hover:text-ink">
                   {SUPPORT_EMAIL}
                 </a>
               </li>
@@ -60,12 +60,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-rose-light/60 pt-6 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <BloomMark size={18} plain className="!rounded-md opacity-80" />
-            <p className="font-body text-xs text-plum/50">© {new Date().getFullYear()} Help Me. All rights reserved.</p>
-          </div>
-          <p className="font-body text-xs text-plum/40">Built for the places we share.</p>
+        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-line pt-6 sm:flex-row sm:items-center">
+          <p className="text-xs text-muted">© {new Date().getFullYear()} Help Me. All rights reserved.</p>
+          <p className="text-xs text-muted">Help Me does not replace 911 or emergency services.</p>
         </div>
       </div>
     </footer>

@@ -6,21 +6,30 @@ export const metadata: Metadata = { title: "Privacy Policy · Help Me" };
 
 export default function PrivacyPage() {
   return (
-    <LegalPage eyebrow="legal" title="Privacy Policy" updated="July 2026">
+    <LegalPage eyebrow="legal" title="Privacy Policy" updated="August 2026">
       <p>
-        This page is a placeholder while Help Me is in beta. A complete Privacy Policy will replace it before
-        public launch, detailing exactly what is collected, how long it is kept, and how to request deletion.
+        Help Me handles real accounts, approximate locations, and safety reports. This summary describes how the
+        app is built today, during the TestFlight beta. A full policy will replace it before the public App Store
+        release, with retention periods and data-request detail spelled out in full.
       </p>
-      <p>What guides the design today:</p>
-      <ul className="flex list-disc flex-col gap-2 pl-5">
-        <li>Help Me is built around places and community connection, not selling attention.</li>
-        <li>Location context is used to show nearby places and help requests, not to build a public profile for others to stalk.</li>
-        <li>Help requests and offers should stay practical and respectful of personal information.</li>
-        <li>Private messages and personal details are never used to train models or sold as a product.</li>
+      <p>What holds true in the product right now:</p>
+      <ul className="flex list-disc flex-col gap-2.5 pl-5">
+        <li>
+          An account is required, because requests, private chat, reports, saved events, and account deletion all
+          belong to a person.
+        </li>
+        <li>
+          Live help activity is shown as a coarse area, not a point. Precise location is shared only after a
+          Helper is accepted and you consent, and only with that Helper.
+        </li>
+        <li>Private messages stay between the two people in the request. They are not sold or used to train models.</li>
+        <li>
+          You can report or block anyone, and delete your account yourself from Account inside the app.
+        </li>
       </ul>
       <p>
-        Privacy questions can be sent to{" "}
-        <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-raspberry-deep underline-offset-2 hover:underline">
+        Privacy questions go to{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-ink underline-offset-4 hover:underline">
           {SUPPORT_EMAIL}
         </a>
         .

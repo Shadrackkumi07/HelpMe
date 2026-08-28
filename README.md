@@ -1,6 +1,7 @@
 # Help Me website
 
-The public marketing site for Help Me, a community platform built around places.
+The public marketing site for **Help Me** — connecting people in need with trusted Helpers nearby.
+Brand line: *See Beyond.*
 
 ## Run it
 
@@ -12,19 +13,31 @@ npm run dev     # http://localhost:3002
 ## Structure
 
 - `src/app/page.tsx` — the landing page, composed from `src/components/sections/*`
-- `src/app/download` — the page every QR code and share link points to; shows the App Store badge
+  (Hero → Problem → How it works → Inside the app → Features → Helpers → Safety → Download)
+- `src/app/download` — the page share links point to; one screen, one action
 - `src/app/legal/*`, `src/app/support/*` — footer destinations (Terms, Privacy, Help Center, Contact)
-- `src/components/StoreBadges.tsx` — self-drawn App Store badge (not hotlinked)
+- `src/components/AppBadge.tsx` — the single call to action, self-drawn (not a hotlinked store badge)
+- `src/components/PhoneFrame.tsx` — CSS iPhone bezel around a real App screenshot
 - `src/components/QrCode.tsx` — server-generated QR (the `qrcode` package, no third-party API call)
-- `src/lib/constants.ts` — **`APP_STORE_URL` starts as `"#"`**. Set the App Store listing URL here when it
-  is live — the badge and `/download` page pick it up automatically. Until then, the badge shows a "Soon"
-  chip instead of a dead or
-  fabricated link.
+- `src/lib/constants.ts` — **`APP_URL`** plus all landing-page copy data
+
+## Links and assets
+
+`APP_URL` in `src/lib/constants.ts` is the TestFlight join link. Every button, the navbar CTA, and both
+QR codes read it, so moving to a public App Store listing later is a one-line change.
+
+The three phone images in `public/` (`IMG_8317`–`IMG_8319`) are real screenshots of the shipping iOS app —
+Home, Live map, and Community. They already include the iOS status bar and home indicator, which is why
+`PhoneFrame` draws hardware only.
 
 ## Design
 
-Simple off white, white, and black palette with light and dark mode. Phone mockups on the landing page
-are illustrative recreations of place pages, live updates, and nearby help — not literal screenshots.
+Dark first, matching the app. Near-black chrome, iOS system blue for anything actionable, and the deep
+green of the app's home card for the human notes. A light theme is available from the navbar toggle;
+both palettes are defined as tokens in `src/app/globals.css`.
+
+Voice: human, observant, bold, hopeful. Show the human problem first, then show how Help Me changes it.
+No corporate or charity language.
 
 ## Deploying to Vercel
 

@@ -332,6 +332,51 @@ export function IconStar(props: IconProps) {
   );
 }
 
+export function IconShield(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 3.2 19 6v5.4c0 4.2-2.9 7.5-7 9.4-4.1-1.9-7-5.2-7-9.4V6l7-2.8z" />
+      <path d="m9.2 12.1 2 2 3.6-3.9" />
+    </svg>
+  );
+}
+
+export function IconEye(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M2.5 12S6 5.9 12 5.9 21.5 12 21.5 12 18 18.1 12 18.1 2.5 12 2.5 12z" />
+      <circle cx="12" cy="12" r="2.9" />
+    </svg>
+  );
+}
+
+export function IconLock(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <rect x="4.5" y="10" width="15" height="10.5" rx="2.2" />
+      <path d="M8.2 10V7.6a3.8 3.8 0 0 1 7.6 0V10" />
+    </svg>
+  );
+}
+
+export function IconHand(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M9 11V4.9a1.4 1.4 0 0 1 2.8 0V11" />
+      <path d="M11.8 10.4V3.9a1.4 1.4 0 0 1 2.8 0v6.5" />
+      <path d="M14.6 10.8V5.9a1.4 1.4 0 0 1 2.8 0v7.6c0 4-2.4 6.6-6 6.6-3.2 0-5-1.9-6.3-4.6l-1.4-3a1.4 1.4 0 0 1 2.4-1.4L9 13.4V11" />
+    </svg>
+  );
+}
+
+export function IconArrowRight(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M4.5 12h15M13.5 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 export type IconName =
   | "mapPin"
   | "calendar"
@@ -350,7 +395,13 @@ export type IconName =
   | "store"
   | "info"
   | "sparkles"
-  | "check";
+  | "check"
+  | "shield"
+  | "eye"
+  | "lock"
+  | "hand"
+  | "message"
+  | "arrowRight";
 
 const ICONS: Record<IconName, (props: IconProps) => ReactElement> = {
   mapPin: IconMapPin,
@@ -371,6 +422,12 @@ const ICONS: Record<IconName, (props: IconProps) => ReactElement> = {
   info: IconInfo,
   sparkles: IconSparkles,
   check: IconCheck,
+  shield: IconShield,
+  eye: IconEye,
+  lock: IconLock,
+  hand: IconHand,
+  message: IconMessage,
+  arrowRight: IconArrowRight,
 };
 
 export function Icon({ name, ...props }: IconProps & { name: IconName }) {

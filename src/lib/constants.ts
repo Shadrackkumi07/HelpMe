@@ -1,81 +1,81 @@
 /**
- * The App Store link is not live yet. It defaults to "#" so the site ships
- * honestly today. Buttons show a "coming soon" state instead of dead or
- * fabricated links. Fill these in the moment the listings go live and every
- * badge and the /download page update automatically.
+ * Single source of truth for links and landing-page copy.
+ *
+ * Help Me ships to iPhone through TestFlight today. Every button, badge, and QR
+ * code on the site reads APP_URL, so moving to a public App Store listing later
+ * is a one-line change here.
  */
 import type { IconName } from "@/components/icons";
 
-export const APP_STORE_URL = "#";
+export const APP_URL = "https://testflight.apple.com/join/TDcwmAe8";
+export const APP_CHANNEL = "TestFlight";
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://helpme.app";
 export const SUPPORT_EMAIL = "support@helpme.app";
+export const REGION = "Fargo–Moorhead";
 
-export interface TemplateCard {
-  id: string;
-  name: string;
-  signature: string;
+export interface Step {
+  step: string;
+  title: string;
   description: string;
-  icon: IconName;
-  wash: string;
 }
 
-export const TEMPLATES: TemplateCard[] = [
+export const HOW_IT_WORKS: Step[] = [
   {
-    id: "university",
-    name: "University",
-    signature: "Campus life",
-    description: "Classes, clubs, events, and help from people already on campus.",
-    icon: "graduation",
-    wash: "from-blush-deep to-rose-light",
+    step: "01",
+    title: "Ask",
+    description:
+      "One sentence is enough. A jump start. A walk to your car. A hand with something heavy. No explaining yourself.",
   },
   {
-    id: "park",
-    name: "Park",
-    signature: "Open air",
-    description: "Trails, gatherings, volunteer days, and what is happening outside.",
-    icon: "tree",
-    wash: "from-blush-deep to-rose-light",
+    step: "02",
+    title: "Someone nearby sees it",
+    description:
+      "Approved helpers around you get the request. No feed, no audience, nothing to perform for.",
   },
   {
-    id: "downtown",
-    name: "Downtown",
-    signature: "City pulse",
-    description: "Announcements, pop ups, and local energy in the heart of town.",
-    icon: "building",
-    wash: "from-blush-deep to-rose-light",
+    step: "03",
+    title: "Meet in public",
+    description:
+      "A helper accepts, a private chat opens, and you decide what location you share and where you meet.",
   },
   {
-    id: "airport",
-    name: "Airport",
-    signature: "In transit",
-    description: "Directions, delays, and a friendly hand when you need one.",
-    icon: "plane",
-    wash: "from-blush-deep to-rose-light",
+    step: "04",
+    title: "Get on with your day",
+    description: "Mark it done, leave a review, and carry on. That's the whole thing.",
+  },
+];
+
+export interface ShowcaseScreen {
+  src: string;
+  alt: string;
+  tab: string;
+  title: string;
+  description: string;
+}
+
+export const SCREENS: ShowcaseScreen[] = [
+  {
+    src: "/IMG_8317.PNG",
+    alt: "Help Me home screen showing the daily brief and a live map card for Fargo-Moorhead",
+    tab: "Home",
+    title: "Your community, within reach",
+    description: "The day's brief, what's open near you, and one tap into the live map.",
   },
   {
-    id: "shopping",
-    name: "Shopping center",
-    signature: "Retail hub",
-    description: "Store updates, events, and easy help finding your way around.",
-    icon: "shoppingBag",
-    wash: "from-blush-deep to-rose-light",
+    src: "/IMG_8318.PNG",
+    alt: "Help Me live map of Fargo-Moorhead with Request help and I can help actions",
+    tab: "Map",
+    title: "Help nearby",
+    description:
+      "Open help areas stay a coarse ~500 m circle until a helper accepts and you choose to share more.",
   },
   {
-    id: "stadium",
-    name: "Stadium",
-    signature: "Game day",
-    description: "Schedules, gate info, and community energy before the whistle.",
-    icon: "stadium",
-    wash: "from-blush-deep to-rose-light",
-  },
-  {
-    id: "business",
-    name: "Local business",
-    signature: "Neighborhood",
-    description: "Announcements, offers, and a page that keeps visitors in the loop.",
-    icon: "store",
-    wash: "from-blush-deep to-rose-light",
+    src: "/IMG_8319.PNG",
+    alt: "Help Me community tab showing upcoming events across Fargo-Moorhead campuses",
+    tab: "Community",
+    title: "Fargo-Moorhead is happening",
+    description: "Campus and regional calendars in one place, always linked back to the official source.",
   },
 ];
 
@@ -87,66 +87,71 @@ export interface FeatureCard {
 
 export const FEATURES: FeatureCard[] = [
   {
-    icon: "mapPin",
-    title: "Built around places",
-    description: "Not another feed of people. Open a place and see what is happening there.",
-  },
-  {
-    icon: "calendar",
-    title: "Local events",
-    description: "Discover events, announcements, fun facts, and updates for the spot you are in.",
-  },
-  {
     icon: "handshake",
-    title: "Ask for help",
-    description: "Need directions, a quick hand, or info about a location? Nearby people can step in.",
+    title: "Ask in a sentence",
+    description: "Post what you need. It goes to helpers near you, not to a timeline.",
+  },
+  {
+    icon: "shield",
+    title: "Approved helpers only",
+    description:
+      "Helping is gated. A helper holds a current staff-reviewed approval before they can see or accept anything.",
+  },
+  {
+    icon: "mapPin",
+    title: "Location on your terms",
+    description: "Your request shows as an approximate area until you consent to share more with your helper.",
+  },
+  {
+    icon: "message",
+    title: "Private chat",
+    description: "A direct thread opens only between you and the helper who accepted. Nobody else is in it.",
   },
   {
     icon: "users",
-    title: "Offer help",
-    description: "See who needs a hand around you and make your community stronger in small ways.",
+    title: "Meet in public",
+    description: "Public places by default, with safety actions one tap away in every request.",
   },
   {
-    icon: "wrench",
-    title: "Trusted local pros",
-    description: "As the platform grows, connect with local professionals for moving, lawn care, tutoring, and more.",
+    icon: "calendar",
+    title: "Events worth showing up for",
+    description: "Campus and regional calendars, attributed and linked to the source that published them.",
   },
   {
     icon: "megaphone",
-    title: "For organizations",
-    description: "Businesses and community leaders share announcements and events in one clear place.",
+    title: "A community that talks",
+    description: "Posts, comments, and reactions from people who actually live here.",
   },
   {
-    icon: "sprout",
-    title: "Volunteer openings",
-    description: "Find ways to pitch in near parks, campuses, and community spaces.",
-  },
-  {
-    icon: "compass",
-    title: "Stay informed nearby",
-    description: "Scattered pages and social posts become one living community page per place.",
+    icon: "lock",
+    title: "Report, block, delete",
+    description: "Report or block anyone, any time. Delete your account yourself, from your own phone.",
   },
 ];
 
-export const HOW_IT_WORKS = [
+export interface TrustPoint {
+  icon: IconName;
+  title: string;
+  description: string;
+}
+
+export const TRUST: TrustPoint[] = [
   {
-    step: "01",
-    title: "Open a place",
-    description: "Every public location gets its own community page, from campuses to parks to stadiums.",
+    icon: "eye",
+    title: "Nobody sees your exact spot",
+    description:
+      "Live help shows as an approximate area. Precise location moves only after a helper is accepted and you say yes.",
   },
   {
-    step: "02",
-    title: "See what is happening",
-    description: "Events, announcements, fun facts, and updates for that place, all in one view.",
+    icon: "check",
+    title: "Approval is current or it isn't",
+    description:
+      "Helpers submit identity evidence and wait on a staff decision. An old badge grants nothing.",
   },
   {
-    step: "03",
-    title: "Ask or offer help",
-    description: "Need a hand, or ready to give one? Nearby community members can connect in the moment.",
-  },
-  {
-    step: "04",
-    title: "Build local ties",
-    description: "Organizations keep visitors informed, and people leave more connected than they arrived.",
+    icon: "info",
+    title: "Help Me is not 911",
+    description:
+      "In an emergency, call emergency services. Help Me is for the everyday things that stop your day but aren't an emergency.",
   },
 ];

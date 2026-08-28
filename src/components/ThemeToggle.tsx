@@ -1,50 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { IconMoon, IconSun } from "@/components/icons";
 
 type Theme = "light" | "dark";
 
-function applyTheme(theme: Theme) {
+/*
+ * The theme lives on <html>, set before first paint by the inline script in
+ * layout.tsx. That makes the document the source of truth, so this button
+ * subscribes to it rather than mirroring it into React state.
+ */
+const listeners = new Set<() => void>();
+
+function subscribe(onChange: () => void) {
+  listeners.add(onChange);
+  return () => {
+    listeners.delete(onChange);
+  };
+}
+
+function getSnapshot(): Theme {
+  return document.documentElement.classList.contains("light") ? "light" : "dark";
+}
+
+/** Dark is the default, so that is what the server renders. */
+function getServerSnapshot(): Theme {
+  return "dark";
+}
+
+function setTheme(theme: Theme) {
   const root = document.documentElement;
-  if (theme === "dark") root.classList.add("dark");
-  else root.classList.remove("dark");
+  root.classList.toggle("light", theme === "light");
   root.style.colorScheme = theme;
+  try {
+    window.localStorage.setItem("helpme-theme", theme);
+  } catch {
+    // Private browsing or blocked storage: the choice just will not persist.
+  }
+  listeners.forEach((notify) => notify());
 }
 
 export default function ThemeToggle({ className }: { className?: string }) {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem("helpme-theme") as Theme | null;
-    const next = stored ?? "light";
-    setTheme(next);
-    applyTheme(next);
-    setReady(true);
-  }, []);
-
-  function toggle() {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    applyTheme(next);
-    window.localStorage.setItem("helpme-theme", next);
-  }
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className={`flex h-10 w-10 items-center justify-center rounded-full border border-rose-light/80 bg-white/70 text-plum transition-colors hover:bg-blush-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-raspberry dark:bg-blush-deep/80 ${className ?? ""}`}
+      className={`flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink/70 transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${className ?? ""}`}
     >
-      {!ready ? (
-        <span className="h-4 w-4 rounded-full bg-plum/20" aria-hidden />
-      ) : theme === "dark" ? (
-        <IconSun size={18} />
-      ) : (
-        <IconMoon size={18} />
-      )}
+      {theme === "dark" ? <IconSun size={18} /> : <IconMoon size={18} />}
     </button>
   );
 }

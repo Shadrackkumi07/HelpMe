@@ -1,34 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Eyebrow from "@/components/Eyebrow";
 import { FEATURES } from "@/lib/constants";
 import { Icon } from "@/components/icons";
-import SectionBrand from "@/components/SectionBrand";
 
 export default function Features() {
   return (
-    <section id="features" className="relative bg-blush py-20 sm:py-28">
+    <section id="features" className="relative bg-bg py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="mx-auto max-w-xl text-center">
-          <SectionBrand label="features" />
-          <h2 className="mt-3 font-serif-display text-3xl font-semibold text-plum sm:text-4xl">Everything a community needs, in one place</h2>
+        <div className="max-w-2xl">
+          <Eyebrow>What you get</Eyebrow>
+          <h2 className="font-display display-md mt-4 text-ink">
+            Everything needed to ask, and to show up.
+          </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: (index % 4) * 0.07 }}
-              className="rounded-3xl bg-white/70 p-5 shadow-petal-sm transition-transform hover:-translate-y-1"
+              transition={{ duration: 0.45, delay: (index % 4) * 0.06 }}
+              className="group rounded-3xl border border-line bg-surface p-6 transition-colors hover:border-line-strong"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-blush-deep text-plum">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                 <Icon name={feature.icon} size={20} />
               </span>
-              <p className="mt-3 font-body text-base font-bold text-plum">{feature.title}</p>
-              <p className="mt-1.5 font-body text-sm leading-snug text-plum/60">{feature.description}</p>
+              <p className="font-display mt-5 text-base font-semibold text-ink">{feature.title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{feature.description}</p>
             </motion.div>
           ))}
         </div>
