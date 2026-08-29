@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Contact · Help Me" };
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Email support@helpme.fyi. A person reads it. Help Me does not replace 911.",
+  alternates: { canonical: "/support/contact" },
+};
 
 export default function ContactPage() {
   return (

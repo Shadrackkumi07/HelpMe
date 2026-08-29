@@ -6,7 +6,12 @@ import QrCode from "@/components/QrCode";
 import { AppBadge } from "@/components/AppBadge";
 import { APP_URL, REGION } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Get Help Me" };
+export const metadata: Metadata = {
+  title: "Get the app",
+  description:
+    "Download Help Me on TestFlight for iPhone. Everyday community help in Fargo, Moorhead, and West Fargo.",
+  alternates: { canonical: "/download" },
+};
 
 /** The page every share link points to: one screen, one action. */
 export default function DownloadPage() {

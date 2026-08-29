@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Privacy Policy · Help Me" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "How Help Me handles accounts, approximate location, private chat, reports, and account deletion during the TestFlight beta.",
+  alternates: { canonical: "/legal/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LegalPage from "@/components/LegalPage";
+import JsonLd from "@/components/seo/JsonLd";
 import { REGION } from "@/lib/constants";
+import { SITE_URL } from "@/lib/seo/site";
 
-export const metadata: Metadata = { title: "Help Center · Help Me" };
+export const metadata: Metadata = {
+  title: "Help Center",
+  description:
+    "What Help Me is, what you can ask for, who sees your location, how to become a Helper, and how to delete your account.",
+  alternates: { canonical: "/support/help" },
+};
 
 const FAQS = [
   {
@@ -41,8 +48,20 @@ const FAQS = [
 ];
 
 export default function HelpCenterPage() {
+  const faqGraph = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+    url: `${SITE_URL}/support/help`,
+  };
+
   return (
     <LegalPage eyebrow="support" title="Help Center">
+      <JsonLd data={faqGraph} />
       <p>
         The questions we hear most. Not here?{" "}
         <Link href="/support/contact" className="font-semibold text-ink underline-offset-4 hover:underline">

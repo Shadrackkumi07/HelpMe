@@ -8,10 +8,10 @@ import { APP_URL } from "@/lib/constants";
 import { IconClose, IconMenu } from "@/components/icons";
 
 const NAV_LINKS = [
-  { href: "/#how-it-works", label: "How it works" },
-  { href: "/#inside", label: "Inside the app" },
-  { href: "/#helpers", label: "Helpers" },
-  { href: "/#safety", label: "Safety" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/explore", label: "Explore" },
+  { href: "/helpers", label: "Helpers" },
+  { href: "/safety", label: "Safety" },
 ];
 
 export default function Navbar() {
@@ -47,13 +47,13 @@ export default function Navbar() {
 
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-muted transition-colors hover:text-ink"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -81,14 +81,14 @@ export default function Navbar() {
       {open && (
         <nav aria-label="Mobile" className="flex flex-col gap-1 border-t border-line bg-bg px-5 pb-6 pt-3 md:hidden">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
               className="min-h-11 rounded-xl px-3 py-2.5 text-sm font-medium text-ink/80 hover:bg-surface"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <a
             href={APP_URL}

@@ -6,13 +6,14 @@
  * is a one-line change here.
  */
 import type { IconName } from "@/components/icons";
+import { REGION as SEO_REGION, SITE_URL as SEO_SITE_URL, SUPPORT_EMAIL as SEO_SUPPORT_EMAIL } from "@/lib/seo/site";
 
 export const APP_URL = "https://testflight.apple.com/join/TDcwmAe8";
 export const APP_CHANNEL = "TestFlight";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://helpme.app";
-export const SUPPORT_EMAIL = "support@helpme.app";
-export const REGION = "Fargo–Moorhead";
+export const SITE_URL = SEO_SITE_URL;
+export const SUPPORT_EMAIL = SEO_SUPPORT_EMAIL;
+export const REGION = SEO_REGION;
 
 export interface Step {
   step: string;

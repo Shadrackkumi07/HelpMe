@@ -1,6 +1,7 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import { rootMetadata } from "@/lib/seo/metadata";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,27 +16,7 @@ const interTight = Inter_Tight({
   display: "swap",
 });
 
-const title = "Help Me · See Beyond";
-const description =
-  "Someone nearby needs a hand. Someone nearby would give one. Help Me connects people in need with trusted Helpers nearby. Now on TestFlight for iPhone.";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://helpme.app"),
-  title,
-  description,
-  icons: { icon: "/logo.png", apple: "/logo.png" },
-  openGraph: {
-    title,
-    description,
-    type: "website",
-    siteName: "Help Me",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-  },
-};
+export const metadata = rootMetadata;
 
 export const viewport: Viewport = {
   width: "device-width",

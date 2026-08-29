@@ -8,10 +8,13 @@ import Features from "@/components/sections/Features";
 import Helpers from "@/components/sections/Helpers";
 import Safety from "@/components/sections/Safety";
 import Download from "@/components/sections/Download";
+import JsonLd from "@/components/seo/JsonLd";
+import { homeGraph } from "@/lib/seo/schema";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homeGraph()} />
       <Navbar />
       <main>
         <Hero />

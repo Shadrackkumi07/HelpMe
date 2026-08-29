@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Terms of Service · Help Me" };
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Terms for the Help Me TestFlight beta in Fargo–Moorhead. Not an emergency service. Helpers are approved community members.",
+  alternates: { canonical: "/legal/terms" },
+};
 
 export default function TermsPage() {
   return (
