@@ -1,6 +1,5 @@
-/** Small tracked label that sits above a section title. */
-export default function Eyebrow({ children, onDark = false }: { children: string; onDark?: boolean }) {
-  return (
-    <p className={`eyebrow ${onDark ? "text-white/50" : "text-muted"}`}>{children}</p>
-  );
+/** Sentence-case label with a short bar, as on the brand decks. */
+export default function Eyebrow({ children, className = "" }: { children: string; className?: string }) {
+  const text = children ? children[0].toUpperCase() + children.slice(1) : children;
+  return <p className={`dash-label ${className}`}>{text}</p>;
 }

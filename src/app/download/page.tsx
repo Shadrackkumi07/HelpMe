@@ -1,45 +1,41 @@
 import type { Metadata } from "next";
+import { dedicatedMetadata } from "@/lib/seo/metadata";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Mark from "@/components/Mark";
 import QrCode from "@/components/QrCode";
 import { AppBadge } from "@/components/AppBadge";
-import { APP_URL, REGION } from "@/lib/constants";
+import { SplitText } from "@/components/motion/Reveal";
+import { APP_URL, NOT_EMERGENCY_LINE } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = dedicatedMetadata({
+  path: "/download",
   title: "Get the app",
   description:
-    "Download Help Me on TestFlight for iPhone. Everyday community help in Fargo, Moorhead, and West Fargo.",
-  alternates: { canonical: "/download" },
-};
+    "Join the Help Me beta on TestFlight for iPhone. Neighbors helping neighbors with the small stuff in Fargo, West Fargo, and Moorhead.",
+});
 
 /** The page every share link points to: one screen, one action. */
 export default function DownloadPage() {
   return (
     <>
       <Navbar />
-      <main className="spot-top relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
-        <div aria-hidden className="grid-field pointer-events-none absolute inset-0 opacity-60" />
-        <div className="relative z-10 flex flex-col items-center">
-          <Mark size={84} preload />
-          <h1 className="font-display display-lg mt-8 text-ink">Get Help Me</h1>
-          <p className="mx-auto mt-5 max-w-sm text-base leading-relaxed text-muted">
-            Live on TestFlight for iPhone in {REGION}. Install it, and you are one tap from asking — or from
-            answering.
-          </p>
-
-          <div className="mt-9">
-            <AppBadge />
+      <main className="bg-ember text-ink">
+        <div className="mx-auto grid min-h-svh max-w-7xl items-end gap-12 px-5 pb-16 pt-32 sm:px-8 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p className="dash-label">Get the app</p>
+            <SplitText as="h1" text="Want in?" className="display-hero mt-6" />
+            <p className="subhead mt-6 max-w-xl text-2xl sm:text-3xl">
+              Help Me is in beta on iPhone through TestFlight. Fargo, West Fargo, and Moorhead first.
+            </p>
+            <div className="mt-10">
+              <AppBadge />
+            </div>
+            <p className="mt-10 max-w-xl border-t-2 border-ink pt-6 text-sm font-semibold leading-[1.5]">{NOT_EMERGENCY_LINE}</p>
           </div>
-
-          <div className="mt-12 flex flex-col items-center gap-3">
-            <QrCode value={APP_URL} label="Scan to open Help Me on TestFlight" />
-            <span className="text-xs font-medium text-muted">Scan with your iPhone camera</span>
+          <div className="flex flex-col items-start gap-3 lg:items-center">
+            <QrCode value={APP_URL} size={200} label="Scan to open Help Me on TestFlight" />
+            <span className="text-sm font-bold">Scan with your iPhone camera</span>
           </div>
-
-          <p className="mt-10 max-w-xs text-xs text-muted">
-            Bookmark this page. It always points at the current iOS release.
-          </p>
         </div>
       </main>
       <Footer />

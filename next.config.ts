@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { CATALOG_REDIRECTS } from "./src/lib/seo/redirects";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -24,6 +25,24 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      /*
+       * One canonical host: helpme.fyi (SITE_URL). Today Vercel still redirects
+       * helpme.fyi -> www.helpme.fyi, so turning this rule on first would loop
+       * the site. Order of operations:
+       *   1. Vercel > Domains: make helpme.fyi primary; www redirects to it.
+       *   2. Then set CANONICAL_HOST_REDIRECT=1 in Vercel and redeploy.
+       * Step 1 alone already fixes the redirect errors; step 2 is a safety net.
+       */
+      ...(process.env.CANONICAL_HOST_REDIRECT === "1"
+        ? [
+            {
+              source: "/:path*",
+              has: [{ type: "host" as const, value: "www.helpme.fyi" }],
+              destination: "https://helpme.fyi/:path*",
+              permanent: true,
+            },
+          ]
+        : []),
       { source: "/privacy", destination: "/legal/privacy", permanent: true },
       { source: "/privacy-policy", destination: "/legal/privacy", permanent: true },
       { source: "/terms", destination: "/legal/terms", permanent: true },
@@ -33,6 +52,9 @@ const nextConfig: NextConfig = {
       { source: "/get", destination: "/download", permanent: true },
       { source: "/testflight", destination: "/download", permanent: true },
       { source: "/help-center", destination: "/support/help", permanent: true },
+      { source: "/questions/what-does-see-beyond-mean", destination: "/questions/what-does-it-starts-with-me-mean", permanent: true },
+      // Pages removed, merged, or renamed. Source of truth: src/lib/seo/redirect-map.json
+      ...CATALOG_REDIRECTS.map((r) => ({ ...r, permanent: true })),
     ];
   },
 };

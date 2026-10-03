@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
+import { dedicatedMetadata } from "@/lib/seo/metadata";
 import LegalPage from "@/components/LegalPage";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = dedicatedMetadata({
+  path: "/legal/terms",
   title: "Terms of Service",
   description:
     "Terms for the Help Me TestFlight beta in Fargo–Moorhead. Not an emergency service. Helpers are approved community members.",
-  alternates: { canonical: "/legal/terms" },
-};
+});
 
 export default function TermsPage() {
   return (
-    <LegalPage eyebrow="legal" title="Terms of Service" updated="August 2026">
+    <LegalPage eyebrow="Legal" title="Terms of Service" updated="August 2026">
       <p>
         These terms cover the Help Me TestFlight beta. A complete Terms of Service will replace this page before
         the public App Store release, covering accounts, community content, Helper approval, and any paid services

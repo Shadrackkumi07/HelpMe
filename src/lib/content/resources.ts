@@ -39,7 +39,7 @@ export const RESOURCE_PAGES: SeoPage[] = [
         ],
       },
     ],
-    related: ["not-911", "resources/fargo-emergency", "resources/211-north-dakota", "safety", "guides", "explore"],
+    related: ["not-911", "resources/fargo-emergency", "resources/211-north-dakota", "ground-rules", "guides", "explore"],
     faqs: [
       {
         q: "Will Help Me dispatch police if I request help?",
@@ -61,6 +61,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Emergencies: 911, then the right local desk",
     eyebrow: "emergency",
     lead: "If you are in danger, threatened, injured, or watching a crime, call 911. Do not wait on an app offer.",
+    answer:
+      "In Fargo, West Fargo, Moorhead, and Dilworth, call 911 for danger, injury, fire, or a crime in progress. 911 works on both sides of the Red River. For non-urgent police matters, the Red River Regional Dispatch Center publishes 701-451-7660. Help Me is not an emergency service and does not dispatch anyone.",
+    takeaways: [
+      "911 works in Fargo, West Fargo, Moorhead, and Dilworth.",
+      "Stay on the line and give a location a dispatcher can use.",
+      "Non-urgent police matters: the published regional dispatch line, 701-451-7660.",
+      "Help Me does not dispatch emergency services.",
+    ],
     priority: 0.9,
     keywords: ["Fargo 911", "Fargo emergency", "Moorhead emergency"],
     sections: [
@@ -88,15 +96,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "The Red River Regional Dispatch Center publishes a metro non-emergency number, 701-451-7660, used in Fargo, Moorhead, and West Fargo for situations that need an officer and are not urgent. City police pages and 211 sit beside that. Help Me sits much further down the list: jump starts, walks, directions — never dispatch.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for the small stuff that follows an emergency: a phone charger, a hand with a car, company while you wait. It never comes before a call to 911.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "not-911",
-      "resources/fargo-police",
-      "resources/moorhead-police",
-      "resources/west-fargo-police",
-      "resources/ndsu-safety",
-      "resources/211-north-dakota",
-    ],
+    related: ["not-911", "resources/fargo-police", "resources/moorhead-police", "resources/west-fargo-police", "resources/ndsu-safety", "resources/211-north-dakota"],
     faqs: [
       {
         q: "Should I try Help Me first in an emergency?",
@@ -105,6 +113,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Does 911 work on both sides of the river?",
         a: "Yes. City and county services after that do not automatically match.",
+      },
+      {
+        q: "What should I tell a 911 dispatcher?",
+        a: "Say where you are first: a building name, an intersection, or a campus landmark. Then say what is happening, and stay on the line until they tell you to hang up.",
       },
     ],
   }),
@@ -118,6 +130,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Cass County resources (North Dakota)",
     eyebrow: "Cass County",
     lead: "Fargo and West Fargo live in Cass County. If you need a county office, this is the bank of the river to stand on.",
+    answer:
+      "Fargo and West Fargo are in Cass County, North Dakota. Cass County Human Services handles many basic-needs and family programs, and 211, answered locally by FirstLink, can point you to the right desk. Emergencies are 911. Clay County offices serve Moorhead and Dilworth, not Fargo.",
+    takeaways: [
+      "Fargo and West Fargo are in Cass County, North Dakota.",
+      "Cass County Human Services covers many basic-needs programs.",
+      "211 is answered locally by FirstLink.",
+      "Office hours are weekday business hours. After hours, call 911 or 211.",
+    ],
     priority: 0.7,
     keywords: ["Cass County resources", "Cass County Human Services", "Fargo county help"],
     geo: { name: "Cass County", type: "AdministrativeArea", state: "ND", county: "Cass County" },
@@ -146,15 +166,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "It is not Clay County Social Services. It is not Moorhead city hall. It is not Help Me. If you live in Dilworth or Moorhead, open the Clay County page.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not a county office or a caseworker. A neighbor might point you to the right building, but enrollment and benefits belong to the county.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/clay-county-resources",
-      "resources/211-north-dakota",
-      "resources/fargo-police",
-      "resources/west-fargo-police",
-      "resources/food-assistance-fargo",
-      "cities/fargo",
-    ],
+    related: ["resources/clay-county-resources", "resources/211-north-dakota", "resources/fargo-police", "resources/west-fargo-police", "resources/food-assistance-fargo", "cities/fargo"],
     faqs: [
       {
         q: "I live in West Fargo. Is that Cass County?",
@@ -163,6 +183,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Can Help Me enroll me in county benefits?",
         a: "No. Call the county or 211. Helpers are neighbors, not caseworkers.",
+      },
+      {
+        q: "What is the difference between Cass and Clay County?",
+        a: "Cass County is in North Dakota and includes Fargo and West Fargo. Clay County is in Minnesota and includes Moorhead and Dilworth. Their offices and benefits are separate, so use the county where you live.",
       },
     ],
   }),
@@ -176,6 +200,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Clay County resources (Minnesota)",
     eyebrow: "Clay County",
     lead: "Moorhead and Dilworth are Minnesota. The river is pretty. It is also a border for almost every benefit that is not 911.",
+    answer:
+      "Moorhead and Dilworth are in Clay County, Minnesota. Clay County Social Services administers food support, medical assistance, child and adult protection, and related programs, and the county publishes crisis numbers on its site. Cass County offices serve Fargo, not this side of the river. Emergencies are 911.",
+    takeaways: [
+      "Moorhead and Dilworth are in Clay County, Minnesota.",
+      "Clay County Social Services runs food support and medical assistance.",
+      "Crisis lines are published on claycountymn.gov. Confirm them there.",
+      "Do not use a Cass County number for a Moorhead case.",
+    ],
     priority: 0.7,
     keywords: ["Clay County resources", "Clay County Social Services", "Moorhead county help"],
     geo: { name: "Clay County", type: "AdministrativeArea", state: "MN", county: "Clay County" },
@@ -204,15 +236,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "MSUM, Concordia, and M State’s Moorhead campus sit here. Their public-safety pages are the on-campus path. The county is the benefits path. Help Me is neither.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not a county office. A neighbor can help with a small favor, and the county is the path for benefits and protection services.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/cass-county-resources",
-      "resources/211-minnesota",
-      "resources/moorhead-police",
-      "resources/msum-safety",
-      "cities/moorhead",
-      "resources/mental-health-fargo",
-    ],
+    related: ["resources/cass-county-resources", "resources/211-minnesota", "resources/moorhead-police", "resources/msum-safety", "cities/moorhead", "resources/mental-health-fargo"],
     faqs: [
       {
         q: "I go to MSUM and live in Fargo. Which county?",
@@ -221,6 +253,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is FirstLink only for North Dakota?",
         a: "FirstLink answers 211 for North Dakota and for Clay County, Minnesota. Still use Clay County offices for Minnesota programs.",
+      },
+      {
+        q: "What is the difference between Clay and Cass County?",
+        a: "Clay County is in Minnesota and includes Moorhead and Dilworth. Cass County is in North Dakota and includes Fargo and West Fargo. Use the county where you live.",
       },
     ],
   }),
@@ -233,7 +269,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
       "NDSU University Police: 911 for emergencies, 701-231-8998 for campus police and escorts. Help Me is not campus security.",
     h1: "NDSU Police and Safety — official campus help",
     eyebrow: "NDSU",
-    lead: "If it is happening on NDSU ground and you need an officer, you want University Police, not a neighbor with a current approval.",
+    lead: "If it is happening on NDSU ground and you need an officer, you want University Police, not a neighbor from an app.",
+    answer:
+      "NDSU University Police and Safety is the official campus public safety office. Call 911 for an emergency. NDSU publishes 701-231-8998 as a 24-hour line for campus police, reports, and safety escorts. Help Me is not campus security and does not replace these services.",
+    takeaways: [
+      "Emergency: 911. Campus police line: 701-231-8998.",
+      "Safety escorts go through campus police, not an app.",
+      "Fargo Police cover the city off campus.",
+      "Confirm numbers on the NDSU site before you need them.",
+    ],
     priority: 0.72,
     keywords: ["NDSU Police", "NDSU safety escort", "NDSU campus safety"],
     geo: { name: "North Dakota State University", type: "Campus", city: "Fargo", state: "ND" },
@@ -262,15 +306,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "A jump in a public lot when you want a neighbor, not a police call. Directions. A study table. Official NDSU events in the app still link back to MyNDSU. Safety stays with the badge.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for smaller things, like directions or a jump in a lot. The badge handles safety.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/fargo-emergency",
-      "resources/student-health-ndsu",
-      "guides/student-safety-fargo",
-      "guides/new-to-ndsu",
-      "resources/fargo-police",
-      "not-911",
-    ],
+    related: ["resources/fargo-emergency", "resources/student-health-ndsu", "guides/new-to-ndsu", "resources/fargo-police", "not-911"],
     faqs: [
       {
         q: "Can Help Me send NDSU Police?",
@@ -279,6 +323,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is the escort the same as a Help Me walk?",
         a: "No. The escort is official campus safety. Help Me is a neighbor. Use the official one when you want an officer.",
+      },
+      {
+        q: "Does NDSU Police come off campus?",
+        a: "They serve NDSU property and work with Fargo Police when an incident involves the city. Off campus, Fargo Police are the city desk.",
       },
     ],
   }),
@@ -292,6 +340,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "MSUM Public Safety — official campus help",
     eyebrow: "MSUM",
     lead: "Minnesota State University Moorhead staffs Public Safety so you do not have to invent a night walk out of a group chat.",
+    answer:
+      "MSUM Public Safety is the official campus office at Minnesota State University Moorhead, published at 218-477-2449 and staffed around the clock. It offers escorts, on-campus jump starts, and vehicle unlocks within a short radius. Call 911 for emergencies. Help Me is not campus security.",
+    takeaways: [
+      "Public Safety: 218-477-2449. Emergency: 911.",
+      "Escorts and jump starts are published campus services.",
+      "Moorhead Police cover the city around campus.",
+      "Confirm services on mnstate.edu.",
+    ],
     priority: 0.7,
     keywords: ["MSUM Public Safety", "MSUM escort", "MSUM jump start"],
     geo: { name: "Minnesota State University Moorhead", type: "Campus", city: "Moorhead", state: "MN" },
@@ -320,15 +376,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "If Public Safety will jump the car on campus, call them. If you are in a public Fargo lot, a helper may be the neighbor tool. Do not mix the two in your head when you are scared — official first.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for a neighbor's help in a public lot or a hallway. For official campus services, call Public Safety.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/moorhead-police",
-      "resources/concordia-safety",
-      "guides/new-to-msum",
-      "guides/first-week-msum",
-      "resources/domestic-violence-fargo",
-      "not-911",
-    ],
+    related: ["resources/moorhead-police", "resources/concordia-safety", "guides/new-to-msum", "resources/domestic-violence-fargo", "not-911"],
     faqs: [
       {
         q: "Will MSUM Public Safety come off campus?",
@@ -337,6 +393,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is Help Me affiliated with MSUM Police?",
         a: "No. We ingest the official MSUM calendar. We are not campus public safety.",
+      },
+      {
+        q: "What does MSUM Public Safety do besides emergencies?",
+        a: "The office publishes escorts, on-campus jump starts, and vehicle unlocks within a short radius of campus. Read the current services page for the details.",
       },
     ],
   }),
@@ -350,6 +410,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Concordia Public Safety — official campus help",
     eyebrow: "Concordia",
     lead: "A small campus still needs an official number. Concordia publishes one. Use it.",
+    answer:
+      "Concordia College Public Safety is published at 218-299-3123 and runs SAFEWalk through the same number. Public Safety is staffed around the clock, and 911 reaches Moorhead emergency dispatch. The office is described at Knutson Campus Center. Help Me is not campus security.",
+    takeaways: [
+      "Public Safety and SAFEWalk: 218-299-3123.",
+      "Emergency: 911, which reaches Moorhead dispatch.",
+      "The Public Safety office is at Knutson Campus Center.",
+      "Confirm details on concordiacollege.edu.",
+    ],
     priority: 0.68,
     keywords: ["Concordia Public Safety", "Concordia SAFEWalk", "Concordia College safety"],
     geo: { name: "Concordia College", type: "Campus", city: "Moorhead", state: "MN" },
@@ -378,15 +446,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Directions, a study table, a jump in a public lot — that is Help Me. SAFEWalk and Public Safety remain the official night tools on this campus.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for small favors between neighbors, like directions or a charger. SAFEWalk and Public Safety remain the official tools on this campus.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/msum-safety",
-      "resources/moorhead-police",
-      "guides/new-to-concordia",
-      "resources/domestic-violence-fargo",
-      "guides/student-safety-fargo",
-      "not-911",
-    ],
+    related: ["resources/msum-safety", "resources/moorhead-police", "guides/new-to-concordia", "resources/domestic-violence-fargo", "not-911"],
     faqs: [
       {
         q: "Is SAFEWalk a Help Me feature?",
@@ -395,6 +463,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Does Concordia sit in Fargo?",
         a: "No. Moorhead, Minnesota. Clay County. Moorhead Police and campus public safety.",
+      },
+      {
+        q: "How do I use SAFEWalk?",
+        a: "Call Public Safety at the published number and ask for a SAFEWalk. It is the official campus walking service.",
       },
     ],
   }),
@@ -408,6 +480,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Fargo Police — official city law enforcement",
     eyebrow: "Fargo",
     lead: "If you need an officer in Fargo, you want Fargo Police. Not a helper. Not a Facebook flag.",
+    answer:
+      "Fargo Police is the official law enforcement agency for Fargo. Call 911 for emergencies. The department's public site is fargond.gov, and the regional dispatch center publishes 701-451-7660 for non-emergency calls. Fargo Police do not serve West Fargo or Moorhead. Help Me does not dispatch officers.",
+    takeaways: [
+      "Emergency: 911. Non-emergency: published on fargond.gov.",
+      "Online reporting exists for some non-urgent incidents.",
+      "Fargo Police serve Fargo only.",
+      "Help Me cannot take a report or send an officer.",
+    ],
     priority: 0.74,
     keywords: ["Fargo Police", "Fargo non-emergency", "Fargo PD"],
     geo: { name: "Fargo", type: "City", city: "Fargo", state: "ND", county: "Cass County" },
@@ -426,7 +506,7 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         heading: "What to call them for",
         body: [
-          "Crime, threats, crashes with injury (911), suspicious activity you want an officer to handle, official reports. Delayed reports, noise, and parking issues are the usual non-emergency examples they give — still official, still not an app request.",
+          "Crime, threats, crashes with injury (911), activity that worries you and that you want an officer to handle, official reports. Delayed reports, noise, and parking issues are the usual non-emergency examples they give — still official, still not an app request.",
         ],
       },
       {
@@ -435,15 +515,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Anything that belongs in a police report. Help Me cannot take a statement, recover stolen property, or stand in for an officer on Broadway.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not part of any police process. A neighbor can help with a dead battery, and an officer is for a crime.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/fargo-emergency",
-      "resources/west-fargo-police",
-      "resources/moorhead-police",
-      "resources/ndsu-safety",
-      "guides/downtown-fargo-at-night",
-      "not-911",
-    ],
+    related: ["resources/fargo-emergency", "resources/west-fargo-police", "resources/moorhead-police", "resources/ndsu-safety", "guides/downtown-fargo-at-night", "not-911"],
     faqs: [
       {
         q: "Is the non-emergency number the same in Moorhead?",
@@ -452,6 +532,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Can I file a police report in Help Me?",
         a: "No. Use 911, dispatch, or Fargo’s official online reporting for eligible incidents.",
+      },
+      {
+        q: "Can I file a report online?",
+        a: "The city publishes online reporting for some non-urgent incidents. Read the current rules on fargond.gov, and call 911 for anything urgent.",
       },
     ],
   }),
@@ -465,6 +549,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Moorhead Police — official Minnesota-side law enforcement",
     eyebrow: "Moorhead",
     lead: "Moorhead is a city with a police department. Crossing the river for dinner does not move your 911 call, but it does change which records desk you use tomorrow.",
+    answer:
+      "Moorhead Police is the official law enforcement agency for Moorhead, Minnesota. Call 911 for emergencies. The city publishes 218-299-5120 for general information and lists the regional dispatch non-emergency line on moorheadmn.gov. Moorhead Police are separate from Fargo Police. Help Me is not a reporting system.",
+    takeaways: [
+      "Emergency: 911. General information: 218-299-5120.",
+      "Anonymous tips and some online reports are published on the city site.",
+      "Campus public safety is not a replacement off campus.",
+      "File an incident with the city where it happened.",
+    ],
     priority: 0.72,
     keywords: ["Moorhead Police", "Moorhead PD", "Moorhead non-emergency"],
     geo: { name: "Moorhead", type: "City", city: "Moorhead", state: "MN", county: "Clay County" },
@@ -486,15 +578,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "If the incident happened in Moorhead, do not file it with Fargo Police. Clay County is the county layer. Help Me is not a reporting system on either side.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for small favors, not reports. For anything that belongs in a police record, use Moorhead Police.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/fargo-police",
-      "resources/msum-safety",
-      "resources/concordia-safety",
-      "resources/clay-county-resources",
-      "resources/fargo-emergency",
-      "cities/moorhead",
-    ],
+    related: ["resources/fargo-police", "resources/msum-safety", "resources/concordia-safety", "resources/clay-county-resources", "resources/fargo-emergency", "cities/moorhead"],
     faqs: [
       {
         q: "I am an NDSU student in Moorhead. Who do I call?",
@@ -503,6 +595,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is Help Me a Moorhead Police partner?",
         a: "No. This page exists so you call the official department.",
+      },
+      {
+        q: "Where do I report something that happened in Moorhead?",
+        a: "With Moorhead Police, not Fargo Police. Use 911 for urgent matters and the city's published non-emergency options for the rest.",
       },
     ],
   }),
@@ -516,6 +612,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "West Fargo Police — official city law enforcement",
     eyebrow: "West Fargo",
     lead: "West Fargo has its own officers, its own lobby, and its own website. Use them.",
+    answer:
+      "West Fargo Police is the official law enforcement agency for West Fargo. Call 911 for emergencies. The department publishes 701-515-5500 on westfargond.gov, and the regional dispatch center handles some non-urgent calls. West Fargo Police are separate from Fargo Police, and Help Me does not dispatch officers.",
+    takeaways: [
+      "Emergency: 911. Department line: published on westfargond.gov.",
+      "West Fargo has its own police and its own lobby.",
+      "Cass County covers county human services.",
+      "Confirm numbers on the city site.",
+    ],
     priority: 0.7,
     keywords: ["West Fargo Police", "West Fargo PD", "West Fargo non-emergency"],
     geo: { name: "West Fargo", type: "City", city: "West Fargo", state: "ND", county: "Cass County" },
@@ -537,15 +641,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Threats, break-ins, domestic violence, a crash, a missing person — official. A dead battery in a Veterans Boulevard lot can be a helper. Do not split the difference in a crisis.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not a police partner. A neighbor can help with a small favor, and officers handle crime, crashes, and threats.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "guides/west-fargo-community-help",
-      "resources/fargo-police",
-      "resources/cass-county-resources",
-      "cities/west-fargo",
-      "resources/fargo-emergency",
-      "not-911",
-    ],
+    related: ["guides/west-fargo-community-help", "resources/fargo-police", "resources/cass-county-resources", "cities/west-fargo", "resources/fargo-emergency", "not-911"],
     faqs: [
       {
         q: "Can I call Fargo Police from Sheyenne Street?",
@@ -554,6 +658,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Does Help Me work with West Fargo Police?",
         a: "No. We ingest the official West Fargo community calendar. We do not dispatch officers.",
+      },
+      {
+        q: "Which police do I call in West Fargo?",
+        a: "West Fargo Police. 911 works everywhere, and it will route your call to the right department.",
       },
     ],
   }),
@@ -567,6 +675,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "MATBUS — official metro transit",
     eyebrow: "transit",
     lead: "A helper is not a bus. When the car is a brick, the official map is matbus.com.",
+    answer:
+      "MATBUS is the public transit system for Fargo, West Fargo, Moorhead, and Dilworth. Routes, fares, and hours are published at matbus.com, including a trip planner and real-time tracking. Service changes by season, so check the official source before you travel. Help Me does not arrange transportation.",
+    takeaways: [
+      "MATBUS serves both sides of the river.",
+      "The Ground Transportation Center is the main transfer hub.",
+      "Fixed-route service is described as Monday through Saturday.",
+      "Check matbus.com for current routes, fares, and hours.",
+    ],
     priority: 0.6,
     keywords: ["MATBUS", "Fargo bus", "Moorhead bus"],
     sections: [
@@ -579,32 +695,36 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Ground Transportation Center (GTC): 502 NP Avenue, Fargo — main transfer hub.",
           "Service is described as Monday through Saturday for fixed routes. Do not assume a Sunday night bus.",
           "Student and youth pass rules (including U-Pass) are published by MATBUS. Confirm eligibility on their site.",
-          "Park-and-ride locations are listed by MATBUS, including a Moorhead Center Mall reference.",
+          "Park-and-go locations are listed by MATBUS, including a Moorhead Center Mall reference.",
         ],
       },
       {
         heading: "How this relates to Help Me",
         body: [
-          "Ask a neighbor for a jump. Ride the bus when you need transit. Do not request a stranger to become your driver. Help Me is not a ride board.",
+          "Ask a neighbor for a jump. Take the bus when you need transit. Help Me does not arrange transportation, and a neighbor is not a driver.",
+        ],
+      },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "A neighbor can answer a quick question about a stop or a route, but MATBUS is the official source for service.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "guides/winter-help-fargo",
-      "guides/jump-start-in-fargo",
-      "cities/fargo",
-      "cities/moorhead",
-      "lists/winter-student-survival-fargo",
-      "for-students",
-    ],
+    related: ["guides/winter-help-fargo", "cities/fargo", "cities/moorhead", "guides/how-to-use-matbus", "help/transit-help", "for-people-without-a-car"],
     faqs: [
       {
-        q: "Can I ask a helper for a ride across town?",
-        a: "Help Me is not a ride service. Use MATBUS or another official option.",
+        q: "Can a helper drive me across town?",
+        a: "Help Me does not arrange transportation. Use MATBUS or another official option.",
       },
       {
         q: "Does Help Me show live buses?",
         a: "No. Use matbus.com and their tracking tools.",
+      },
+      {
+        q: "Where can I see live bus locations?",
+        a: "On matbus.com, which publishes a trip planner and real-time tracking. Help Me does not show buses.",
       },
     ],
   }),
@@ -618,6 +738,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Fargo Public Library — official public indoor ground",
     eyebrow: "library",
     lead: "Three buildings, computers, heat, and a meeting place you can name without dropping a home pin.",
+    answer:
+      "Fargo Public Library has three locations: the Main Library downtown at 101 4th St. N., the Dr. James Carlson Library in south Fargo, and the Northport Library on North Broadway. Hours differ by building and change, so check fargond.gov. A staffed library is a good public place to meet.",
+    takeaways: [
+      "Three branches: Main, Dr. James Carlson, and Northport.",
+      "Hours differ by building. Check fargond.gov.",
+      "Downtown library parking is described as free for patrons.",
+      "A library is not a shelter and not a crisis service.",
+    ],
     priority: 0.58,
     keywords: ["Fargo Public Library", "Fargo library hours", "downtown Fargo library"],
     geo: { name: "Fargo", type: "City", city: "Fargo", state: "ND" },
@@ -639,15 +767,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "A staffed library is public, indoor, and easy to leave. Fine for a Help Me meet during open hours. Not a shelter, not a police department, not open because you wished it were.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "A library is one of the best public places to meet someone, during open hours. After closing, pick another place.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "lists/public-meeting-places-fargo",
-      "lists/study-spots-fargo",
-      "guides/meet-in-public-fargo",
-      "cities/fargo",
-      "lists/free-community-help-fargo",
-      "resources/matbus",
-    ],
+    related: ["lists/public-meeting-places-fargo", "lists/study-spots-fargo", "guides/meet-in-public-fargo", "cities/fargo", "lists/free-community-help-fargo", "resources/matbus"],
     faqs: [
       {
         q: "Can I meet a helper at the library after close?",
@@ -656,6 +784,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is the library a winter shelter?",
         a: "No. It is a library. For shelter, call 211 and see the winter-shelter page.",
+      },
+      {
+        q: "Which Fargo library is open latest?",
+        a: "Hours differ by building and by season. Check the city's hours and locations page before you go.",
       },
     ],
   }),
@@ -669,6 +801,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Homeless services — call official programs, not a neighbor app",
     eyebrow: "housing",
     lead: "If you need a bed tonight, this page is the direction. Help Me cannot house you, and a helper cannot be a shelter.",
+    answer:
+      "If you need shelter in Fargo-Moorhead, call 211 first. FirstLink answers 211 locally and can route you to Churches United, New Life Center, the Gladys Ray Shelter, or the YWCA depending on who you are and what is open. Capacity changes nightly. Help Me is not a shelter.",
+    takeaways: [
+      "Call 211 first. Capacity and hours change.",
+      "Several established shelters serve different groups.",
+      "In dangerous cold or an emergency, call 911.",
+      "Help Me cannot house anyone.",
+    ],
     priority: 0.7,
     keywords: ["Fargo homeless shelter", "Moorhead shelter", "Fargo housing help"],
     sections: [
@@ -696,15 +836,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Not intake. Not a waitlist. Not a place to send someone to “see if a helper has a couch.” If you are trying to help a person who is unhoused, walk with them to 211 or to one of these doors. Do not make them a request on a map.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "If you want to help someone who is unhoused, walk them to 211 or one of these programs. The app is not the place to arrange a bed.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/winter-shelters-fargo",
-      "resources/food-assistance-fargo",
-      "resources/domestic-violence-fargo",
-      "resources/211-north-dakota",
-      "resources/211-minnesota",
-      "not-911",
-    ],
+    related: ["resources/winter-shelters-fargo", "resources/food-assistance-fargo", "resources/domestic-violence-fargo", "resources/211-north-dakota", "resources/211-minnesota", "not-911"],
     faqs: [
       {
         q: "Can I request housing on Help Me?",
@@ -713,6 +853,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Should I send a helper to check on someone sleeping outside?",
         a: "If they appear in medical danger, 911. Otherwise 211 or an outreach/shelter program. Do not deputize a stranger from an app.",
+      },
+      {
+        q: "What if shelters are full?",
+        a: "211 can tell you what else is open that night. In dangerous cold or a medical emergency, call 911.",
       },
     ],
   }),
@@ -726,6 +870,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Food assistance — official pantries and benefits, not an app request",
     eyebrow: "food",
     lead: "Hungry is a county and a pantry problem. It is not a category a neighbor should have to solve out of their trunk.",
+    answer:
+      "Food help in Fargo-Moorhead comes from county benefits like SNAP, where the county you live in matters, and from pantries and meal sites supplied by the Great Plains Food Bank. 211 can tell you which door fits and what is open. Help Me is not a food program.",
+    takeaways: [
+      "Benefits follow the county you live in: Cass in ND, Clay in MN.",
+      "Pantry hours change. Use the food bank list or 211.",
+      "Meal sites publish their own times.",
+      "Help Me is not a food program.",
+    ],
     priority: 0.66,
     keywords: ["Fargo food pantry", "food assistance Fargo", "Great Plains Food Bank"],
     sections: [
@@ -754,15 +906,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Do not post a food-insecurity request and hope a stranger brings groceries. Send people here. If you want to help, donate through these programs, not through an unvetted handoff in a lot.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "If you want to help, donate to these programs. A first-time handoff in a parking lot is not a good substitute.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/cass-county-resources",
-      "resources/clay-county-resources",
-      "resources/homeless-services-fargo",
-      "resources/211-north-dakota",
-      "lists/free-community-help-fargo",
-      "resources/211-minnesota",
-    ],
+    related: ["resources/cass-county-resources", "resources/clay-county-resources", "resources/homeless-services-fargo", "resources/211-north-dakota", "lists/free-community-help-fargo", "resources/211-minnesota"],
     faqs: [
       {
         q: "Can a helper drop off groceries?",
@@ -771,6 +923,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "I go to school in Moorhead and live in Fargo. Where do I apply?",
         a: "Usually where you live. Call 211 with both facts if you are unsure.",
+      },
+      {
+        q: "Where is the nearest pantry?",
+        a: "Use the Great Plains Food Bank pantry list or call 211 for current locations and hours.",
       },
     ],
   }),
@@ -784,6 +940,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Mental health help — official crisis lines, not a neighbor chat",
     eyebrow: "crisis",
     lead: "If you are in danger of hurting yourself or someone else, call 988 or 911. Stay with official, confidential help. This app is the wrong room.",
+    answer:
+      "For a mental health crisis in Fargo-Moorhead, call or text 988, or call 911 if there is immediate danger. FirstLink answers 988 for North Dakota, and Clay County publishes its own crisis lines. Campus counseling centers serve enrolled students. Help Me is not a crisis line or a therapist.",
+    takeaways: [
+      "Call or text 988. Call 911 for immediate danger.",
+      "FirstLink answers 988 for North Dakota.",
+      "Clay County publishes a 24-hour mobile crisis line.",
+      "Help Me is not a crisis service.",
+    ],
     priority: 0.72,
     keywords: ["Fargo mental health", "988 Fargo", "FirstLink crisis"],
     sections: [
@@ -812,15 +976,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "211 can refer to local clinics. Sanford and Essentia operate large local health systems — search their behavioral-health intake rather than using a number from memory. Campus student health is for enrolled students. None of that intake happens inside Help Me.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "If a request starts to sound like a crisis, stop and call 988 or 911. A matched neighbor is the wrong kind of company.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/211-north-dakota",
-      "resources/211-minnesota",
-      "resources/student-health-ndsu",
-      "resources/ndsu-safety",
-      "resources/domestic-violence-fargo",
-      "not-911",
-    ],
+    related: ["resources/211-north-dakota", "resources/211-minnesota", "resources/student-health-ndsu", "resources/ndsu-safety", "resources/domestic-violence-fargo", "not-911"],
     faqs: [
       {
         q: "Can I ask a helper to sit with me while I am in crisis?",
@@ -830,6 +994,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
         q: "Is FirstLink the same as Help Me?",
         a: "No. FirstLink is an official crisis and referral center. Help Me is a community help app.",
       },
+      {
+        q: "Who do I call for someone else's crisis?",
+        a: "988 can guide you on how to help another person. For immediate danger, call 911.",
+      },
     ],
   }),
 
@@ -838,23 +1006,31 @@ export const RESOURCE_PAGES: SeoPage[] = [
     kind: "resource",
     title: "Domestic violence help in Fargo–Moorhead",
     description:
-      "If you are in danger, call 911. Local 24/7 help: YWCA Cass Clay, Sollera, national hotline 1-800-799-7233. Help Me is not a safe shelter.",
+      "If you are in danger, call 911. Local 24/7 help: YWCA Cass Clay, Sollera, national hotline 1-800-799-7233. Help Me is not a shelter.",
     h1: "Domestic violence help — official advocates, not this app",
     eyebrow: "safety",
     lead: "If you are unsafe in your home, this page should send you to people whose job is safety. A community help app is the wrong place to plan an exit.",
+    answer:
+      "If you are in immediate danger, call 911. Local help includes the YWCA Cass Clay emergency shelter and Sollera, and the National Domestic Violence Hotline at 1-800-799-7233 is available around the clock. Use a device that is not monitored if you can. Help Me is not a shelter or an advocate.",
+    takeaways: [
+      "Immediate danger: call 911.",
+      "YWCA Cass Clay and Sollera serve this metro.",
+      "National hotline: 1-800-799-7233.",
+      "Help Me cannot help you leave a home.",
+    ],
     priority: 0.74,
     keywords: ["domestic violence Fargo", "YWCA Cass Clay", "Sollera Fargo"],
     sections: [
       {
         heading: "If you are in immediate danger",
         body: [
-          "Call 911. If it is not safe to talk, stay on the line if you can. Campus public safety if you are on campus and that is the faster official path.",
+          "Call 911. If you cannot talk, stay on the line if you can. Campus public safety if you are on campus and that is the faster official path.",
         ],
       },
       {
         heading: "24/7 local and national lines",
         body: [
-          "These are public, established services. If a device is monitored, use a safer device or a public phone. Several local sites include a quick-exit control.",
+          "These are public, established services. If a device is monitored, use a device that is not monitored, or a public phone. Several local sites include a quick-exit control.",
         ],
         bullets: [
           "YWCA Cass Clay emergency shelter (women and children, including people fleeing violence): 701-232-3449, ywcacassclay.org. Published 24/7. They also publish a help form if calling is unsafe.",
@@ -869,15 +1045,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Do not request a helper to “get me out of the house.” Do not share a live location with a matched stranger while you are fleeing. Advocates, police, and shelters know how to do this. We do not pretend to.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Please do not use Help Me for this. Advocates, police, and shelters know how to help you leave safely.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/fargo-emergency",
-      "resources/homeless-services-fargo",
-      "resources/mental-health-fargo",
-      "resources/211-north-dakota",
-      "resources/winter-shelters-fargo",
-      "not-911",
-    ],
+    related: ["resources/fargo-emergency", "resources/homeless-services-fargo", "resources/mental-health-fargo", "resources/211-north-dakota", "resources/winter-shelters-fargo", "not-911"],
     faqs: [
       {
         q: "Can a helper walk me out of an unsafe home?",
@@ -885,7 +1061,11 @@ export const RESOURCE_PAGES: SeoPage[] = [
       },
       {
         q: "What if calling is unsafe?",
-        a: "Use a safer device if you can. YWCA describes an online help form. The national hotline also has chat on thehotline.org. 911 if you are in immediate danger.",
+        a: "Use a device that is not monitored if you can. YWCA describes an online help form. The national hotline also has chat on thehotline.org. 911 if you are in immediate danger.",
+      },
+      {
+        q: "What if I cannot call?",
+        a: "The national hotline has chat on its website, and YWCA describes an online help form. Use a device that is not monitored if you can.",
       },
     ],
   }),
@@ -899,6 +1079,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "Winter shelter — official beds, not an app pin",
     eyebrow: "winter",
     lead: "A Fargo night can kill. If someone needs to be inside, call 211 or 911. Do not send them to a stranger from a map.",
+    answer:
+      "For cold-weather shelter in Fargo-Moorhead, call 211 before you drive, because overflow sites and hours change with the weather. Year-round programs include Churches United, New Life Center, the Gladys Ray Shelter, and the YWCA. If someone is hypothermic or unresponsive, call 911. Help Me is not a shelter.",
+    takeaways: [
+      "Call 211 before you drive. Hours change.",
+      "Year-round shelters still matter in January.",
+      "Libraries and malls are not overnight shelter.",
+      "Hypothermia or an unresponsive person: 911.",
+    ],
     priority: 0.7,
     keywords: ["Fargo winter shelter", "Moorhead emergency shelter", "cold weather shelter Fargo"],
     sections: [
@@ -932,15 +1120,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "No couch-surfing requests. No “can someone take a person in.” If you are a helper who wants to volunteer, call the shelters and 211 — they have real volunteer desks. The app is for jump starts and walks, not for housing a human through a blizzard.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "If you want to help, volunteer through the shelters or 211. Hosting a stranger overnight through an app is not what Help Me is.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/homeless-services-fargo",
-      "resources/211-north-dakota",
-      "guides/winter-help-fargo",
-      "resources/domestic-violence-fargo",
-      "resources/food-assistance-fargo",
-      "not-911",
-    ],
+    related: ["resources/homeless-services-fargo", "resources/211-north-dakota", "guides/winter-help-fargo", "resources/domestic-violence-fargo", "resources/food-assistance-fargo", "not-911"],
     faqs: [
       {
         q: "Does Fargo open extra winter-only sites?",
@@ -949,6 +1137,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Can I list my spare room on Help Me for winter?",
         a: "No. Hosting a stranger overnight is not what this product is. Official shelters and coordinated entry exist for a reason.",
+      },
+      {
+        q: "Where can I warm up during the day?",
+        a: "Libraries and some public buildings are heated during open hours. They are not shelter, so plan with 211 for the night.",
       },
     ],
   }),
@@ -962,6 +1154,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "NDSU Student Health — official campus clinic",
     eyebrow: "NDSU",
     lead: "Colds, vaccines, a campus pharmacy. If it cannot wait or it is an emergency, 911 — not a walk-in hope and not a helper.",
+    answer:
+      "NDSU Student Health Service is the campus clinic and pharmacy in the Wallman Wellness Center, published at 701-231-7331 for the clinic. It serves enrolled students and is not an emergency department. For chest pain, trouble breathing, or severe injury, call 911. Counseling is a separate office.",
+    takeaways: [
+      "Clinic: 701-231-7331. Pharmacy: 701-231-7332.",
+      "For enrolled and eligible students.",
+      "Not a 24-hour emergency department.",
+      "Counseling is a different office in Ceres Hall.",
+    ],
     priority: 0.62,
     keywords: ["NDSU Student Health", "NDSU clinic", "Wallman Wellness Center"],
     geo: { name: "North Dakota State University", type: "Campus", city: "Fargo", state: "ND" },
@@ -984,15 +1184,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "A printer problem is a helper. A fever is a clinic. A walk to the Wellness Center in the cold can be a neighbor ask. Diagnosis cannot.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "A neighbor can help with directions to the Wellness Center, but diagnosis belongs to the clinic.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/ndsu-safety",
-      "resources/mental-health-fargo",
-      "guides/new-to-ndsu",
-      "lists/student-resources-ndsu",
-      "resources/211-north-dakota",
-      "for-students",
-    ],
+    related: ["resources/ndsu-safety", "resources/mental-health-fargo", "guides/new-to-ndsu", "resources/211-north-dakota"],
     faqs: [
       {
         q: "Can a helper pick up my prescription?",
@@ -1001,6 +1201,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is Student Health the same as NDSU Police?",
         a: "No. Clinic for health. Police for safety and crime. 911 for emergencies.",
+      },
+      {
+        q: "Is Student Health open on weekends?",
+        a: "Hours are weekday clinic hours and shorter on breaks. Check the Student Health site for the current schedule.",
       },
     ],
   }),
@@ -1014,6 +1218,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "211 in North Dakota — FirstLink",
     eyebrow: "211",
     lead: "Three digits for the problems that are not 911 and are not a jump start. Food, heat, shelter, a listening line.",
+    answer:
+      "In North Dakota, dial 211 for food, shelter, heat, and referrals. FirstLink answers 211 for the entire state and for Clay County, Minnesota, and publishes 701-235-7335 if 211 does not connect. It is free, confidential, and not police dispatch. For danger, call 911.",
+    takeaways: [
+      "Dial 211. Backup number: 701-235-7335.",
+      "Text your zip code to 898-211 for resources.",
+      "FirstLink also answers 988 for North Dakota.",
+      "211 is not police dispatch.",
+    ],
     priority: 0.76,
     keywords: ["211 North Dakota", "FirstLink", "211 Fargo"],
     sections: [
@@ -1041,15 +1253,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "211 will often send Fargo and West Fargo callers toward Cass County Human Services for benefits. That is correct. Open the Cass County resource page if you already know you need the Annex at 1010 2nd Ave. S.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not a 211 client portal. It sends you here for anything that is not a small favor.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/211-minnesota",
-      "resources/cass-county-resources",
-      "resources/homeless-services-fargo",
-      "resources/food-assistance-fargo",
-      "resources/mental-health-fargo",
-      "resources/fargo-emergency",
-    ],
+    related: ["resources/211-minnesota", "resources/cass-county-resources", "resources/homeless-services-fargo", "resources/food-assistance-fargo", "resources/mental-health-fargo", "resources/fargo-emergency"],
     faqs: [
       {
         q: "Is 211 the same as Help Me support?",
@@ -1058,6 +1270,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Does 211 work in West Fargo?",
         a: "Yes. West Fargo is in North Dakota. Dial 211.",
+      },
+      {
+        q: "Is 211 free?",
+        a: "Yes. It is a free, confidential information and referral service.",
       },
     ],
   }),
@@ -1071,6 +1287,14 @@ export const RESOURCE_PAGES: SeoPage[] = [
     h1: "211 in Minnesota — including Moorhead",
     eyebrow: "211",
     lead: "Minnesota has 211. Clay County also gets FirstLink. The point is the same: official referral, not a stranger in a chat.",
+    answer:
+      "In Minnesota, dial 211 for health and human services. United Way 211 publishes 211unitedway.org, and FirstLink states that it also serves Clay County for 211, so a Moorhead or Dilworth call may be answered locally. It is free and confidential. For emergencies, call 911.",
+    takeaways: [
+      "Dial 211 from Minnesota.",
+      "United Way 211 covers the state. FirstLink serves Clay County.",
+      "Minnesota programs live in Minnesota.",
+      "988 and 911 still work.",
+    ],
     priority: 0.72,
     keywords: ["211 Minnesota", "United Way 211", "211 Moorhead"],
     sections: [
@@ -1098,15 +1322,15 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "A jump start in a Moorhead lot can be a helper. Rent, SNAP, a shelter bed, a sliding-scale clinic — 211 and the county. We will not funnel those into the map.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "A jump start in a Moorhead lot can be a neighbor favor. Rent, food support, and shelter belong to 211 and the county.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: [
-      "resources/211-north-dakota",
-      "resources/clay-county-resources",
-      "resources/moorhead-police",
-      "resources/homeless-services-fargo",
-      "resources/mental-health-fargo",
-      "cities/moorhead",
-    ],
+    related: ["resources/211-north-dakota", "resources/clay-county-resources", "resources/moorhead-police", "resources/homeless-services-fargo", "resources/mental-health-fargo", "cities/moorhead"],
     faqs: [
       {
         q: "I am in Dilworth. Which 211?",
@@ -1115,6 +1339,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Can Help Me apply for Minnesota benefits for me?",
         a: "No. Clay County Social Services or 211. Helpers are not caseworkers.",
+      },
+      {
+        q: "Can I text for resources?",
+        a: "Yes. Text your zip code to 898-211 for resource text-back.",
       },
     ],
   }),
@@ -1130,6 +1358,12 @@ export const RESOURCE_PAGES: SeoPage[] = [
     lead: "One of the organizations that actually maps this metro’s social services, on both sides of the river at once.",
     answer:
       "United Way of Cass-Clay is a community organization serving the Fargo–Moorhead metro across both Cass County, North Dakota and Clay County, Minnesota. It funds and connects local programs in areas like health, education, and financial stability. For direct service referral, 211 is the fastest front door in either state.",
+    takeaways: [
+      "Serves both Cass County, ND and Clay County, MN.",
+      "Funds and connects health, education, and financial stability programs.",
+      "For a direct referral, 211 is the fastest door.",
+      "Help Me is not affiliated with United Way.",
+    ],
     priority: 0.6,
     keywords: ["United Way Cass Clay", "Fargo Moorhead nonprofit", "community services metro"],
     sections: [
@@ -1145,6 +1379,13 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "For an immediate need — food, housing, utilities, health — call 211. It is free, confidential, and staffed by people who know the current landscape. Program details, hours, and eligibility change, so confirm with the organization’s own site rather than trusting a summary anywhere, including this one.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is a place to ask your block for small favors. United Way is one of the organizations that maps the bigger picture.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["resources/211-north-dakota", "resources/211-minnesota", "resources/food-assistance-fargo", "for-nonprofits", "resources/cass-county-resources", "resources"],
     faqs: [
@@ -1155,6 +1396,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "What if I need help today?",
         a: "Call 211 for referral, or 911 if it is an emergency.",
+      },
+      {
+        q: "Does United Way provide direct services?",
+        a: "It funds and connects programs. For direct help, 211 can refer you to the right organization.",
       },
     ],
   }),
@@ -1170,6 +1415,12 @@ export const RESOURCE_PAGES: SeoPage[] = [
     lead: "The supply side of North Dakota’s food assistance network, behind many of the pantries people actually walk into.",
     answer:
       "Great Plains Food Bank is the statewide food bank for North Dakota, distributing food through partner pantries, programs, and agencies including many in the Fargo area. Individuals usually access food through a partner site rather than the food bank directly. 211 can identify current pantry locations and hours.",
+    takeaways: [
+      "The statewide food bank for North Dakota.",
+      "People usually get food through partner pantries.",
+      "211 can identify current pantry locations.",
+      "Minnesota has its own network for Clay County.",
+    ],
     priority: 0.65,
     keywords: ["Great Plains Food Bank", "food pantry Fargo", "North Dakota food assistance"],
     sections: [
@@ -1185,6 +1436,13 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "Clay County residents are served by Minnesota’s own network of food shelves and programs. Minnesota 211 is the right referral line there. The river matters for this the same way it matters for everything except 911.",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "If you want to help, donate through the food bank or a partner pantry. Help Me is not a food program.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["resources/food-assistance-fargo", "resources/211-north-dakota", "resources/211-minnesota", "resources/homeless-services-fargo", "resources/clay-county-resources", "for-nonprofits"],
     faqs: [
@@ -1195,6 +1453,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Should I ask for food on Help Me?",
         a: "No. Food insecurity is a services question, and this metro has real programs for it. A neighbor app is the wrong door.",
+      },
+      {
+        q: "How do I find a partner pantry?",
+        a: "Use the Great Plains Food Bank pantry list or call 211 for current locations and hours.",
       },
     ],
   }),
@@ -1210,19 +1472,32 @@ export const RESOURCE_PAGES: SeoPage[] = [
     lead: "Shelter is infrastructure, not a favor, and this metro has organizations whose entire job it is.",
     answer:
       "Churches United for the Homeless is a Fargo–Moorhead organization providing emergency shelter and housing-related services. Availability, intake times, and requirements change, so contact the organization or call 211 for current information. In a life-threatening situation, especially in extreme cold, call 911.",
+    takeaways: [
+      "Provides emergency shelter and housing services.",
+      "Availability and intake change. Call to confirm.",
+      "In dangerous cold, call 911 first.",
+      "211 can help find current options.",
+    ],
     priority: 0.7,
     keywords: ["Churches United Moorhead", "shelter Fargo Moorhead", "homeless services metro"],
     sections: [
       {
         heading: "When this is the right call",
         body: [
-          "Nowhere to sleep tonight. Facing the loss of housing. Needing shelter in dangerous cold. These are the situations where an organization with beds, staff, and a process is the only real answer.",
+          "Nowhere to sleep tonight. Facing the loss of housing. Needing shelter in dangerous cold. These are the situations where an organization with beds, staff, and a process is the only real answer. A neighbor can keep you company while you call, but only the organization can tell you whether a bed is open tonight, and 211 can confirm what else is available across the metro.",
         ],
       },
       {
         heading: "Winter urgency",
         body: [
           "Fargo–Moorhead winters make exposure a genuine emergency, not a discomfort. If someone is outside in dangerous cold and cannot get warm, that is 911 first and shelter second. Do not route it into a help app.",
+        ],
+      },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Shelter is a service, not a favor. Help Me points you to the organization built for it.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
@@ -1235,6 +1510,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Is Help Me a shelter resource?",
         a: "No. It is everyday non-emergency help between neighbors, and this page exists to point at the real option instead.",
+      },
+      {
+        q: "Can I volunteer there?",
+        a: "Contact the organization directly. It runs its own volunteer process.",
       },
     ],
   }),
@@ -1250,19 +1529,32 @@ export const RESOURCE_PAGES: SeoPage[] = [
     lead: "One of the metro’s emergency shelter providers, and one of the organizations that exists precisely for the situations an app must never try to hold.",
     answer:
       "YWCA Cass Clay provides emergency shelter and support services for women and children in the Fargo–Moorhead area, including help for people leaving domestic violence. Contact the organization or call 211 for current intake information. If you are in immediate danger, call 911 first.",
+    takeaways: [
+      "Emergency shelter and services for women and children.",
+      "Includes help for people leaving domestic violence.",
+      "In immediate danger, call 911 first.",
+      "Contact the organization or 211 for current intake.",
+    ],
     priority: 0.7,
     keywords: ["YWCA Cass Clay", "women's shelter Fargo", "domestic violence shelter Moorhead"],
     sections: [
       {
         heading: "If you are in danger right now",
         body: [
-          "Call 911. Getting somewhere safe comes before any intake process, any app, and any plan. Advocacy organizations can help with what comes after, and they can help with safety planning before a crisis too.",
+          "Call 911. Getting out of danger comes before any intake process, any app, and any plan. Advocacy organizations can help with what comes after, and they can help with safety planning before a crisis too.",
         ],
       },
       {
         heading: "Why this is on a help app’s website",
         body: [
           "Because someone will search for help and land here. A community app for jump starts and moving boxes has no business being the last page a person in danger reads. These organizations are the right ones, and naming them is the least this site can do.",
+        ],
+      },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is not a shelter and not an advocate. This page exists so someone who needs help finds the right organization.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
@@ -1275,6 +1567,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Can Help Me connect me to a shelter?",
         a: "No. Contact the provider directly or call 211, and 911 if you are in immediate danger.",
+      },
+      {
+        q: "What if I cannot call?",
+        a: "The YWCA describes an online help form, and the national hotline has chat. Use a device that is not monitored if you can.",
       },
     ],
   }),
@@ -1289,7 +1585,13 @@ export const RESOURCE_PAGES: SeoPage[] = [
     eyebrow: "resource",
     lead: "Two states, two sets of law, and a metro where people routinely get confident advice about the wrong one.",
     answer:
-      "Legal help in Fargo–Moorhead follows the state: Legal Services of North Dakota serves eligible North Dakota residents, and Minnesota has its own legal aid organizations for Clay County. Courts also publish self-help resources. Nothing on this site is legal advice, and no approved helper is qualified to give any.",
+      "Legal help in Fargo–Moorhead follows the state: Legal Services of North Dakota serves eligible North Dakota residents, and Minnesota has its own legal aid organizations for Clay County. Courts also publish self-help resources. Nothing on this site is legal advice, and no helper is a lawyer able to give any.",
+    takeaways: [
+      "Legal help follows the state: North Dakota or Minnesota.",
+      "Legal aid serves eligible people at no cost.",
+      "State courts publish self-help resources.",
+      "Nothing here is legal advice.",
+    ],
     priority: 0.6,
     keywords: ["legal aid Fargo", "tenant rights North Dakota", "Minnesota legal aid Clay County"],
     sections: [
@@ -1311,6 +1613,13 @@ export const RESOURCE_PAGES: SeoPage[] = [
           "211 for referral in either state",
         ],
       },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me cannot give legal advice and neither can a neighbor. Use the organizations on this page.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["for-renters", "guides/apartment-move-out-checklist-fargo", "resources/211-north-dakota", "resources/211-minnesota", "resources/cass-county-resources", "legal/terms"],
     faqs: [
@@ -1320,7 +1629,11 @@ export const RESOURCE_PAGES: SeoPage[] = [
       },
       {
         q: "Is legal aid free?",
-        a: "Legal aid organizations serve eligible clients at no cost. Eligibility is screened and varies by program.",
+        a: "Legal aid organizations serve eligible clients at no cost. Eligibility is checked and varies by program.",
+      },
+      {
+        q: "Where do I start with a legal problem?",
+        a: "Legal aid in your state, a state court self-help resource, or 211 for a referral. For anything with a deadline, talk to a licensed attorney.",
       },
     ],
   }),
@@ -1336,19 +1649,32 @@ export const RESOURCE_PAGES: SeoPage[] = [
     lead: "Benefits navigation is a job someone does professionally and for free. Use them.",
     answer:
       "Veterans in Fargo–Moorhead have three main doors: the VA health care system for healthcare and enrollment, county veterans service officers in Cass and Clay counties for benefits and claims navigation at no cost, and the Veterans Crisis Line at 988 then press 1. For immediate danger, call 911.",
+    takeaways: [
+      "County veterans service officers help with benefits at no cost.",
+      "The VA health care system handles healthcare and enrollment.",
+      "Veterans Crisis Line: 988, then press 1.",
+      "For immediate danger, call 911.",
+    ],
     priority: 0.65,
     keywords: ["Fargo VA", "veterans service officer Cass County", "Veterans Crisis Line"],
     sections: [
       {
         heading: "County veterans service officers",
         body: [
-          "Both Cass County, North Dakota and Clay County, Minnesota have veterans service officers whose job is helping veterans and families navigate benefits and claims. It is free, it is local, and it is dramatically more effective than filling out forms alone.",
+          "Both Cass County, North Dakota and Clay County, Minnesota have veterans service officers whose job is helping veterans and families navigate benefits and claims. It is free, it is local, and it is dramatically more effective than filling out forms alone. Bring discharge papers if you have them, and ask what you may be eligible for beyond the benefit you came in about. Many veterans are surprised by how much exists.",
         ],
       },
       {
         heading: "Crisis support",
         body: [
           "988 then press 1 reaches the Veterans Crisis Line, by call or text. It is staffed, free, and appropriate well before things reach the worst possible moment.",
+        ],
+      },
+      {
+        heading: "Where Help Me fits",
+        body: [
+          "Help Me is for small favors between neighbors, and veterans use it like anyone else. Benefits and crisis support belong to the organizations above.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
@@ -1361,6 +1687,10 @@ export const RESOURCE_PAGES: SeoPage[] = [
       {
         q: "Do I need to pay a service officer?",
         a: "No. County veterans service officers assist at no charge, and you should never pay someone to file a basic claim for you.",
+      },
+      {
+        q: "Is help from a veterans service officer free?",
+        a: "Yes. County veterans service officers help veterans and families navigate benefits at no cost.",
       },
     ],
   }),

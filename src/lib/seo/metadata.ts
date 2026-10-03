@@ -48,14 +48,39 @@ export function pageMetadata(page: SeoPage): Metadata {
   };
 }
 
+/**
+ * Metadata for the dedicated App Router pages (download, legal, support).
+ * Next replaces openGraph wholesale when a page sets it, so the share URL, title,
+ * and image are all built here instead of inheriting the homepage's.
+ */
+export function dedicatedMetadata(input: { path: string; title: string; description: string }): Metadata {
+  const url = absoluteUrl(input.path);
+  const image = absoluteUrl(DEFAULT_OG_IMAGE);
+  return {
+    title: input.title,
+    description: input.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      locale: LOCALE,
+      url,
+      siteName: `${SITE_NAME} · ${SITE_TAGLINE}`,
+      title: `${input.title} · ${SITE_NAME}`,
+      description: input.description,
+      images: [{ url: image, width: 1200, height: 630, alt: "Help Me. It starts with me." }],
+    },
+    twitter: { card: "summary_large_image", title: input.title, description: input.description, images: [image] },
+  };
+}
+
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Help Me · See Beyond — Community help in Fargo–Moorhead",
+    default: "Help Me · It starts with me. Ask your block in Fargo-Moorhead",
     template: "%s · Help Me",
   },
   description:
-    "Someone nearby needs a hand. Someone nearby would give one. Help Me connects people in Fargo, Moorhead, and West Fargo with trusted Helpers nearby. Now on TestFlight for iPhone.",
+    "A place to ask your block for the small stuff, from neighbors in Fargo, West Fargo, and Moorhead. Your block is closer than you think. In beta on iPhone.",
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -72,9 +97,9 @@ export const rootMetadata: Metadata = {
     "Concordia College",
     "jump start Fargo",
     "campus events Fargo",
-    "approved helpers",
+    "neighbors helping neighbors",
+    "ask your block",
   ],
-  icons: { icon: "/logo.png", apple: "/logo.png" },
   alternates: {
     canonical: SITE_URL,
     types: {
@@ -97,16 +122,16 @@ export const rootMetadata: Metadata = {
     locale: LOCALE,
     url: SITE_URL,
     siteName: `${SITE_NAME} · ${SITE_TAGLINE}`,
-    title: "Help Me · See Beyond — Community help in Fargo–Moorhead",
+    title: "Help Me · It starts with me. Ask your block in Fargo-Moorhead",
     description:
-      "Ask for everyday help from approved people nearby. Built for Fargo, Moorhead, and West Fargo. Live on TestFlight for iPhone.",
-    images: [{ url: absoluteUrl(DEFAULT_OG_IMAGE), alt: "Help Me" }],
+      "A place to ask your block for the small stuff. Fargo, West Fargo, and Moorhead first. In beta on TestFlight for iPhone.",
+    images: [{ url: absoluteUrl(DEFAULT_OG_IMAGE), width: 1200, height: 630, alt: "Help Me. It starts with me." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Help Me · See Beyond",
+    title: "Help Me · It starts with me",
     description:
-      "Ask for everyday help from approved people nearby in Fargo–Moorhead. Live on TestFlight for iPhone.",
+      "Neighbors helping neighbors with the small stuff in Fargo–Moorhead. Your block is closer than you think.",
     images: [absoluteUrl(DEFAULT_OG_IMAGE)],
   },
   other: {

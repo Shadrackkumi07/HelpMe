@@ -1,28 +1,51 @@
+"use client";
+
+import { useId, useState } from "react";
 import type { FaqItem } from "@/lib/seo/types";
+
+/** transitions.dev #21 accordion: the panel grows via grid rows, the plus turns to a cross. */
+function Faq({ faq }: { faq: FaqItem }) {
+  const [open, setOpen] = useState(false);
+  const id = useId();
+  return (
+    <div className="border-b-2 border-ink">
+      <h3>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={id}
+          onClick={() => setOpen((v) => !v)}
+          className="flex w-full items-start justify-between gap-6 py-6 text-left"
+        >
+          <span className="subhead text-xl sm:text-2xl">{faq.q}</span>
+          <span
+            aria-hidden
+            className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-xl leading-none text-paper transition-transform duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+            style={{ transform: open ? "rotate(45deg)" : "none" }}
+          >
+            +
+          </span>
+        </button>
+      </h3>
+      <div id={id} role="region" className="t-acc" data-open={open}>
+        <div>
+          <p className="max-w-2xl pb-7 text-base leading-[1.6]">{faq.a}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function FaqList({ faqs }: { faqs: FaqItem[] }) {
   if (!faqs.length) return null;
   return (
-    <section className="mt-14" aria-labelledby="faq-heading">
-      <h2 id="faq-heading" className="font-display text-2xl font-semibold text-ink">
+    <section className="mt-20" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" className="display-md">
         Questions people actually ask
       </h2>
-      <div className="mt-6 flex flex-col gap-3">
+      <div className="mt-8 border-t-2 border-ink">
         {faqs.map((faq) => (
-          <details
-            key={faq.q}
-            className="group rounded-2xl border border-line bg-surface px-5 py-4"
-          >
-            <summary className="cursor-pointer list-none font-display text-base font-semibold text-ink [&::-webkit-details-marker]:hidden">
-              <span className="flex items-start justify-between gap-4">
-                {faq.q}
-                <span aria-hidden className="mt-0.5 text-muted transition-transform group-open:rotate-45">
-                  +
-                </span>
-              </span>
-            </summary>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{faq.a}</p>
-          </details>
+          <Faq key={faq.q} faq={faq} />
         ))}
       </div>
     </section>

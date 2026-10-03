@@ -15,6 +15,8 @@ export function organizationSchema(): Json {
     logo: {
       "@type": "ImageObject",
       url: ORGANIZATION.logo,
+      width: 512,
+      height: 512,
     },
     image: ORGANIZATION.logo,
     slogan: SITE_TAGLINE,
@@ -68,11 +70,11 @@ export function softwareSchema(): Json {
     description: ORGANIZATION.description,
     publisher: { "@id": `${SITE_URL}/#organization` },
     featureList: [
-      "Ask nearby approved helpers for everyday help",
-      "Approximate location until you consent to share more",
+      "Ask neighbors nearby for quick, everyday, non-emergency favors",
+      "A rough area on the map until you agree to share more",
       "Private chat between requester and accepted helper",
       "Official Fargo–Moorhead campus and regional event calendars",
-      "Report, block, and self-serve account deletion",
+      "Report or block any member at any time; delete your own account",
     ],
     countriesSupported: ["US"],
     areaServed: GEO.areaServed,
@@ -107,12 +109,19 @@ export function breadcrumbSchema(page: SeoPage): Json {
   };
 }
 
+/**
+ * FAQPage, not QAPage: QAPage is reserved for pages where users submit answers.
+ * On question pages the page's own question and answer lead the list.
+ */
 export function faqSchema(page: SeoPage): Json | null {
-  if (!page.faqs?.length) return null;
+  const items: { q: string; a: string }[] = [];
+  if (page.kind === "question" && page.answer) items.push({ q: page.h1, a: page.answer });
+  for (const faq of page.faqs ?? []) items.push({ q: faq.q, a: faq.a });
+  if (!items.length) return null;
   return {
     "@type": "FAQPage",
     "@id": `${absoluteUrl(page.slug ? `/${page.slug}` : "/")}#faq`,
-    mainEntity: page.faqs.map((faq) => ({
+    mainEntity: items.map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: {
@@ -204,7 +213,7 @@ export function serviceSchema(): Json {
     name: "Community help matching",
     serviceType: "Everyday non-emergency community help",
     description:
-      "Help Me matches a person who needs everyday, non-emergency help with approved helpers nearby in the Fargo\u2013Moorhead area. It is not an emergency service and not a paid gig marketplace.",
+      "Help Me matches a person who needs everyday, non-emergency help with neighbors nearby in the Fargo\u2013Moorhead area who applied to help and were reviewed by our team. It is not an emergency service and not a paid gig marketplace.",
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: [
       { "@type": "City", name: "Fargo", address: { "@type": "PostalAddress", addressRegion: "ND", addressCountry: "US" } },
@@ -227,30 +236,6 @@ const SPEAKABLE = {
   "@type": "SpeakableSpecification",
   cssSelector: ["h1", "[data-speakable]"],
 };
-
-export function qaSchema(page: SeoPage): Json | null {
-  if (page.kind !== "question" || !page.answer) return null;
-  const url = absoluteUrl(page.slug ? `/${page.slug}` : "/");
-  return {
-    "@type": "QAPage",
-    "@id": `${url}#qa`,
-    mainEntity: {
-      "@type": "Question",
-      name: page.h1,
-      text: page.title,
-      answerCount: 1,
-      dateCreated: page.updated,
-      author: { "@id": `${SITE_URL}/#organization` },
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: page.answer,
-        url,
-        dateCreated: page.updated,
-        author: { "@id": `${SITE_URL}/#organization` },
-      },
-    },
-  };
-}
 
 export function howToSchema(page: SeoPage): Json | null {
   if (!page.steps?.length) return null;
@@ -302,7 +287,7 @@ export function graphFor(page: SeoPage): Json {
     webpageSchema(page),
     breadcrumbSchema(page),
   ];
-  for (const node of [qaSchema(page), howToSchema(page), itemListSchema(page), faqSchema(page)]) {
+  for (const node of [howToSchema(page), itemListSchema(page), faqSchema(page)]) {
     if (node) graph.push(node);
   }
   return {

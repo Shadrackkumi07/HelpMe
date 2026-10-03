@@ -1,7 +1,9 @@
 # Help Me website
 
-The public marketing site for **Help Me** — connecting people in need with trusted Helpers nearby.
-Brand line: *See Beyond.*
+The public marketing site for **Help Me**, a place to ask your block for the small stuff.
+Master line: *It starts with me.* Campaign line: *Your block is closer than you think.*
+
+Brand, voice, and banned words: see `AGENTS.md`.
 
 ## Run it
 
@@ -42,18 +44,16 @@ Production environment: `NEXT_PUBLIC_SITE_URL=https://helpme.fyi`. That is also 
 `APP_URL` in `src/lib/constants.ts` is the TestFlight join link. Every button, the navbar CTA, and both
 QR codes read it, so moving to a public App Store listing later is a one-line change.
 
-The three phone images in `public/` (`IMG_8317`–`IMG_8319`) are real screenshots of the shipping iOS app —
-Home, Live map, and Community. They already include the iOS status bar and home indicator, which is why
-`PhoneFrame` draws hardware only.
+Brand files (the frozen "me" mark, campaign posters, share card, and the "Who we are" film) live in
+`public/brand/`. The three phone mockups in the homepage's "One favor" section are `PhoneFrame` with no
+`src`, which shows an empty placeholder screen. Pass a 1206 x 2622 screenshot as `src` to fill one.
 
 ## Design
 
-Dark first, matching the app. Near-black chrome, iOS system blue for anything actionable, and the deep
-green of the app's home card for the human notes. A light theme is available from the navbar toggle;
-both palettes are defined as tokens in `src/app/globals.css`.
-
-Voice: human, observant, bold, hopeful. Show the human problem first, then show how Help Me changes it.
-No corporate or charity language.
+One theme from the brand package: Ember, Paper, and Ink, with Archivo for display and Inter for text.
+Solid fills only. Tokens and the transitions.dev motion scale are in `src/app/globals.css`. The homepage
+hero is a react-three-fiber scene (`src/components/three/BlockScene.tsx`), loaded client-side only, with
+Lenis smooth scrolling and Framer Motion scroll scenes. Full brand and voice rules: `AGENTS.md`.
 
 ## Deploying to Vercel
 

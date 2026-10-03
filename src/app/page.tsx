@@ -1,16 +1,24 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
-import Problem from "@/components/sections/Problem";
-import HowItWorks from "@/components/sections/HowItWorks";
-import Showcase from "@/components/sections/Showcase";
-import Features from "@/components/sections/Features";
-import Helpers from "@/components/sections/Helpers";
-import Safety from "@/components/sections/Safety";
-import Download from "@/components/sections/Download";
+import Moments from "@/components/sections/Moments";
+import Turn from "@/components/sections/Turn";
+import OneFavor from "@/components/sections/OneFavor";
+import SmallStuff from "@/components/sections/SmallStuff";
+import BeTheOne from "@/components/sections/BeTheOne";
+import Film from "@/components/sections/Film";
+import ZoneByZone from "@/components/sections/ZoneByZone";
+import WantIn from "@/components/sections/WantIn";
+import AroundHere from "@/components/sections/AroundHere";
 import JsonLd from "@/components/seo/JsonLd";
 import { homeGraph } from "@/lib/seo/schema";
 
+/**
+ * The homepage tells one story, top to bottom:
+ * the small moments where you need a hand → somebody nearby might say yes if
+ * they knew → one favor, start to finish → you could be the one who says yes →
+ * a clear way in.
+ */
 export default function HomePage() {
   return (
     <>
@@ -18,13 +26,15 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Problem />
-        <HowItWorks />
-        <Showcase />
-        <Features />
-        <Helpers />
-        <Safety />
-        <Download />
+        <Moments />
+        <Turn />
+        <OneFavor />
+        <SmallStuff />
+        <BeTheOne />
+        <Film />
+        <ZoneByZone />
+        <WantIn />
+        <AroundHere />
       </main>
       <Footer />
     </>

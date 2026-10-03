@@ -5,553 +5,752 @@ export const CORE_PAGES: SeoPage[] = [
   page({
     slug: "explore",
     kind: "hub",
-    title: "Explore Help Me in Fargo–Moorhead",
+    title: "Explore Help Me in Fargo-Moorhead",
     description:
-      "The full map of Help Me: cities, campuses, high schools, help topics, glossary, comparisons, guides, and local resources across Fargo, Moorhead, and West Fargo.",
-    h1: "Everything Help Me covers in Fargo–Moorhead",
-    eyebrow: "directory",
-    lead: "Start wherever you actually are. A campus. A neighborhood. A dead battery. A question about what this app is — and what it is not.",
+      "Every Help Me page in one place: cities, neighborhoods, the small stuff, guides, answers, and official resources across Fargo, West Fargo, and Moorhead.",
+    h1: "Everything Help Me covers in Fargo-Moorhead",
+    eyebrow: "Directory",
+    lead: "Start wherever you actually are. A neighborhood. A dead battery. A question about what this app is, and what it is not.",
+    answer:
+      "Help Me is a place to ask your block for the small stuff in Fargo, West Fargo, and Moorhead. This directory lists every page: cities, neighborhoods, small-favor topics, guides, plain answers, and the official numbers to call when something is more than a neighbor can handle.",
+    takeaways: [
+      "Cities and neighborhoods explain the places Help Me is launching in.",
+      "Help topics cover the small stuff: chargers, directions, jump starts, heavy lifting.",
+      "Resource pages point to police, county services, 211, and campus public safety.",
+      "Help Me is not an emergency service. In danger, call 911.",
+    ],
     priority: 0.9,
-    keywords: ["Help Me directory", "Fargo community help", "Help Me sitemap"],
+    keywords: ["Help Me directory", "Fargo community help", "Help Me Fargo-Moorhead", "ask your block"],
     sections: [
       {
         heading: "A local app, with local pages",
         body: [
-          "Help Me is built for Fargo, Moorhead, West Fargo, and the towns that share their roads, campuses, and winters. These pages exist so a person — or a search engine, or an answer engine — can find the honest version of that: how asking for help works, who is allowed to give it, and where the official campus calendars come from.",
-          "Nothing here invents a feature the iPhone app does not ship. Helping is gated by a current staff-reviewed approval. Live help shows as an approximate area. Chat is private. Meeting in public is the default. 911 is still 911.",
+          "Help Me is built for Fargo, West Fargo, and Moorhead, and for the people who share their roads, campuses, and winters. These pages exist so a person, or a search engine, or an answer engine, can find the honest version: how asking for help works, who can give it, and where the official calendars come from.",
+          "Nothing here invents a feature the iPhone app does not ship. Helping requires a current review by our team. Live requests show as a rough area about 500 meters wide. Chat is private between the two people. Meeting in public is the default. 911 is still 911.",
         ],
       },
       {
         heading: "How to use this directory",
         body: [
-          "If you live here, start with your city or campus. If you are comparing tools, start with Versus or Alternatives. If you want a definition, open the glossary. If you need an official phone number, open Resources — those pages send you to police, campus safety, 211, and county services, not to a stranger in the app.",
+          "If you live here, start with your city or neighborhood. If you want a definition, open the glossary. If you are comparing tools, start with the comparisons and alternatives. If you need an official phone number, open Resources. Those pages send you to police, campus public safety, 211, and county services, not to a stranger in the app.",
         ],
         bullets: [
-          "Places: cities, neighborhoods, campuses, and schools",
-          "Product: how it works, helpers, safety, events, community",
-          "Help topics: jump starts, walks to the car, study, tech, winter",
-          "Learn: glossary, guides, listicles, comparisons",
-          "Answers: one-question pages for the things people ask a search bar",
-          "Seasons: what this metro needs in January, August, and finals week",
+          "Places: cities, neighborhoods, and campuses.",
+          "Product: how it works, helping, ground rules, events, and community.",
+          "Help topics: the small stuff, from phone chargers to jump starts in daylight.",
+          "Learn: the glossary, guides, and lists.",
+          "Answers: one-question pages for the things people type into a search bar.",
+          "Seasons: what this metro needs in January, August, and everything between.",
+        ],
+      },
+      {
+        heading: "What this directory is not",
+        body: [
+          "It is not a place to request help. Only the iPhone app creates a request, and only helpers who have been reviewed by our team can accept one. These pages explain; the app does the asking.",
         ],
       },
     ],
-    related: ["about", "safety", "how-it-works", "questions", "seasons", "cities", "campuses", "help"],
+    related: ["about", "ground-rules", "how-it-works", "questions", "cities", "help"],
     faqs: [
       {
         q: "Is every page here a place I can request help?",
-        a: "No. City and campus pages explain the area. Resource pages point at official services. Only the iPhone app creates a live help request, and only approved helpers can accept one.",
+        a: "No. City and neighborhood pages explain the area, and resource pages point to official services. Only the iPhone app creates a request, and only reviewed helpers can accept one.",
       },
       {
-        q: "Does Help Me work outside Fargo–Moorhead?",
-        a: "The product is built for Fargo–Moorhead first. Event calendars are local. Matching is local. Surrounding-town pages describe the metro people actually drive, not a national network we do not operate.",
+        q: "Does Help Me work outside Fargo-Moorhead?",
+        a: "Help Me is launching in Fargo, West Fargo, and Moorhead first, one zone at a time. Event calendars and matching are local, and the app shows what is open near you.",
+      },
+      {
+        q: "Where do I find official phone numbers?",
+        a: "On the Resources pages. They list police, county services, 211, and campus public safety offices. For danger, call 911 or your local emergency number.",
       },
     ],
   }),
   page({
     slug: "about",
     kind: "core",
-    title: "About Help Me",
+    title: "About Help Me: ask your block",
     description:
-      "Help Me is a Fargo–Moorhead community app for everyday, non-emergency help. Approved helpers nearby can accept a request and meet you in public.",
-    h1: "About Help Me",
-    eyebrow: "product",
-    lead: "Someone near you needs a hand right now. Someone near you would give one. Help Me puts them in the same place — in Fargo, Moorhead, and West Fargo.",
+      "Help Me is a place to ask your block for the small stuff in Fargo-Moorhead. One sentence, a neighbor can say yes, and you meet in public. It starts with me.",
+    h1: "A place to ask your block for the small stuff",
+    eyebrow: "About",
+    lead: "There's a version of you that doesn't ask. The car won't start, the couch needs two more hands, and somebody on your block might have said yes. You just stopped asking.",
+    answer:
+      "Help Me is an iPhone app for neighbors in Fargo, West Fargo, and Moorhead. You ask for a hand with something small, a neighbor can say yes or no, and you meet in public. It is a place to ask, not a guarantee that someone comes. It starts with one person deciding to ask.",
+    takeaways: [
+      "Help Me is for small, everyday favors, not emergencies.",
+      "A neighbor can say yes or no, and both are fine.",
+      "Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+      "It is in beta on TestFlight for iPhone, launching one zone at a time.",
+    ],
     priority: 0.95,
-    keywords: ["about Help Me", "Help Me app", "Fargo community app", "See Beyond"],
+    keywords: ["about Help Me", "Help Me app", "Fargo community app", "It starts with me", "ask your block"],
     sections: [
       {
         heading: "The simple idea",
         body: [
-          "You post what you need in a sentence. Approved helpers around you can see it. One of them accepts. A private chat opens. You meet in public, finish the thing, and get on with your day.",
-          "That is the whole product. There is no feed to perform for, no public ranking of who needed help, and no promise that a stranger is a professional. Helpers are community members whose identity evidence a staff member has actually reviewed.",
+          "You post what you need in a sentence. A neighbor nearby can say yes. A private chat opens, you meet in a public place, you finish the thing, and you get on with your day. That is the whole product.",
+          "There is no feed to perform for, no public ranking of who needed help, and no promise that a neighbor is a professional. Help Me is built on a simple bet: neighbors still show up for each other. They just need an easy way to ask and an easy way to say yes.",
         ],
       },
       {
         heading: "Built here, for here",
         body: [
-          "Help Me is a Fargo–Moorhead app. Home shows a daily brief and upcoming official events. The map is where help happens. Community opens on campus and regional calendars from NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo, each linked to the official source.",
-          "The brand line is See Beyond — as in, notice the person who is stuck, and the person who would stop.",
+          "Help Me is a Fargo-Moorhead app. Home shows the day's brief and upcoming events. The map is where asking happens. Community opens on calendars from NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo, each linked to the source that published it.",
+          "The brand line is \"It starts with me.\" Asking a neighbor for a hand starts with one person deciding to ask, or to say yes. Under it sits the campaign line: \"Your block is closer than you think.\"",
         ],
       },
       {
         heading: "What Help Me is not",
         body: [
-          "It is not 911. It is not campus police. It is not a paid TaskRabbit-style marketplace. It is not a social network for minors. It is not a background-check company. Staff review identity evidence; that is not the same thing as a criminal background check, and we do not advertise one.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number. It is not campus police. It is not a paid marketplace for hired help. It is not a network for children. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
         ],
       },
     ],
-    related: ["how-it-works", "safety", "helpers", "for-students", "not-911", "download"],
+    related: ["how-it-works", "ground-rules", "helpers", "not-911", "cities", "download"],
     faqs: [
       {
         q: "Who makes Help Me?",
-        a: "Help Me is a product built in Fargo–Moorhead. Support is at support@helpme.fyi. A person reads it.",
+        a: "Help Me is built in Fargo-Moorhead by Help Me LLC. Support is at support@helpme.fyi, and a person reads it.",
       },
       {
         q: "Is the app free?",
-        a: "Yes. Help Me is on TestFlight for iPhone (iOS 15 or later) at no charge. It is not a paid gig marketplace.",
+        a: "Yes. Help Me is in beta on TestFlight for iPhone (iOS 15 or later) at no charge. It is not a paid marketplace for hired help.",
       },
       {
         q: "Do I need an account?",
-        a: "Yes. Requests, private chat, reports, saved events, and account deletion all belong to a person. You can create an account with email or Sign in with Apple.",
+        a: "Yes. Requests, private chat, reports, saved events, and account deletion all belong to a person. You can sign up with email or Sign in with Apple.",
       },
     ],
   }),
   page({
     slug: "how-it-works",
     kind: "core",
-    title: "How Help Me works",
+    title: "How Help Me works: ask, say yes, meet in public",
     description:
-      "Ask in a sentence. Approved helpers nearby see it. One accepts. You chat privately and meet in public. Four steps — that is the entire ask.",
+      "Ask in one sentence. A neighbor nearby can say yes. You chat privately and meet in a public place. Four steps, for the small stuff in Fargo-Moorhead.",
     h1: "How Help Me works",
-    eyebrow: "product",
-    lead: "Four steps. That is the entire ask. No audience, no performance, no explaining yourself to a timeline.",
+    eyebrow: "How it works",
+    lead: "Your phone is at 4% on the second floor of the library. One sentence, a neighbor who can say yes, and five minutes in a public place. Here is the whole thing.",
+    answer:
+      "On Help Me you post one sentence about a small favor, like a phone charger at the library. A neighbor nearby can say yes or no. If someone says yes, a private chat opens between the two of you, and you meet in a public place. Then you mark it done. A request closes on its own after two hours.",
+    takeaways: [
+      "Ask in one sentence. Details are optional.",
+      "Your request shows as a rough area about 500 meters wide, not a pin on you.",
+      "Only one live request at a time, and it closes after two hours if nobody says yes.",
+      "A private chat opens only between you and the neighbor who said yes.",
+    ],
     priority: 0.95,
-    keywords: ["how Help Me works", "request help Fargo", "approved helpers"],
+    keywords: ["how Help Me works", "ask a neighbor for help", "request help Fargo", "Help Me app steps"],
+    steps: [
+      { name: "Ask", text: "Open the map, choose I need help, pick a category, and add a sentence if you want. A public meeting place label is optional." },
+      { name: "A neighbor can say yes", text: "Helpers nearby who are online and suitable for the category can see your request. Or no. Both are fine." },
+      { name: "Meet in public", text: "When someone says yes, a private chat opens. You choose what location to share and where to meet. Public places are the default." },
+      { name: "Get on with your day", text: "Both of you confirm it is done and exact location sharing ends. Each person can leave a review." },
+    ],
     sections: [
       {
         heading: "Ask",
         body: [
-          "Open the live map and choose I need help. Pick a category — a jump start, a walk to the car, directions, a study session, tech support, lost and found — and add a sentence if you want. Details and a public meeting-place label are optional. Category-only requests are still understandable to helpers.",
+          "Open the live map and choose I need help. Pick a category, like a phone charger, directions, a jump start, a study session, tech help, or a lost item, and add a sentence if you want. Details and a public meeting-place label are optional. A category on its own is still easy for a neighbor to understand.",
         ],
       },
       {
-        heading: "Someone nearby sees it",
+        heading: "A neighbor can say yes",
         body: [
-          "Help Me privately considers approved helpers who are online, suitable for the category, recently active, and not blocked by either person. Up to ten eligible helpers may receive a short-lived offer. There is no public feed of your request.",
-          "When both people have shared matching location, offers stay within about 10 km of the requester’s rounded area. The system uses that rounded area — not a pin on you.",
+          "Help Me privately shows your request to helpers who are online, suitable for the category, recently active, and not blocked by either of you. There is no public feed of your request. Your request shows on the map as a rough area about 500 meters wide, not a pin on you.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Helping needs a current review, and a past one does not carry over.",
         ],
       },
       {
         heading: "Meet in public",
         body: [
-          "The first eligible helper to accept gets the request. A private chat opens. You decide what location you share and where you meet. Public places are the default. On supported iPhones, precision finding is available only when both people opt in.",
+          "The first eligible helper to say yes gets the request, and a private chat opens between just the two of you. You decide what location you share and where you meet. Public places are the default. On supported iPhones, precision finding is available only when both people opt in.",
         ],
       },
       {
         heading: "Get on with your day",
         body: [
-          "Both people confirm completion. Exact location sharing ends. Each person can leave a review. If nobody accepts within two hours, the request closes and you can try again. Only one live request at a time.",
+          "Both people confirm it is done, exact location sharing ends, and each person can leave a review. If nobody says yes within two hours, the request closes and you can try again. You can have only one live request at a time. You can report or block any member at any time.",
         ],
       },
     ],
-    related: ["help", "safety", "helpers", "guides/how-to-ask-for-help", "not-911"],
+    related: ["help", "ground-rules", "helpers", "guides/how-to-ask-for-help", "not-911", "cities"],
     faqs: [
       {
         q: "Can I ask without sharing my location?",
-        a: "Yes. No-location requests can still be considered by suitable approved helpers. Approximate area is the usual map view. Exact location is opt-in after someone accepts.",
+        a: "Yes. A request without a location can still be seen by suitable helpers. The map shows a rough area, and exact location is opt-in after someone says yes.",
       },
       {
         q: "Who sees my request?",
-        a: "Eligible approved helpers who receive a private offer. Not a public timeline. Not people you did not match with.",
+        a: "Helpers nearby who are online and suitable for the category, and who you have not blocked. It is not a public timeline.",
+      },
+      {
+        q: "What if nobody says yes?",
+        a: "The request closes after two hours and you can try again. For anything urgent, do not wait on the app. Call 911 or your local emergency number.",
+      },
+      {
+        q: "Can I cancel a request?",
+        a: "Yes. You can close your request any time, and you can report or block any member at any time.",
       },
     ],
   }),
   page({
-    slug: "safety",
+    slug: "ground-rules",
     kind: "core",
-    title: "Safety on Help Me",
+    title: "Help Me ground rules: location, chat, meeting",
     description:
-      "Approximate location, approved helpers only, private chat, public meeting places, and report/block tools. Help Me is not 911.",
-    h1: "Safety, said plainly",
-    eyebrow: "trust",
-    lead: "Asking for help should never cost you your privacy. Help Me is built around that sentence, and around the other sentence we will not bury: this is not emergency response.",
+      "How Help Me handles your location, who can help, private chat, and meeting in public. Plus how to report or block anyone. Help Me is not an emergency service.",
+    h1: "The ground rules, said plainly",
+    eyebrow: "Ground rules",
+    lead: "Asking for help should never cost you your privacy. Here is how location, chat, and meeting up work, and the one sentence we will not bury: Help Me is not an emergency service.",
+    answer:
+      "Help Me shows a request as a rough area about 500 meters wide, not a pin on you. A private chat opens only between you and the neighbor who said yes. Meeting in public is the default, and you can report or block any member at any time. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+    takeaways: [
+      "Your request is a rough area until you choose to share more.",
+      "Chat is private between two people.",
+      "Meet in public by default, in daylight when you can.",
+      "Report or block any member at any time. For danger, call 911.",
+    ],
     priority: 0.95,
-    keywords: ["Help Me safety", "location privacy", "approved helpers", "not 911"],
+    keywords: ["Help Me ground rules", "Help Me location privacy", "meet in public", "report and block", "not 911"],
     sections: [
       {
         heading: "Location on your terms",
         body: [
-          "Live help shows as an approximate area of about 500 meters, not a pin on you. Precise location moves only after a helper is accepted and you say yes, and only to that person. You can stop sharing. Completion ends exact sharing automatically.",
+          "Live requests show as a rough area about 500 meters wide, not a pin on you. More precise location moves only after a helper says yes and you agree, and only to that one person. You can stop sharing, and finishing the request ends exact sharing.",
         ],
       },
       {
-        heading: "Approved helpers only",
+        heading: "Who can help",
         body: [
-          "Anyone can join Help Me. Not everyone can help. A helper submits identity evidence from inside the app. A staff member reviews it. Until that approval is current, they cannot see or accept requests. An old badge grants nothing.",
-          "That is identity evidence plus a human decision. It is not a criminal background check, and we do not claim one.",
+          "Anyone can join Help Me. Helping is gated. A helper submits identity evidence from inside the app, and our team reviews it. Until that review is current, they cannot see or accept requests. A past one grants nothing.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks, and nothing on this site says otherwise.",
         ],
       },
       {
-        heading: "Meet in public, keep the tools close",
+        heading: "Private chat, public places",
         body: [
-          "Public places by default. Report or block anyone, any time. Safety actions sit one tap away in every request. If you are in danger, call 911 first — then use the app later if you still want to.",
+          "A chat opens only between you and the neighbor who said yes. Nobody else is in it. Meet in public by default: a library lobby, a store entrance, a busy lot in daylight. A doorstep is never the place to meet, and a stranger's car is never the meeting spot. For anything with a vehicle, both people stay outside it.",
+        ],
+      },
+      {
+        heading: "Tools that stay close",
+        body: [
+          "You can report or block any member at any time, from inside any request or chat. Reports go to our team privately. If something feels off, leave. Nobody is keeping score, and you do not owe anyone politeness at the cost of your comfort.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["not-911", "guides/how-to-stay-safe", "guides/location-privacy", "helpers", "resources/fargo-emergency"],
+    related: ["not-911", "guides/meeting-someone-new-in-fargo", "guides/location-privacy", "helpers", "resources/fargo-emergency"],
     faqs: [
       {
-        q: "Can a helper see my house?",
-        a: "Not from the open map. They see a coarse area. Exact location is off until you consent after they accept, and you can meet at a public place instead.",
+        q: "Can a helper see where I live?",
+        a: "Not from the open map. Helpers see a rough area. You can meet at a public place instead, and exact location is off until you agree after someone says yes.",
       },
       {
-        q: "What if something feels wrong?",
-        a: "Leave. Call emergency services if you need them. In the app, report and block. Staff can act on reports. Do not stay in a situation to be polite.",
+        q: "What if something feels wrong during a meetup?",
+        a: "Leave. If you are in danger, call 911 or your local emergency number. In the app, you can report and block, and our team reviews reports privately.",
+      },
+      {
+        q: "Does Help Me run background checks?",
+        a: "No. Helpers can apply to be reviewed by our team after they submit identity evidence. That review is not a background check, and Help Me does not run background checks.",
       },
     ],
   }),
   page({
     slug: "not-911",
     kind: "core",
-    title: "Help Me is not 911",
+    title: "Help Me is not an emergency service",
     description:
-      "Help Me is for everyday, non-emergency help in Fargo–Moorhead. If you are in danger, call 911. Here is how to tell the difference.",
-    h1: "Help Me is not 911",
-    eyebrow: "safety",
-    lead: "If you are in danger, threatened, injured, or watching a crime, call 911. Help Me will still be here for the jump start, the walk to the car, and the printer that will not print.",
+      "Help Me is for small favors in Fargo-Moorhead. If someone is in immediate danger, call 911 or your local emergency number. Here is how to tell the difference.",
+    h1: "Help Me is not an emergency service",
+    eyebrow: "Not 911",
+    lead: "If someone is in immediate danger, call 911 or your local emergency number. Help Me is for the other kind of day: the charger, the directions, the stuck jar.",
+    answer:
+      "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number. Help Me is for small, everyday favors in public places: a phone charger, directions, saving a seat, a jump start in daylight. It does not dispatch police, fire, or medical help.",
+    takeaways: [
+      "In danger, call 911 or your local emergency number first.",
+      "Help Me does not dispatch emergency services.",
+      "Help Me is for the small stuff, under five minutes, in public.",
+      "Official numbers for Fargo, West Fargo, and Moorhead are on the Resources pages.",
+    ],
     priority: 0.9,
-    keywords: ["Help Me not 911", "Fargo emergency", "when to call 911"],
+    keywords: ["Help Me not 911", "Fargo emergency number", "when to call 911", "non-emergency Fargo"],
     sections: [
       {
         heading: "Call 911 when",
-        body: ["Use official emergency services for immediate danger, medical emergencies, fire, crime in progress, or anyone who cannot wait for a neighbor."],
+        body: [
+          "Use official emergency services for immediate danger, a medical emergency, a fire, a crime in progress, or anyone who cannot wait for a neighbor. Do not wait on an app when you need an official response.",
+        ],
         bullets: [
-          "Fargo, West Fargo, and Cass County, ND: 911",
-          "Moorhead, Dilworth, and Clay County, MN: 911",
-          "Campus emergencies: use the campus police / public safety number for that school, or 911",
+          "Fargo, West Fargo, and Cass County, ND: 911.",
+          "Moorhead, Dilworth, and Clay County, MN: 911.",
+          "Campus emergencies: the school's public safety number, or 911.",
         ],
       },
       {
         heading: "Use Help Me when",
         body: [
-          "The day is stuck but nobody is in danger. A dead battery in a West Acres lot. A walk from the library after dark. A study partner in the Memorial Union. Directions to a lecture hall. A lost set of keys. Heavy boxes on move-in weekend.",
+          "The day is stuck but nobody is in danger. Your phone dies at the library. You are circling a building looking for the right door. You need someone to hold your seat. A dead battery in a busy lot in daylight. Two more hands for a couch on move-in weekend. Small, public, and over in minutes.",
         ],
       },
       {
         heading: "Official numbers live on Resources",
         body: [
-          "We keep a separate set of pages for Fargo Police, Moorhead Police, West Fargo Police, NDSU, MSUM, and Concordia public safety, 211, and county services. Those are the pages to bookmark for emergencies and official help. The app is the page for a neighbor.",
+          "We keep a separate set of pages for Fargo Police, Moorhead Police, West Fargo Police, campus public safety offices, 211, and county services. Those are the pages to bookmark for official help. The app is for a neighbor, not a dispatcher.",
         ],
       },
     ],
-    related: ["safety", "resources", "resources/fargo-emergency", "resources/ndsu-safety", "help"],
+    related: ["ground-rules", "resources", "resources/fargo-emergency", "resources/ndsu-safety", "help", "lists/emergency-numbers-fargo-moorhead"],
     faqs: [
       {
         q: "Will Help Me dispatch police?",
-        a: "No. Help Me does not dispatch emergency services. Call 911 or campus police directly.",
+        a: "No. Help Me does not dispatch emergency services. In an emergency, call 911 or your local emergency number directly.",
       },
       {
-        q: "Can I use both?",
-        a: "If it is an emergency, call 911 first. Do not wait on an app offer when you need official response.",
+        q: "Can I use both Help Me and 911?",
+        a: "If it is an emergency, call 911 first. Use Help Me later for the small stuff, if you still need a hand.",
+      },
+      {
+        q: "What is a non-emergency number in Fargo?",
+        a: "Fargo, West Fargo, and Moorhead police each have a non-emergency line. They are listed on the Resources pages, and 211 covers local services.",
       },
     ],
   }),
   page({
     slug: "helpers",
     kind: "core",
-    title: "Become a Help Me Helper",
+    title: "Be the one who says yes: helping on Help Me",
     description:
-      "Apply in the app, submit identity evidence, wait on a staff decision. Current approval is required before you can see or accept requests in Fargo–Moorhead.",
-    h1: "Helpers show up",
-    eyebrow: "helpers",
-    lead: "Anyone can join Help Me. Not everyone can help. Becoming a Helper means putting your name to it and waiting on a real decision.",
+      "Apply in the app, submit identity evidence, and get reviewed by our team before you can see or accept requests in Fargo-Moorhead. Say yes when it suits you.",
+    h1: "Be the one who says yes",
+    eyebrow: "Helping",
+    lead: "Next time, it could be you. Anyone can join Help Me. Helping means putting your name to it and waiting on a real decision by our team.",
+    answer:
+      "To help on Help Me, you apply from inside the app and submit identity evidence. Our team reviews it, and helping needs a current review before you can see or accept requests. Helpers can apply to be reviewed by our team. Help Me does not run background checks. Helping is unpaid and optional.",
+    takeaways: [
+      "Apply from Account in the iPhone app.",
+      "Our team reviews identity evidence. That is not a background check.",
+      "You say yes when it suits you, and no when it does not.",
+      "Helping is not a paid gig, and nobody is keeping score.",
+    ],
     priority: 0.9,
-    keywords: ["become a helper", "Help Me helper", "volunteer Fargo", "approved helper"],
+    keywords: ["become a helper", "Help Me helper", "volunteer Fargo", "help neighbors Fargo", "helper application"],
     sections: [
       {
         heading: "Apply from Account",
         body: [
-          "The application asks about categories you can actually help with, availability, motivation, experience, and identity evidence. Submit it from inside the app. There is no shortcut from this website.",
+          "The application asks which kinds of small favors you can actually help with, when you are available, why you want to help, and for identity evidence. You submit it from inside the app. There is no shortcut from this website.",
         ],
       },
       {
         heading: "A person reviews it",
         body: [
-          "A staff member makes the call. Not an algorithm, and not a self-serve badge. Pending, approved, rejected, expired, and resubmission are real states. Historical labels never grant access.",
+          "A member of our team makes the call. It is not an algorithm and not a self-serve badge. Applications can be pending, accepted, declined, or expired, and a past review never grants access. Helping needs a current review.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Nothing about the review is a promise about anyone's character.",
         ],
       },
       {
-        heading: "Go online when you can",
+        heading: "Say yes when it suits you",
         body: [
-          "Once approved, you choose when to go online. You can use your location for genuinely nearby offers. Going offline, leaving the app, accepting a request, or going quiet removes you from active matching. You are a neighbor, not an on-duty employee.",
+          "Once your review is current, you choose when to go online. You can use your location so requests nearby reach you. Going offline, closing the app, or going quiet takes you out of the list. You are a neighbor, not an on-duty employee, and no is always a fine answer.",
+          "Meet in public, keep it short, and keep both people outside any car. You can report or block any member at any time.",
         ],
       },
     ],
-    related: ["guides/how-to-become-a-helper", "safety", "how-it-works", "for-helpers", "for-neighbors"],
+    related: ["guides/how-to-become-a-helper", "ground-rules", "how-it-works", "for-helpers", "glossary/helper-review", "guides/how-to-be-a-good-helper"],
     faqs: [
       {
-        q: "Is this a paid job?",
-        a: "No. Help Me is not a gig marketplace. Helpers are approved community members. Do not expect a paycheck from the app.",
+        q: "Is helping a paid job?",
+        a: "No. Help Me is not a paid marketplace. Helpers are neighbors who applied and were reviewed by our team, and there is no paycheck from the app.",
       },
       {
-        q: "Does approval last forever?",
-        a: "No. Approval has to be current. An old label grants nothing.",
+        q: "Does the review last forever?",
+        a: "No. Helping needs a current review. A past one does not grant access.",
+      },
+      {
+        q: "Does Help Me run background checks?",
+        a: "No. Helpers can apply to be reviewed by our team after they submit identity evidence. Help Me does not run background checks.",
       },
     ],
   }),
   page({
     slug: "community",
     kind: "core",
-    title: "Community on Help Me",
+    title: "Community on Help Me: what's happening in Fargo-Moorhead",
     description:
-      "Campus and regional events first, then local posts. Help Me Community is what is happening in Fargo–Moorhead — attributed to the official source.",
-    h1: "Fargo–Moorhead is happening",
-    eyebrow: "community",
-    lead: "Community opens on Events, on purpose. The first feeling should be that this place has things going on — not that you walked into a blank social feed.",
+      "Calendars from NDSU, MSUM, Concordia, M State, West Fargo, and Ticketmaster Fargo, then local posts. Community is what's happening here, linked to the source.",
+    h1: "Fargo-Moorhead is happening",
+    eyebrow: "Community",
+    lead: "Community opens on Events, on purpose. The first feeling should be that this place has things going on, not that you walked into a blank feed.",
+    answer:
+      "Help Me Community opens on events from a fixed list of sources: NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo. Every event is linked to the source that published it. Signed-in people can also post, comment, and react, with report and block tools on everything.",
+    takeaways: [
+      "Events come from six named sources and always link back.",
+      "Help Me does not invent events.",
+      "Signed-in people can post, comment, and react.",
+      "Report and block tools apply everywhere.",
+    ],
     priority: 0.85,
-    keywords: ["Help Me community", "Fargo events", "campus events Fargo-Moorhead"],
+    keywords: ["Help Me community", "Fargo events", "Fargo-Moorhead events", "NDSU events", "West Fargo events"],
     sections: [
       {
         heading: "Events, attributed",
         body: [
-          "Official calendars from NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo are normalized on the server and shown with the source that published them. Tap through for the official page. We do not invent events.",
+          "Calendars from NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo are normalized on the server and shown with the source that published them. Tap through for the official page. Attribution is not affiliation or endorsement, and Help Me does not invent events to fill the screen.",
         ],
       },
       {
-        heading: "Updates",
+        heading: "Updates from people here",
         body: [
-          "Signed-in people can post, comment, and react. Posts persist. Standard report and block tools apply. This is a local conversation, not a national social network.",
+          "Signed-in people can post, comment, and react. Posts persist. The standard report and block tools apply, and our team reviews reports privately. This is a local conversation, not a national social network.",
+        ],
+      },
+      {
+        heading: "What you will see",
+        body: [
+          "Home shows a short rail of what is coming up. Community is the full calendar, with filters for each source and a search box. You can save an event, open the official page, and see which source published it. Nothing is sorted by popularity, and nothing is ranked by who showed up the most.",
+          "Posts from people here sit beside the events. They are local and short. Report and block tools are on every post, and you can leave a conversation any time you want.",
+        ],
+      },
+      {
+        heading: "Why it opens on events",
+        body: [
+          "A neighborhood is not an address. It is the people who show up. Events are the easiest proof that people are showing up: a game, a market, a lecture, a show. Starting there makes asking for a hand feel less like walking into an empty room.",
         ],
       },
     ],
-    related: ["events", "campuses", "lists/fargo-moorhead-campuses", "guides/campus-events-fargo-moorhead"],
+    related: ["events", "cities", "guides/campus-events-fargo-moorhead", "lists/fargo-events-guide", "campuses", "how-it-works"],
     faqs: [
       {
         q: "Are events from Help Me or from the schools?",
-        a: "Campus and regional listings come from official sources. Help Me caches and attributes them. Always open the official link for the last word.",
+        a: "Events come from official sources like NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo. Help Me caches and attributes them. Open the official link for the last word.",
+      },
+      {
+        q: "Can I post in Community?",
+        a: "Yes, once you are signed in. You can post, comment, and react, and you can report or block anyone at any time.",
+      },
+      {
+        q: "Does Help Me invent events?",
+        a: "No. If a source is empty or down, the app says so instead of filling the screen with made-up listings.",
       },
     ],
   }),
   page({
     slug: "events",
     kind: "core",
-    title: "Fargo–Moorhead events in Help Me",
+    title: "Fargo-Moorhead events: official calendars in Help Me",
     description:
-      "Official NDSU, MSUM, Concordia, M State, West Fargo, and Ticketmaster Fargo calendars in one place, always linked to the source.",
+      "NDSU, MSUM, Concordia, M State, West Fargo, and Ticketmaster Fargo calendars in one place, each linked to the source that published it. Never made up.",
     h1: "Campus and city calendars, in one place",
-    eyebrow: "events",
-    lead: "Four campuses, a city calendar, and regional Ticketmaster listings — cached, attributed, and never made up.",
+    eyebrow: "Events",
+    lead: "Four colleges, a city calendar, and regional Ticketmaster listings, cached, attributed, and never made up.",
+    answer:
+      "Help Me shows events from a fixed list of sources: NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo. Every event links back to the source that published it. If a source is empty or down, the app says so. Help Me does not scrape random sites or invent listings.",
+    takeaways: [
+      "Six sources, always attributed.",
+      "Ticketmaster listings cover regional shows within about 35 miles of Fargo.",
+      "If a feed is empty or down, the app says so.",
+      "To add an event, publish it on the official calendar.",
+    ],
     priority: 0.85,
-    keywords: ["NDSU events", "MSUM events", "Concordia events", "Fargo events", "West Fargo calendar"],
+    keywords: ["NDSU events", "MSUM events", "Concordia events", "Fargo events", "West Fargo calendar", "Fargo-Moorhead events"],
     sections: [
       {
         heading: "Where the events come from",
         body: [
           "NDSU publishes through MyNDSU. MSUM and Concordia publish campus calendars. M State contributes academic dates. West Fargo publishes a public community calendar. Ticketmaster listings cover regional shows within about 35 miles of Fargo.",
-          "Help Me does not scrape random websites. The importer is a fixed list of official sources. If a feed is empty or down, the app says so. It does not invent a concert to fill the rail.",
+          "Help Me does not scrape random websites. The importer reads a fixed list of official sources. If a feed is empty or down, the app says so, rather than inventing a concert to fill the rail.",
         ],
       },
       {
         heading: "What you can do in the app",
         body: [
-          "Filter by source, search, save, and open the official page. Home shows a short rail of upcoming campus and regional events. Community is the full calendar.",
+          "Filter by source, search, save, and open the official page. Home shows a short rail of upcoming events. Community is the full calendar. Attribution is not affiliation or endorsement.",
+        ],
+      },
+      {
+        heading: "What attribution means",
+        body: [
+          "Every event shows the name of the source and links to its page. That keeps the facts where they belong. If a time or a room changes, the source is the place that updates first, and the link takes you there. Showing a source is not the same as being affiliated with it, and Help Me does not claim to be.",
+        ],
+      },
+      {
+        heading: "Adding an event",
+        body: [
+          "You cannot submit an event on this website. Publish it on the official campus or city calendar and Help Me will pick it up from that source. That keeps the app honest and keeps one place as the source of truth.",
         ],
       },
     ],
-    related: ["community", "campuses/ndsu", "campuses/msum", "campuses/concordia", "guides/campus-events-fargo-moorhead"],
+    related: ["community", "campuses/ndsu", "campuses/msum", "campuses/concordia", "guides/campus-events-fargo-moorhead", "lists/fargo-events-guide"],
     faqs: [
       {
-        q: "Can I submit an event from this website?",
+        q: "Can I submit an event on this website?",
         a: "No. Publish it on the official campus or city calendar. Help Me will pick it up from that source.",
       },
-    ],
-  }),
-  page({
-    slug: "for-students",
-    kind: "audience",
-    title: "Help Me for Fargo–Moorhead students",
-    description:
-      "For NDSU, MSUM, Concordia, and M State students: everyday campus help, official events, and a way to ask without posting to a group chat.",
-    h1: "For students in Fargo–Moorhead",
-    eyebrow: "who it's for",
-    lead: "New campus, new winter, new parking lot. You do not have to perform the ask in a GroupMe of two hundred people.",
-    keywords: ["NDSU help", "MSUM help", "Concordia student app", "campus help Fargo"],
-    sections: [
       {
-        heading: "What students actually ask for",
-        body: [
-          "Directions to a lecture hall. A study buddy. Wi-Fi and printer problems. A walk from the library. A jump start after a night class. Move-in boxes. None of that is an emergency. All of it can ruin a Tuesday.",
-        ],
+        q: "Which sources does Help Me use for events?",
+        a: "NDSU, MSUM, Concordia College, M State, West Fargo, and Ticketmaster Fargo. Each event links back to the source that published it.",
       },
       {
-        heading: "Events without another app",
-        body: [
-          "Campus calendars already exist. Help Me puts NDSU, MSUM, Concordia, and M State next to each other so a weekend in this metro is visible in one place, with the official link still attached.",
-        ],
-      },
-      {
-        heading: "Campus safety still exists",
-        body: [
-          "NDSU, MSUM, and Concordia run official public safety and escort programs. Use those for official campus safety. Help Me is a neighbor with a current approval, not a substitute for campus police.",
-        ],
-      },
-    ],
-    related: ["campuses", "campuses/ndsu", "campuses/msum", "campuses/concordia", "help/study-buddy", "resources/ndsu-safety"],
-    faqs: [
-      {
-        q: "Do I need a .edu email?",
-        a: "You can join with email or Sign in with Apple. A .edu address is not a helper badge and does not skip staff review.",
+        q: "What happens if a calendar is down?",
+        a: "The app says so instead of filling the screen. Help Me does not invent events.",
       },
     ],
   }),
   page({
     slug: "for-helpers",
     kind: "audience",
-    title: "Help Me for people who want to help",
+    title: "Help Me for people who already say yes",
     description:
-      "If you live in Fargo, Moorhead, or West Fargo and want to help neighbors with everyday tasks, apply to become an approved Helper.",
+      "If you already jump a neighbor's car or point a lost visitor to the right door, here is how to help through Help Me in Fargo, West Fargo, and Moorhead.",
     h1: "For people who would have stopped anyway",
-    eyebrow: "who it's for",
-    lead: "You already jump strangers’ cars. You already walk people to the parking ramp. Help Me is how the person who needs that finds you without shouting it down Broadway.",
-    keywords: ["volunteer Fargo", "help neighbors Fargo", "become a helper"],
+    eyebrow: "Who it's for",
+    lead: "You already point lost people to the right door. You already stop for the dead battery. Help Me is how the person who needs that finds you without calling out across a parking lot.",
+    answer:
+      "Help Me is for people in Fargo, West Fargo, and Moorhead who would stop for a small favor anyway. You apply from the app and our team reviews your identity evidence. Helpers can apply to be reviewed by our team. Help Me does not run background checks. Helping is unpaid, and you say yes only when it suits you.",
+    takeaways: [
+      "Apply in the app, then wait on a review by our team.",
+      "Help Me is not a paid marketplace.",
+      "You choose when to go online and what to say yes to.",
+      "Meet in public, and report or block any member at any time.",
+    ],
+    keywords: ["volunteer Fargo", "help neighbors Fargo", "become a helper", "help a neighbor Moorhead"],
     sections: [
       {
-        heading: "This is not a side hustle listing",
+        heading: "This is not a side-hustle listing",
         body: [
-          "If you want paid gigs, TaskRabbit and similar marketplaces exist. Help Me is community help. Apply, get a current staff decision, go online when you can, meet in public, mark it done.",
+          "If you want paid gigs, marketplaces for hired help exist. Help Me is neighbors helping neighbors. You apply, get a current review by our team, go online when you can, meet in public, and mark it done. Nobody is keeping score, and nobody is tracking how fast you say yes.",
+        ],
+      },
+      {
+        heading: "What a typical yes looks like",
+        body: [
+          "A phone charger at a library. Directions to a building across campus. Holding a seat for ten minutes. A jump start in a busy lot in daylight. Two more hands for a couch. These are small, public, and quick. You stay in control of when you are available and which categories you take on.",
+          "Both people stay outside the car for anything involving a vehicle. A doorstep is never the place to meet, and a stranger's car is never the meeting spot.",
+        ],
+      },
+      {
+        heading: "The review, plainly",
+        body: [
+          "Helping is gated. A member of our team reviews your identity evidence, and the review has to be current. It is not a background check, and Help Me does not run background checks. You can report or block any member at any time.",
         ],
       },
     ],
-    related: ["helpers", "guides/how-to-become-a-helper", "safety", "help"],
+    related: ["helpers", "guides/how-to-become-a-helper", "ground-rules", "help", "guides/how-to-be-a-good-helper"],
     faqs: [
       {
-        q: "Can I help only on my campus?",
-        a: "You choose categories and when you are online. Nearby matching uses recent activity and, when you allow it, location. It is not a campus-only shift board.",
+        q: "Can I help only near my own neighborhood?",
+        a: "You choose categories and when you are online. Requests nearby reach you based on recent activity and, when you allow it, your location.",
+      },
+      {
+        q: "Do helpers get paid?",
+        a: "No. Help Me is not a paid marketplace. Helpers are neighbors who applied and were reviewed by our team.",
+      },
+      {
+        q: "Can I say no to a request?",
+        a: "Always. No is a fine answer. Nobody is keeping score.",
       },
     ],
   }),
   page({
     slug: "for-neighbors",
     kind: "audience",
-    title: "Help Me for Fargo–Moorhead neighbors",
+    title: "Help Me for Fargo-Moorhead neighbors",
     description:
-      "A quieter way than Facebook groups or Nextdoor to ask for a jump start, a walk, or a hand — from approved people nearby.",
+      "A quieter way than a group feed to ask for a jump start, directions, or a hand. One sentence, a neighbor can say yes, and you meet in public.",
     h1: "For neighbors, not for an audience",
-    eyebrow: "who it's for",
-    lead: "The Facebook group will argue for forty comments before anyone picks up a jumper cable. Help Me sends the ask to people who are actually allowed to help.",
-    keywords: ["Fargo neighbors", "West Fargo help", "Moorhead community"],
+    eyebrow: "Who it's for",
+    lead: "The group thread will debate for forty comments before anyone picks up a jumper cable. Help Me sends your ask to people nearby who can actually say yes.",
+    answer:
+      "Help Me is for neighbors in Fargo, West Fargo, and Moorhead who want to ask for a small favor without posting to a feed. You write one sentence, helpers nearby can say yes or no, and a private chat opens between the two of you. You meet in public. There is no audience and nothing to perform for.",
+    takeaways: [
+      "No feed, no audience, nothing to perform for.",
+      "Meet in public. You never need to post your address.",
+      "Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+      "For danger, call 911.",
+    ],
+    keywords: ["Fargo neighbors", "West Fargo neighbors", "Moorhead neighbors", "ask your block"],
     sections: [
       {
         heading: "Why this is not a neighborhood feed",
         body: [
-          "Nextdoor and Facebook groups are broadcasts. Help Me is a request with a gated offer list. Your dead battery does not need a public debate about which auto shop is best.",
+          "Group feeds are broadcasts. Help Me is a request shown to helpers nearby, answered by one person, and finished in a private chat. A dead battery does not need a public debate about which shop is best. It needs a charger and ten minutes.",
+        ],
+      },
+      {
+        heading: "Your address stays yours",
+        body: [
+          "You never need to post where you live. Your request shows as a rough area about 500 meters wide. Meet in a public place, share more location only if you want to, and only after someone says yes. You can report or block any member at any time.",
+        ],
+      },
+      {
+        heading: "What a good ask looks like",
+        body: [
+          "Short and specific. Anyone have a USB-C charger? Library, second floor. Where is the entrance to the north building? Two more hands for a futon, Saturday morning, ground floor. You do not owe anyone an explanation, and nobody owes you a yes. A no is a fine answer, and it costs nothing.",
+          "Pick a public place for the handoff, and say where. Daylight helps. Keep it quick, say thanks, and mark it done.",
+        ],
+      },
+      {
+        heading: "Say yes, too",
+        body: [
+          "The same app that lets you ask lets you answer. If you would stop for a small favor anyway, apply to be a helper. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
         ],
       },
     ],
-    related: ["cities/fargo", "cities/moorhead", "cities/west-fargo", "vs/nextdoor", "vs/facebook-groups"],
+    related: ["cities/fargo", "cities/moorhead", "cities/west-fargo", "how-it-works"],
     faqs: [
       {
-        q: "Do I have to post my address?",
-        a: "No. Meet in public. Share exact location only after a helper accepts, and only if you want to.",
+        q: "Do I have to share my address?",
+        a: "No. Meet in public. Share more location only after someone says yes, and only if you want to.",
+      },
+      {
+        q: "Is it like posting in a neighborhood group?",
+        a: "No. There is no public feed. Your request is shown to helpers nearby and answered by one person.",
+      },
+      {
+        q: "What if I need urgent help?",
+        a: "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
       },
     ],
   }),
   page({
     slug: "for-newcomers",
     kind: "audience",
-    title: "New to Fargo–Moorhead",
+    title: "New to Fargo-Moorhead? Ask your block",
     description:
-      "Moving to Fargo, Moorhead, or West Fargo? How Help Me fits a first winter, a first campus week, and a city you do not know yet.",
+      "Moving to Fargo, West Fargo, or Moorhead? How Help Me fits your first winter, your first week on campus, and a city you do not know yet.",
     h1: "New in town, on purpose",
-    eyebrow: "who it's for",
-    lead: "Fargo–Moorhead is easy to like and easy to get stuck in — especially in January, especially if your family is eight hours away.",
-    keywords: ["moving to Fargo", "new to NDSU", "new to Moorhead"],
+    eyebrow: "Who it's for",
+    lead: "Fargo-Moorhead is easy to like and easy to get stuck in, especially in January, and especially if your family is eight hours away. You do not know who to ask yet. That is the point.",
+    answer:
+      "If you are new to Fargo, West Fargo, or Moorhead, Help Me is a place to ask the people around you for small things: directions, a phone charger, two more hands for a move, a jump start in daylight. A neighbor can say yes or no, and you meet in public. It is not an emergency service.",
+    takeaways: [
+      "Two states, two counties, one metro: Cass County, ND and Clay County, MN.",
+      "Help Me is for adults and for small, public favors.",
+      "Official numbers live on the Resources pages.",
+      "In danger, call 911 or your local emergency number.",
+    ],
+    keywords: ["moving to Fargo", "new to Fargo", "new to Moorhead", "new to West Fargo", "new to NDSU"],
     sections: [
       {
         heading: "What to learn first",
         body: [
-          "There are two states here. Fargo and West Fargo sit in Cass County, North Dakota. Moorhead and Dilworth sit in Clay County, Minnesota. 911 still works; county services do not copy-paste across the river.",
-          "NDSU is in Fargo. MSUM and Concordia are in Moorhead. M State has a Moorhead campus. Downtown Broadway is the walkable night strip. West Acres is the big mall. Winter is not a metaphor.",
+          "There are two states here. Fargo and West Fargo sit in Cass County, North Dakota. Moorhead and Dilworth sit in Clay County, Minnesota. 911 works on both sides, but county services do not copy over the river.",
+          "NDSU is in Fargo. MSUM and Concordia are in Moorhead, and M State has a Moorhead campus. Downtown Broadway is the walkable core. West Acres is the big mall. Winter is not a metaphor, so a plan for a dead battery is a good first plan.",
+        ],
+      },
+      {
+        heading: "What a first week looks like",
+        body: [
+          "You circle a building twice looking for the right door. Your phone dies at the library. You need two more hands for the futon. These are the moments Help Me is built for. A neighbor who has been lost in the same hallway can say yes in a minute.",
+          "Meet in public, in daylight when you can, and keep the handoff short.",
+        ],
+      },
+      {
+        heading: "Where the official help is",
+        body: [
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number. For non-emergency needs, the Resources pages list police, county services, 211, and campus public safety offices by city.",
         ],
       },
     ],
-    related: ["guides/new-to-fargo", "cities/fargo", "campuses", "lists/things-to-do-in-fargo", "help/local-guide"],
+    related: ["guides/new-to-fargo", "cities/fargo", "cities", "lists/things-to-do-in-fargo", "help/local-guide", "resources"],
     faqs: [
       {
-        q: "Is Help Me only for students?",
-        a: "No. Students are a large part of this metro. Neighbors, newcomers, and families use the same app. Helping still requires a current staff approval.",
+        q: "Is Help Me only for college students?",
+        a: "No. Help Me is for adults across Fargo-Moorhead: neighbors, newcomers, and families. Helping still requires a current review by our team.",
+      },
+      {
+        q: "Do I need to know anyone to use it?",
+        a: "No. That is the point. You ask in one sentence, and a neighbor nearby can say yes.",
+      },
+      {
+        q: "What should I do first in a Fargo winter?",
+        a: "Keep a charger and a plan for a dead battery, and know the official non-emergency numbers. The seasons pages cover winter in detail.",
       },
     ],
   }),
   page({
     slug: "for-parents",
     kind: "audience",
-    title: "Help Me for parents in Fargo–Moorhead",
+    title: "Help Me for parents in Fargo-Moorhead",
     description:
-      "What Help Me is — and is not — if your student lives near NDSU, MSUM, Concordia, or a Fargo–Moorhead high school. Adult community help, not a youth network.",
+      "What Help Me is, and is not, if your adult child lives near Fargo, West Fargo, or Moorhead. An adult community app for small favors, not an emergency service.",
     h1: "For parents who want the honest version",
-    eyebrow: "who it's for",
-    lead: "Help Me is an adult community help app. It is not a school-issued safety program and not a place designed for children to meet strangers.",
-    keywords: ["parents NDSU", "Fargo student safety", "Help Me for families"],
+    eyebrow: "Who it's for",
+    lead: "Your kid is eight hours away and just texted that their phone died at the library. Help Me is for exactly that kind of small problem. Here is the honest version of what it is.",
+    answer:
+      "Help Me is an app for adults in Fargo, West Fargo, and Moorhead to ask neighbors for small favors in public places. It is not an emergency service, not campus police, and not a network for children. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+    takeaways: [
+      "Help Me is for adults, not for children.",
+      "It covers small, public favors, not emergencies.",
+      "Campus public safety offices are the right call for campus emergencies.",
+      "Members can report or block anyone at any time.",
+    ],
+    keywords: ["parents Fargo", "parents NDSU", "Help Me for families", "college parents Fargo"],
     sections: [
       {
-        heading: "If your student is in college",
+        heading: "If your adult child is in college here",
         body: [
-          "Point them at official campus safety first: NDSU Police, MSUM Public Safety, Concordia Public Safety. Help Me can cover jump starts, directions, and study help. It does not replace those offices.",
+          "Point them to official campus public safety first: NDSU Police, MSUM Public Safety, or Concordia Public Safety. Help Me can cover small things like directions, a phone charger, a hand with a heavy box, or a jump start in daylight. It does not replace those offices, and it does not dispatch anyone.",
         ],
       },
       {
-        heading: "If you are looking at high school pages",
+        heading: "How meetings work",
         body: [
-          "Those pages describe the community around each school — activities, nearby neighborhoods, winter car help for adults, official resources. Help Me is not a K–12 student meetup product. High school students should use official school and family channels.",
+          "Meeting in public is the default. The map shows a rough area about 500 meters wide, not a pin on anyone. A private chat opens only between two people. Both people stay outside any car. A doorstep is never the place to meet. You can report or block any member at any time.",
+        ],
+      },
+      {
+        heading: "What to be honest about",
+        body: [
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks, and nothing here is a guarantee about any person. Help Me is an adult community app. It is not designed for children to meet people they do not know.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["safety", "not-911", "schools", "resources/ndsu-safety", "for-students"],
+    related: ["ground-rules", "not-911", "resources/ndsu-safety", "resources/msum-safety", "resources/concordia-safety", "helpers"],
     faqs: [
       {
         q: "Is Help Me for minors?",
-        a: "Help Me is a community app for adults in Fargo–Moorhead. Helpers submit identity evidence. It is not a youth program.",
-      },
-    ],
-  }),
-  page({
-    slug: "for-campuses",
-    kind: "audience",
-    title: "Help Me for Fargo–Moorhead campuses",
-    description:
-      "How Help Me treats official NDSU, MSUM, Concordia, and M State calendars, and how campus help requests stay distinct from campus police.",
-    h1: "For the campuses this metro actually has",
-    eyebrow: "who it's for",
-    lead: "We ingest official calendars. We do not pretend to be campus public safety. Those two sentences are the whole partnership posture.",
-    keywords: ["campus partnership Fargo", "NDSU community app", "MSUM events"],
-    sections: [
-      {
-        heading: "Calendars",
-        body: [
-          "Fixed official feeds. Source name and official URL stay visible. Ticketmaster is regional and credentialed on the server. If a source is pending or down, the product says so.",
-        ],
+        a: "No. Help Me is a community app for adults in Fargo-Moorhead. It is not designed for children to meet people they do not know.",
       },
       {
-        heading: "Help requests",
-        body: [
-          "Campus categories exist — tech support, escort-style walks, directions, study buddies — as community help, not as a contracted campus service. Official escorts and police remain official.",
-        ],
+        q: "Does Help Me replace campus public safety?",
+        a: "No. For campus emergencies, call the school's public safety number or 911. Help Me is for small, everyday favors.",
       },
-    ],
-    related: ["campuses", "events", "resources/ndsu-safety", "resources/msum-safety", "resources/concordia-safety"],
-    faqs: [
       {
-        q: "Can a campus post events directly into Help Me?",
-        a: "Publish them on the official campus calendar we already ingest. That keeps attribution honest.",
+        q: "Does Help Me run background checks on helpers?",
+        a: "No. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
       },
     ],
   }),
   page({
     slug: "sitemap-directory",
     kind: "hub",
-    title: "HTML sitemap",
+    title: "Help Me site index",
     description:
-      "A human-readable index of every public Help Me page: product, places, help topics, glossary, comparisons, guides, and resources.",
-    h1: "HTML sitemap",
-    eyebrow: "index",
-    lead: "Every public URL on helpme.fyi, grouped the way the site is actually organized. Machines should use /sitemap.xml. People can use this.",
-    priority: 0.4,
+      "A readable index of every public Help Me page: cities, neighborhoods, help topics, guides, answers, and official resources for Fargo-Moorhead.",
+    h1: "Site index",
+    eyebrow: "Index",
+    lead: "Every public page on helpme.fyi, grouped the way the site is actually organized. Machines read the XML sitemap. People can use this.",
+    priority: 0.3,
     changeFrequency: "weekly",
+    noindex: true,
     sections: [
       {
         heading: "Why this page exists",
         body: [
-          "Search engines get XML. Answer engines get /llms.txt. Humans get a directory that does not require a view-source. If a page is public, it should be reachable from here without guessing the URL.",
+          "Search engines read the XML sitemap. Answer engines read the machine summary. People deserve a table of contents that does not require guessing a URL. If a page is public, it should be reachable from here.",
         ],
       },
     ],
     related: ["explore", "about"],
     faqs: [
       {
-        q: "Is this the same as sitemap.xml?",
-        a: "No. /sitemap.xml is the machine index submitted to Google Search Console. This page is a readable table of contents.",
+        q: "Is this the same as the XML sitemap?",
+        a: "No. The XML sitemap is the machine index. This page is a readable table of contents.",
       },
     ],
   }),

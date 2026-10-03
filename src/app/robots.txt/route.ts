@@ -17,7 +17,6 @@ export function GET() {
     aiRules,
     `Sitemap: ${SITE_URL}/sitemap.xml`,
     `# RSS: ${SITE_URL}/feed.xml`,
-    `Host: ${SITE_URL}`,
     "",
   ].join("\n");
 

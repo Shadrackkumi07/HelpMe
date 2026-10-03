@@ -2,10 +2,8 @@ import Link from "next/link";
 import type { SeoPage } from "@/lib/seo/types";
 
 function labelFromSlug(part: string): string {
-  return part
-    .split("-")
-    .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
+  const s = part.replace(/-/g, " ");
+  return s.length ? s[0].toUpperCase() + s.slice(1) : s;
 }
 
 export default function Breadcrumbs({ page }: { page: SeoPage }) {
@@ -21,17 +19,19 @@ export default function Breadcrumbs({ page }: { page: SeoPage }) {
   });
 
   return (
-    <nav aria-label="Breadcrumb" className="text-xs text-muted">
-      <ol className="flex flex-wrap items-center gap-1.5">
+    <nav aria-label="Breadcrumb" className="text-sm font-semibold text-ink">
+      <ol className="flex flex-wrap items-center gap-2">
         {crumbs.map((crumb, index) => {
           const last = index === crumbs.length - 1;
           return (
-            <li key={crumb.href} className="flex items-center gap-1.5">
+            <li key={crumb.href} className="flex items-center gap-2">
               {index > 0 && <span aria-hidden>/</span>}
               {last ? (
-                <span className="text-ink/70">{crumb.label}</span>
+                <span aria-current="page" className="line-clamp-1 max-w-[22ch] font-normal">
+                  {crumb.label}
+                </span>
               ) : (
-                <Link href={crumb.href} className="transition-colors hover:text-ink">
+                <Link href={crumb.href} className="underline decoration-2 underline-offset-4 hover:no-underline">
                   {crumb.label}
                 </Link>
               )}

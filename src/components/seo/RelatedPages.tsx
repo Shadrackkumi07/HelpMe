@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Arrow } from "@/components/AppBadge";
 import { getPage, STATIC_ROUTES } from "@/lib/content/registry";
 
 export default function RelatedPages({ slugs }: { slugs: string[] }) {
@@ -17,22 +18,23 @@ export default function RelatedPages({ slugs }: { slugs: string[] }) {
     .filter((p) => p != null);
   if (!pages.length) return null;
   return (
-    <section className="mt-14" aria-labelledby="related-heading">
-      <h2 id="related-heading" className="font-display text-2xl font-semibold text-ink">
+    <section className="mt-20" aria-labelledby="related-heading">
+      <h2 id="related-heading" className="display-md">
         Keep going
       </h2>
-      <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {pages.map((page) => (
           <li key={page.slug}>
             <Link
               href={`/${page.slug}`}
-              className="block rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-line-strong"
+              className="t-learn group flex h-full flex-col items-start rounded-[1.5rem] border-2 border-ink p-6 transition-colors duration-[250ms] hover:bg-ember"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-                {page.eyebrow}
-              </p>
-              <p className="font-display mt-2 text-base font-semibold text-ink">{page.h1}</p>
-              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">{page.description}</p>
+              <span className="text-sm font-bold">{page.eyebrow}</span>
+              <span className="subhead mt-3 text-2xl">{page.h1}</span>
+              <span className="mt-3 line-clamp-2 text-base font-normal leading-[1.5]">{page.description}</span>
+              <span className="mt-auto pt-5">
+                <Arrow />
+              </span>
             </Link>
           </li>
         ))}

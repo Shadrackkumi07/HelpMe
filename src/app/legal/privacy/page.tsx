@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
+import { dedicatedMetadata } from "@/lib/seo/metadata";
 import LegalPage from "@/components/LegalPage";
 import { SUPPORT_EMAIL } from "@/lib/constants";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = dedicatedMetadata({
+  path: "/legal/privacy",
   title: "Privacy Policy",
   description:
     "How Help Me handles accounts, approximate location, private chat, reports, and account deletion during the TestFlight beta.",
-  alternates: { canonical: "/legal/privacy" },
-};
+});
 
 export default function PrivacyPage() {
   return (
-    <LegalPage eyebrow="legal" title="Privacy Policy" updated="August 2026">
+    <LegalPage eyebrow="Legal" title="Privacy Policy" updated="August 2026">
       <p>
         Help Me handles real accounts, approximate locations, and safety reports. This summary describes how the
         app is built today, during the TestFlight beta. A full policy will replace it before the public App Store

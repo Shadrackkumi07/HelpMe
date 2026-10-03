@@ -1,48 +1,58 @@
 import Image from "next/image";
 
 /**
- * A CSS iPhone bezel around a real App screenshot. The screenshots already carry
- * their own status bar and home indicator, so the frame stays pure hardware.
+ * A solid Ink iPhone bezel. Pass `src` to show a real app screen (WebP, 1206:2622); leave it out
+ * and the screen stays an empty Paper placeholder, ready for screenshots.
+ * Screenshots are expected at 1206 x 2622 with their own status bar.
+ *
+ * No glow, no gradient bezel, no shadow: the brand is solid fills only.
  */
 export default function PhoneFrame({
   src,
-  alt,
+  alt = "",
+  label = "Screen coming soon",
   preload = false,
   className = "",
 }: {
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
+  /** Shown on the empty placeholder screen. */
+  label?: string;
   preload?: boolean;
   className?: string;
 }) {
   return (
-    <div className={`relative w-[248px] shrink-0 sm:w-[270px] ${className}`}>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -inset-x-6 bottom-0 top-12 -z-10 rounded-[3rem] opacity-70 blur-3xl"
-        style={{ background: "radial-gradient(ellipse at 50% 60%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 70%)" }}
-      />
-      <div
-        className="rounded-[2.9rem] bg-gradient-to-b from-[#3a3d44] via-[#17191d] to-[#0a0b0d] p-[3px] shadow-lift"
-      >
-        <div className="rounded-[2.75rem] bg-black p-[7px]">
-          <div className="relative overflow-hidden rounded-[2.25rem] bg-black" style={{ aspectRatio: "1206 / 2622" }}>
+    <div className={`relative w-[236px] shrink-0 sm:w-[264px] ${className}`}>
+      <div className="rounded-[2.9rem] bg-ink p-[9px]">
+        <div
+          className="relative overflow-hidden rounded-[2.3rem] bg-paper"
+          style={{ aspectRatio: "1206 / 2622" }}
+        >
+          {src ? (
             <Image
               src={src}
               alt={alt}
               fill
-              sizes="(min-width: 640px) 270px, 248px"
+              sizes="(min-width: 640px) 264px, 236px"
               preload={preload}
               draggable={false}
               className="select-none object-cover"
             />
-          </div>
+          ) : (
+            <div aria-hidden className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
+              <span className="absolute left-1/2 top-3 h-[26px] w-[34%] -translate-x-1/2 rounded-full bg-ink" />
+              {/* eslint-disable-next-line @next/next/no-img-element -- static brand file, decorative */}
+              <img src="/brand/help-me-tile-rounded-transparent-512.png" alt="" className="h-14 w-14" draggable={false} />
+              <span className="text-xs font-bold text-ink">{label}</span>
+              <span className="absolute bottom-2.5 left-1/2 h-[5px] w-[36%] -translate-x-1/2 rounded-full bg-ink" />
+            </div>
+          )}
         </div>
       </div>
       {/* side buttons */}
-      <span aria-hidden className="absolute -left-[3px] top-[22%] h-9 w-[3px] rounded-l bg-white/15" />
-      <span aria-hidden className="absolute -left-[3px] top-[32%] h-14 w-[3px] rounded-l bg-white/15" />
-      <span aria-hidden className="absolute -right-[3px] top-[28%] h-16 w-[3px] rounded-r bg-white/15" />
+      <span aria-hidden className="absolute -left-[3px] top-[20%] h-8 w-[3px] rounded-l bg-ink" />
+      <span aria-hidden className="absolute -left-[3px] top-[29%] h-14 w-[3px] rounded-l bg-ink" />
+      <span aria-hidden className="absolute -right-[3px] top-[26%] h-16 w-[3px] rounded-r bg-ink" />
     </div>
   );
 }

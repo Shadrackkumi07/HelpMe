@@ -1,45 +1,51 @@
 import type { Metadata } from "next";
+import { dedicatedMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import LegalPage from "@/components/LegalPage";
 import JsonLd from "@/components/seo/JsonLd";
+import FaqList from "@/components/seo/FaqList";
 import { REGION } from "@/lib/constants";
 import { SITE_URL } from "@/lib/seo/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = dedicatedMetadata({
+  path: "/support/help",
   title: "Help Center",
   description:
-    "What Help Me is, what you can ask for, who sees your location, how to become a Helper, and how to delete your account.",
-  alternates: { canonical: "/support/help" },
-};
+    "What Help Me is, what you can ask for, who sees your location, how to become a helper, and how to delete your account.",
+});
 
 const FAQS = [
   {
     q: "What is Help Me?",
-    a: "A way to ask for practical help from people nearby, and a way to give it. You post what you need, an approved Helper nearby can accept, and the two of you sort it out in a private chat.",
+    a: "A place to ask your block for the small stuff. You post what you need, a neighbor who helps through Help Me can say yes, and the two of you sort it out in a private chat.",
   },
   {
     q: "What can I ask for?",
-    a: "Everyday things. A jump start, directions, a walk to your car, a hand carrying something, a study session. If it stops your day but is not an emergency, it belongs here.",
+    a: "Quick favors in public places. A phone charger at the library, directions to the right door, someone to watch your seat, a jump start in daylight, two more hands for a couch. If it isn't an emergency and it's small, it belongs here.",
   },
   {
     q: "Is this an emergency service?",
-    a: "No. Help Me does not replace 911 or any official emergency service. If you are in danger, call emergency services first.",
+    a: "No. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
   },
   {
     q: "Who can see where I am?",
-    a: "Live help shows on the map as an approximate area, not a pin on you. Precise location is shared only after a Helper is accepted and you consent to share it, and only with that person.",
+    a: "Live requests show on the map as a rough area, not a pin on you. More precise location is shared only after a helper accepts and you agree to share it, and only with that person.",
   },
   {
-    q: "How do I become a Helper?",
-    a: "Apply from inside the app. You submit identity evidence and a staff member reviews it. Until that approval is granted you cannot see or accept requests, and approval has to be current — a past label does not carry over.",
+    q: "How do I become a helper?",
+    a: "Apply from inside the app. You submit identity evidence and our team reviews it. Helping needs a current review; a past one does not carry over. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+  },
+  {
+    q: "What if something feels off?",
+    a: "You can report or block any member at any time, from inside the request or the chat. Meet in public places.",
   },
   {
     q: "Where does Help Me work?",
-    a: `Help Me is built for ${REGION} first, including campus and regional event calendars from local sources.`,
+    a: `Help Me is launching in ${REGION} first, one zone at a time: Fargo, West Fargo, and Moorhead.`,
   },
   {
     q: "How do I get the app?",
-    a: "Help Me is on TestFlight for iPhone (iOS 15 or later). The Get the app button anywhere on this site takes you straight there.",
+    a: "Help Me is in beta on TestFlight for iPhone (iOS 15 or later). Every Join the beta button on this site takes you straight there.",
   },
   {
     q: "How do I delete my account?",
@@ -60,22 +66,14 @@ export default function HelpCenterPage() {
   };
 
   return (
-    <LegalPage eyebrow="support" title="Help Center">
+    <LegalPage eyebrow="Support" title="Help Center">
       <JsonLd data={faqGraph} />
       <p>
         The questions we hear most. Not here?{" "}
-        <Link href="/support/contact" className="font-semibold text-ink underline-offset-4 hover:underline">
-          Contact us
-        </Link>{" "}
-        — a person answers.
+        <Link href="/support/contact">Contact us</Link>. A person answers.
       </p>
-      <div className="mt-4 flex flex-col gap-3">
-        {FAQS.map((faq) => (
-          <div key={faq.q} className="rounded-2xl border border-line bg-surface p-6">
-            <p className="font-display text-base font-semibold text-ink">{faq.q}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{faq.a}</p>
-          </div>
-        ))}
+      <div className="-mt-12">
+        <FaqList faqs={FAQS} />
       </div>
     </LegalPage>
   );

@@ -1,319 +1,506 @@
 import { page } from "./page";
 import type { SeoPage } from "@/lib/seo/types";
 
+/**
+ * The small stuff. Every page here is a favor a neighbor can finish in a few
+ * minutes, in a public place, in daylight when possible. Nothing that needs a
+ * license, a tow truck, or 911 belongs here.
+ */
 export const HELP_PAGES: SeoPage[] = [
   page({
     slug: "help",
     kind: "hub",
-    title: "Everyday things you can ask for on Help Me",
+    title: "The small stuff you can ask for on Help Me",
     description:
-      "Jump starts, walks to the car, study, tech, snow, and move-in — everyday non-emergency help in Fargo–Moorhead. Neighbors, not professionals.",
-    h1: "Everyday things you can ask for",
-    eyebrow: "help",
-    lead: "The day stalls. Nobody is dying. You still need a hand. These pages are the honest list of what that looks like in Fargo–Moorhead — and the equally honest list of what a neighbor is not.",
+      "A phone charger, directions, a jump start in daylight, two more hands for a couch. The everyday favors Help Me is for in Fargo, West Fargo, and Moorhead.",
+    h1: "The small stuff you can ask for",
+    eyebrow: "The small stuff",
+    lead: "The day stalls. Nobody is in danger. You still need a hand. These pages are the honest list of what that looks like in Fargo-Moorhead, and the equally honest list of what a neighbor is not.",
+    answer:
+      "Help Me is for small favors that take under five minutes in a public place: a phone charger, directions, a jump start in daylight, saving a seat, two more hands for something heavy. It is not for emergencies, repairs that need a license, or anything that needs a tow truck. Those have their own official help.",
+    takeaways: [
+      "One sentence is enough to ask. Details are optional.",
+      "Favors are small, public, and done in minutes.",
+      "Nothing that needs a license, a tow, or 911 belongs here.",
+      "Help Me is not an emergency service.",
+    ],
     priority: 0.9,
-    keywords: ["ask for help Fargo", "jump start Fargo", "community help Moorhead", "Help Me categories"],
+    keywords: ["ask for help Fargo", "jump start Fargo", "small favors Fargo-Moorhead", "ask a neighbor Moorhead", "Help Me favors"],
     sections: [
       {
         heading: "A sentence is enough",
         body: [
-          "Open the live map, choose I need help, pick a category, add a sentence if you want. Category-only still makes sense to a helper. Details and a public meeting-place label are optional. The ask goes to approved helpers nearby — not to a timeline, not to a Facebook argument about which shop is cheapest.",
-          "Matching considers helpers who are online, suitable for the category, recently active, and not blocked. Up to ten eligible people may get a short-lived private offer. The first to accept gets the request. A 1:1 chat opens. You meet in public. Both people mark it done.",
+          "Open the map, choose I need help, pick a category, and add a sentence if you want. A category on its own still makes sense to a neighbor. Details and a public meeting-place label are optional. Your request is not posted to a timeline or argued over in a group thread. It is shown to helpers nearby who are online and suitable for the category.",
+          "When someone says yes, a private chat opens between the two of you, you meet in public, and both of you mark it done. A request closes on its own after two hours, and you can have only one live request at a time.",
         ],
       },
       {
         heading: "Neighbors, not a marketplace",
         body: [
-          "Help Me is not 911, not campus police, not a paid gig board, and not a locksmith dispatch. A jump start is someone with cables. A locked-out ask is a neighbor, not a professional entry. A flat tire is a spare and a jack, not a shop. If you need a contractor, hire a contractor.",
+          "Help Me is not an emergency service, not campus police, not a paid marketplace, and not a locksmith or tow dispatch. A jump start is someone with cables. A flat tire is a spare and a jack, not a shop. If you need a contractor, hire a contractor.",
         ],
         bullets: [
-          "Cars: jump starts, dead batteries, winter stalls, flats, a shove out of snow",
-          "Walking: a walk to the car, a safety walk, a community walk — not an official campus escort",
-          "Campus life: study, tech, wifi, printing, directions, lost and found",
-          "Hands: heavy lifting, move-in, snow, a local guide, extra eyes, transit questions",
+          "Cars: a jump start in daylight, a flat tire, a shove out of snow.",
+          "Walking: a walk to the car, a walk with someone, directions.",
+          "Around town: a phone charger, a seat held, a lost item, a local guide.",
+          "Hands: something heavy, a move-in, groceries up the stairs, tech help.",
         ],
       },
       {
-        heading: "The rules do not change by category",
+        heading: "The ground rules do not change by topic",
         body: [
-          "Approved helpers only — identity evidence plus a current staff decision, not a background check. Live help shows as a coarse area of about 500 meters. Exact location is opt-in after accept. Report, block, and 911 still exist. You can delete your account from the app by typing DELETE. iPhone, TestFlight, iOS 15+. Questions: support@helpme.fyi.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Requests show as a rough area about 500 meters wide, and exact location is opt-in after someone says yes. You can report or block any member at any time, and delete your account from inside the app by typing DELETE. Help Me is in beta on TestFlight for iPhone (iOS 15 or later).",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["how-it-works", "safety", "cities/fargo", "for-students", "not-911", "helpers"],
+    related: ["how-it-works", "ground-rules", "cities/fargo", "not-911", "helpers", "questions/what-can-i-ask-for"],
     faqs: [
       {
         q: "Is this a list of paid services?",
-        a: "No. Help Me is not a gig marketplace. Helpers are approved community members. Do not expect a professional, a invoice, or an ETA.",
+        a: "No. Help Me is not a paid marketplace. Helpers are neighbors who applied and were reviewed by our team. Do not expect a professional, an invoice, or an arrival time.",
       },
       {
         q: "What if my need is not listed?",
-        a: "If it is everyday, non-emergency, and a neighbor could actually do it, ask in a sentence. If it needs a license, a tow truck, or 911, use that instead.",
+        a: "If it is small, public, and a neighbor could actually do it, ask in a sentence. If it needs a license, a tow truck, or 911, use that instead.",
       },
       {
-        q: "What if nobody accepts?",
-        a: "A request stays open up to two hours, then it closes. You can try again. Only one live request at a time.",
+        q: "What if nobody says yes?",
+        a: "A request stays open up to two hours and then closes. You can try again. Only one live request at a time.",
       },
     ],
   }),
   page({
     slug: "help/jump-start",
     kind: "help",
-    title: "Jump start help in Fargo–Moorhead",
+    title: "Jump start help in Fargo-Moorhead, in daylight",
     description:
-      "Ask an approved neighbor for jumper cables in Fargo, Moorhead, or West Fargo. Public lots. Not a mechanic, not a tow, and not 911.",
+      "Ask a neighbor with jumper cables in Fargo, West Fargo, or Moorhead. Busy public lots, both people outside the car. Not a mechanic, a tow, or 911.",
     h1: "A jump start, from someone nearby",
-    eyebrow: "cars",
-    lead: "The click. The dash that looks like a rumor of electricity. West Acres, an NDSU ramp, a Davies lot after a game — Fargo winters kill batteries in public. That is a neighbor with cables, not a career.",
-    keywords: ["jump start Fargo", "jumper cables Moorhead", "dead car West Fargo", "jump start NDSU"],
+    eyebrow: "The small stuff",
+    lead: "The click. The dash that looks like a rumor of electricity. A Fargo winter kills batteries in public lots all over the metro, and the fix is usually a neighbor with cables, not a career.",
+    answer:
+      "To get a jump start through Help Me, post jump start with a sentence naming a busy public lot. A neighbor nearby can say yes, and you meet in daylight when you can, with both people outside the car. A neighbor is not a mechanic or a tow service, so call one if the car still will not start.",
+    takeaways: [
+      "Meet in a busy public lot, in daylight when you can.",
+      "Both people stay outside the car, and follow the owner's manual.",
+      "A neighbor is not a mechanic. If the jump does not work, call a shop or a tow.",
+      "A car in a traffic lane or anyone hurt is a 911 call.",
+    ],
+    priority: 0.8,
+    keywords: ["jump start Fargo", "dead battery Fargo", "jumper cables Fargo", "dead battery Moorhead", "jump start West Fargo"],
     sections: [
       {
         heading: "Where cars actually sit down",
         body: [
-          "West Acres lots. Broadway street parking after a show. NDSU ramps after a night class. MSUM and Concordia lots on the Minnesota side. 13th Avenue. Veterans Boulevard. A helper is someone with cables who can meet you in that public place — not a mobile mechanic, not a tow, not a shop that will sell you a battery at 9 p.m.",
+          "West Acres lots. Broadway street parking after a show. A campus ramp after a night class. The lots along 13th Avenue and Veterans Boulevard. A Moorhead lot off campus. A neighbor with cables can meet you in a public place like that and be done in ten minutes, long before a tow truck could arrive.",
+          "A dead battery is the classic January ask, and also the classic August ask after a door was left ajar overnight. Cold makes it more common, not exclusive.",
         ],
       },
       {
         heading: "How the ask works",
         body: [
-          "Post jump start. Add a sentence if you want — “West Acres, north lot” is plenty. Approved helpers nearby may get a private offer. The first to accept opens a 1:1 chat. You decide what location you share. Meet in public. Both people confirm when the engine is running, or when it is not and you are calling someone with a truck.",
+          "Post jump start. Add a sentence if you want, like West Acres, north lot. A helper nearby can say yes, and a private chat opens between the two of you. You decide what location to share. Meet in public, keep both people outside the car, and check the owner's manual for how to connect cables on your vehicle.",
+          "When the engine runs, mark it done. If it does not, that is a battery or alternator problem, and the next step is a shop or a tow, not a longer conversation in a cold lot.",
+        ],
+        bullets: [
+          "Name a busy public lot, not an alley or a quiet court.",
+          "Daylight is better than dark, and a lit entrance is better than a far row.",
+          "Keep a jump pack in the trunk if you can. It makes you independent of anyone.",
         ],
       },
       {
         heading: "What this is not",
         body: [
-          "It is not roadside assistance you pay for. It is not a guarantee. If the car is in a traffic lane, if someone is hurt, if it is more than a battery, that is 911 or a tow — not a stranger with cables. Helpers hold a current staff-reviewed approval. That is not a background check.",
+          "It is not roadside assistance you pay for, and nobody promises to arrive. If the car is in a traffic lane, if someone is hurt, or if it is more than a battery, call 911 or a tow, not an app. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
         ],
       },
     ],
-    related: [
-      "help/dead-battery",
-      "help/winter-car-help",
-      "help/flat-tire",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-      "campuses/ndsu",
-    ],
+    related: ["help/winter-car-help", "help/flat-tire", "how-it-works", "guides/how-to-jump-start-a-car", "cities/fargo", "neighborhoods/west-acres"],
     faqs: [
       {
         q: "Do I have to share my exact parking stall?",
-        a: "No. The map shows a coarse area of about 500 meters. Exact location is off until a helper accepts and you consent. A public lot label is enough.",
+        a: "No. The map shows a rough area about 500 meters wide. Exact location stays off until someone says yes and you agree. A public lot label is enough.",
       },
       {
         q: "What if the jump does not work?",
-        a: "Then it was never a cables problem. Call a tow or a shop. The helper is not obligated to diagnose an alternator in a West Acres wind.",
+        a: "Then it was not only a cables problem. Call a shop or a tow. A neighbor is not obligated to diagnose an alternator in a windy lot.",
       },
       {
-        q: "Is this available at NDSU?",
-        a: "Campus lots are a common place for the ask. NDSU Police still handle campus emergencies. Help Me is community help.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/dead-battery",
-    kind: "help",
-    title: "Dead battery help in Fargo–Moorhead",
-    description:
-      "January batteries in Fargo lots — West Acres, campus ramps, 13th Avenue. Ask a neighbor with cables. Not a shop, not a tow dispatch.",
-    h1: "The battery gave up. That is a whole category.",
-    eyebrow: "cars",
-    lead: "In this metro, “dead battery” is not a metaphor. It is January, a parking lot, and a car that was fine at lunch. You do not need a Facebook thread. You need cables and a public place to use them.",
-    keywords: ["dead battery Fargo", "car battery winter ND", "West Acres dead battery", "battery help Moorhead"],
-    sections: [
-      {
-        heading: "Cold is the mechanic you did not hire",
-        body: [
-          "A Fargo battery that is tired in October is fiction in January. West Acres, the 45th Street strip, NDSU ramps, a Moorhead lot off 8th Street — the car sits, the cold works, the dash dies. Jump-start is the verb. Dead battery is the reason you are still in the lot when the mall lights change.",
-        ],
-      },
-      {
-        heading: "Ask a neighbor, not a parts counter",
-        body: [
-          "Post the ask. An approved helper with cables may accept. Chat is private. Meet in public. They are not selling you an Optima out of a trunk, and they are not a warranty. If the jump takes and the car dies again at the next light, that is a shop. If nobody is in danger, it is still not 911.",
-        ],
-      },
-      {
-        heading: "Location stays coarse until you say yes",
-        body: [
-          "Live help shows as an approximate area, not a pin on your stall. After someone accepts, you can share more, or you can keep meeting at a vestibule and walking out together. Report and block stay one tap away. Account delete is yours: type DELETE in Account.",
-        ],
-      },
-    ],
-    related: [
-      "help/jump-start",
-      "help/winter-car-help",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-      "cities/moorhead",
-      "campuses/ndsu",
-    ],
-    faqs: [
-      {
-        q: "Is dead battery different from jump start?",
-        a: "Same winter, same cables. This page is for the people who searched the diagnosis. The ask in the app is still everyday car help from a neighbor.",
-      },
-      {
-        q: "Will a helper bring a new battery?",
-        a: "Do not expect that. A neighbor may have cables. A parts store sells batteries. Help Me is not AutoZone.",
-      },
-      {
-        q: "What about a battery on campus?",
-        a: "Community help is allowed. Official campus police are still the right call for emergencies. NDSU, MSUM, and Concordia public safety are not this app.",
+        q: "Is it okay to ask at a campus lot?",
+        a: "Yes. Campus lots are a common place for it. Campus police still handle campus emergencies. Help Me is for small favors between neighbors.",
       },
     ],
   }),
   page({
     slug: "help/winter-car-help",
     kind: "help",
-    title: "Winter car help in Fargo–Moorhead",
+    title: "Winter car help in Fargo-Moorhead: doors, snow, batteries",
     description:
-      "Frozen doors, packed-in stalls, dead batteries, a shove out of snow. Fargo winter car help from neighbors — not a plow, not a tow.",
+      "Frozen doors, a car packed in by snow, a windshield that will not clear, a dead battery. Winter car help from neighbors in Fargo, West Fargo, and Moorhead.",
     h1: "Winter car help, which is just Fargo from November on",
-    eyebrow: "winter",
-    lead: "The season here is a mechanical fact. Doors freeze. Tires sit in ruts. Batteries quit. You need a human in a hat, not a metaphor about resilience.",
-    keywords: ["winter car help Fargo", "frozen car North Dakota", "snowed in Fargo", "Fargo winter battery"],
+    eyebrow: "The small stuff",
+    lead: "The season here is a mechanical fact. Doors freeze. Tires sit in ruts. Batteries quit. You need a person in a hat, not a metaphor about resilience.",
+    answer:
+      "Winter car help on Help Me means small favors from a neighbor: cables for a dead battery, a shovel or a push for a car stuck in a stall, a second pair of gloves for a frozen door. It is not a plow, a tow, or a thawing service. If anyone is in danger or the car is in a lane, call 911.",
+    takeaways: [
+      "Cables, a shovel, a push, and ten minutes are what a neighbor offers.",
+      "A neighbor is not a plow, a tow, or a professional thawing service.",
+      "Meet in a public lot, even when the weather is the story.",
+      "A car in a traffic lane or anyone in danger is a 911 call.",
+    ],
+    priority: 0.78,
+    keywords: ["winter car help Fargo", "frozen car door Fargo", "car stuck in snow Fargo", "frozen windshield", "dead battery winter Moorhead"],
     sections: [
       {
-        heading: "What winter actually does to a car here",
+        heading: "What winter does to a car here",
         body: [
-          "A packed stall behind Scheels. A door that will not unstick on 13th Avenue. An NDSU ramp that looks plowed until you try to leave it. A West Fargo driveway that is a neighbor job, not a city contract. Winter car help is the bundle: cables, a shove, a second pair of gloves, someone who will stand there while you try the key again.",
+          "A packed-in stall behind a shopping center. A door that will not unstick on 13th Avenue. A campus ramp that looks plowed until you try to leave it. A driveway in West Fargo that is a neighbor job, not a city contract. A windshield with ice you cannot get off with a card. Winter car help is the bundle: cables, a shovel, a push, a second pair of gloves, and someone who will stand with you while you try the key again.",
+        ],
+        bullets: [
+          "A dead battery on the coldest morning.",
+          "A car stuck in a stall or a rut.",
+          "A frozen door or a windshield that will not clear.",
+          "A shove out of a drift in a public lot.",
         ],
       },
       {
         heading: "A neighbor is not a fleet",
         body: [
-          "Help Me does not send a plow. It does not send a tow. It does not thaw a lock with professional tools. An approved helper nearby might have cables, a shovel, or ten minutes. If the car is in a lane, if someone is trapped, if it is actually dangerous, call 911. If you need a contracted plow, call a contracted plow.",
+          "Help Me does not send a plow, a tow, or a professional with thawing tools. A neighbor nearby might have cables, a shovel, or ten minutes. If the car is in a lane, if someone is trapped, or if it is actually dangerous, call 911. If you need a contracted plow or a tow, call one.",
+          "Keep the basics in the trunk: a jump pack, a shovel, a scraper, a blanket, and warm gloves. Those turn most winter car problems into your own problem to solve.",
         ],
       },
       {
         heading: "Meet in public, even when the weather is the story",
         body: [
-          "A grocery vestibule is still better than a dark residential street. The map stays coarse until you consent after accept. Chat is 1:1. Helpers need a current staff-reviewed approval. iPhone via TestFlight, iOS 15+. support@helpme.fyi if the app itself is the thing that froze.",
+          "A grocery entrance is still better than a dark residential street. Your request shows as a rough area about 500 meters wide until someone says yes. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/jump-start",
-      "help/dead-battery",
-      "help/snow-help",
-      "help/flat-tire",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-    ],
+    related: ["help/jump-start", "help/snow-help", "help/flat-tire", "guides/what-to-keep-in-your-car-in-winter", "seasons/winter-in-fargo-moorhead", "cities/fargo"],
     faqs: [
       {
         q: "Can someone dig my car out?",
-        a: "They might shovel or push. They are not a plow service and not on a clock. Say what you actually need in a sentence.",
+        a: "A neighbor might shovel or push. They are not a plow service and not on a clock. Say what you need in one sentence.",
       },
       {
         q: "Is a frozen door a Help Me ask?",
-        a: "If a neighbor can reasonably help and nobody is in danger, yes. If you are locked in a dangerous situation, call 911.",
+        a: "If a neighbor can reasonably help and nobody is in danger, yes. If someone is trapped in a dangerous situation, call 911.",
       },
       {
         q: "Does this work in Moorhead and West Fargo too?",
-        a: "Yes. The winter does not stop at the river or at Sheyenne Street. Matching is local to who is online.",
+        a: "Yes. Winter does not stop at the river or at Sheyenne Street. Help Me is local to the whole metro and shows your request to helpers nearby.",
+      },
+    ],
+  }),
+  page({
+    slug: "help/flat-tire",
+    kind: "help",
+    title: "Flat tire help in Fargo-Moorhead: spare, jack, tire pressure",
+    description:
+      "A flat tire or low tire pressure in Fargo, West Fargo, or Moorhead: a neighbor with a jack, a pump, and a few minutes in a public lot. Not a shop or a tow.",
+    h1: "A flat tire, in a lot where you can stop",
+    eyebrow: "The small stuff",
+    lead: "You hear it before you see it. Then you are in a grocery lot with a tire that looks like a deflated balloon and a spare you have never touched. Two more hands can change a small afternoon.",
+    answer:
+      "Help Me can connect you with a neighbor who has a jack, a pump, or a few minutes in a public lot to help with a flat tire or low tire pressure. Do it in a busy, lit lot, not on a road shoulder. A neighbor is not a tire shop or a tow truck, so call one if the tire is beyond a spare.",
+    takeaways: [
+      "Change a tire in a lot, not on a road shoulder or a traffic lane.",
+      "A neighbor with a jack, a pump, or a gauge can save an hour.",
+      "Cold lowers tire pressure, so check it when the weather drops.",
+      "A neighbor is not a shop. Call one if the spare is not enough.",
+    ],
+    priority: 0.65,
+    keywords: ["flat tire Fargo", "tire pressure Fargo winter", "low tire pressure cold", "flat tire Moorhead", "spare tire help"],
+    sections: [
+      {
+        heading: "Where flats happen",
+        body: [
+          "A grocery lot. A campus ramp. The edge of a parking row at a mall. A driveway after a nail from a construction season. The good news about a lot is that it is flat, lit, and public, which is where a flat tire should be dealt with. The bad news is that most people have not changed a tire in years, and a spare can be as flat as the tire it replaces.",
+        ],
+        bullets: [
+          "Two more hands to loosen stubborn lug nuts.",
+          "A jack that actually works on your car.",
+          "A portable pump or a gauge for low pressure.",
+          "Someone who has done this before and knows the order.",
+        ],
+      },
+      {
+        heading: "Low pressure in the cold",
+        body: [
+          "Cold air lowers tire pressure, which is why the warning light often comes on during the first deep freeze of the season. Check your pressure against the number on the sticker inside your driver's door, not the number on the tire. A neighbor with a gauge or a pump can help, and a gas station air pump is usually nearby.",
+        ],
+      },
+      {
+        heading: "What a neighbor cannot do",
+        body: [
+          "A neighbor is not a tire shop or a tow service, and nobody promises a tire fix. If the tire is damaged beyond a spare, or if you are on a road shoulder, call roadside assistance or a tow, and call 911 if you are in a traffic lane. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
+    ],
+    related: ["help/jump-start", "help/winter-car-help", "help/bike-help", "guides/what-to-do-if-your-car-wont-start", "cities/fargo", "how-it-works"],
+    faqs: [
+      {
+        q: "Can a neighbor change my tire on the side of the road?",
+        a: "No. Do not change a tire on a road shoulder or in a traffic lane. Move to a busy, lit lot if you can, and call roadside assistance or 911 if you cannot.",
+      },
+      {
+        q: "Why does my tire light come on in the cold?",
+        a: "Cold air lowers tire pressure. Check it against the number on the sticker inside the driver's door, and add air if it is low.",
+      },
+      {
+        q: "What if the spare is flat too?",
+        a: "Then it needs a shop or a tow. A neighbor can keep you company while you call, but cannot fix a damaged spare.",
+      },
+    ],
+  }),
+  page({
+    slug: "help/bike-help",
+    kind: "help",
+    title: "Bike help in Fargo-Moorhead: pump, chain, a quick fix",
+    description:
+      "A flat bike tire, a slipped chain, a loose seat in Fargo or Moorhead. A neighbor with a pump and a few minutes. Not a bike shop, and not a repair service.",
+    h1: "Bike help, from someone with a pump",
+    eyebrow: "The small stuff",
+    lead: "Fargo-Moorhead is flat, which is why so many people bike, and why a flat tire on the way to class feels so unfair. Sometimes all you need is someone with a pump.",
+    answer:
+      "Help Me is a place to ask a neighbor for quick bike help in Fargo, West Fargo, or Moorhead: a pump for a flat tire, a hand with a slipped chain, a seat that needs tightening. Meet in a public place. A neighbor is not a bike shop, so a bent wheel or a broken part needs a real repair.",
+    takeaways: [
+      "A pump, a hex key, or a minute of experience is what a neighbor offers.",
+      "Meet in a public place, like a bike rack by a library or a union.",
+      "A bent wheel or a broken part needs a bike shop.",
+      "In danger, call 911.",
+    ],
+    priority: 0.5,
+    keywords: ["bike help Fargo", "flat bike tire Moorhead", "bike pump Fargo", "bike repair near me Fargo", "bike chain help"],
+    sections: [
+      {
+        heading: "The ordinary bike problems",
+        body: [
+          "A tire that went soft overnight. A chain that slipped off the gear. A seat that dropped. A brake that rubs. Most of these take five minutes and a small tool, and most people do not carry the tool. A neighbor who bikes probably does.",
+          "The metro is built for riding more than most places its size: the Red River trails, the paths along the river, and campus routes between NDSU and the Minnesota side. A quick fix keeps a commute going.",
+        ],
+        bullets: [
+          "A pump for a soft tire.",
+          "A hex key for a loose seat or handlebar.",
+          "A hand putting a chain back on a gear.",
+          "A second opinion on whether it needs a shop.",
+        ],
+      },
+      {
+        heading: "Where to meet",
+        body: [
+          "Meet in a public place with other people around, like a bike rack at a library, a union, or a store. Your request shows as a rough area about 500 meters wide, and you choose when to share more. Bikes and winter do not mix well, so in deep cold the right answer is often a bus, not a repair.",
+        ],
+      },
+      {
+        heading: "What a neighbor is not",
+        body: [
+          "A neighbor is not a bike shop. A bent wheel, a broken derailleur, or anything that needs parts is a shop job. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
+    ],
+    related: ["help/flat-tire", "help/directions", "help/transit-help", "cities/fargo", "cities/moorhead", "how-it-works"],
+    faqs: [
+      {
+        q: "Can someone repair my bike for me?",
+        a: "A neighbor might help with a pump or a loose seat. Anything bigger is a bike shop job, and nobody on Help Me is paid or promises a repair.",
+      },
+      {
+        q: "Where should we meet for a bike fix?",
+        a: "A public spot with people around, like a bike rack at a library or a union. You choose the label.",
+      },
+      {
+        q: "Does this work in winter?",
+        a: "It can, but deep cold is hard on bikes and riders. Often the better answer is a bus. See the MATBUS page for routes.",
+      },
+    ],
+  }),
+  page({
+    slug: "help/snow-help",
+    kind: "help",
+    title: "Snow help in Fargo-Moorhead: shoveling, berms, a push",
+    description:
+      "A berm behind your car, a long sidewalk, a driveway after the plow: snow help from neighbors in Fargo, West Fargo, and Moorhead. Not a plow or a service.",
+    h1: "Snow help, when the plow leaves a gift",
+    eyebrow: "The small stuff",
+    lead: "The plow came through and left a wall of packed snow behind your car. It is not a big job. It is a heavy one, and a second shovel makes it half as long.",
+    answer:
+      "Help Me can connect you with a neighbor who has a shovel and a few minutes to help with snow in Fargo, West Fargo, or Moorhead: a berm behind a car, a walk to the door, a push out of a rut. A neighbor is not a plow service or a snow-removal contractor, and nobody is on a clock.",
+    takeaways: [
+      "A shovel and ten minutes is what a neighbor offers.",
+      "A neighbor is not a plow or a snow-removal contractor.",
+      "Heavy snow is hard on backs, so ask for a hand early.",
+      "In danger, call 911.",
+    ],
+    priority: 0.6,
+    keywords: ["snow help Fargo", "shovel snow Fargo", "plow berm Fargo", "snow removal help Moorhead", "digging out Fargo"],
+    sections: [
+      {
+        heading: "The jobs that fit",
+        body: [
+          "The berm the plow leaves behind a parked car. The last stretch of a walk to the door. A push for a car stuck in a rut. Most of these are small, heavy, and over faster with two people. They are the kind of job people used to do for each other without thinking about it.",
+          "After a big storm, the whole metro digs out at the same time. A neighbor who finishes early might have a few minutes for someone else, and a request can reach them without anyone having to knock on a door.",
+        ],
+        bullets: [
+          "Shoveling a berm behind a car.",
+          "Clearing a short walk or a set of steps.",
+          "A push for a car stuck in a rut.",
+          "Two more hands for heavy, wet snow.",
+        ],
+      },
+      {
+        heading: "Safety on the shovel",
+        body: [
+          "Heavy snow is hard on the heart and back, especially for older adults. If a job is more than a few minutes, hire a contractor. If someone is having chest pain or trouble breathing, call 911. A request for a hand is a good use of Help Me. A request for something that could hurt you is not.",
+        ],
+      },
+      {
+        heading: "Meet in public, work in public",
+        body: [
+          "Snow help often happens in public lots, shared driveways, or on a street in front of your own door. Your request shows as a rough area about 500 meters wide until someone says yes. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
+    ],
+    related: ["help/winter-car-help", "guides/digging-out-after-a-snowstorm", "seasons/winter-in-fargo-moorhead", "for-seniors", "cities/fargo", "how-it-works"],
+    faqs: [
+      {
+        q: "Will someone plow my driveway?",
+        a: "No. Help Me is not a plow or snow-removal service. A neighbor might shovel a small area with you, for free, if they have a few minutes.",
+      },
+      {
+        q: "Is it okay to ask if I have health problems?",
+        a: "Yes, and it is a good reason to ask. Heavy snow is hard on the heart. If you are having chest pain or trouble breathing, call 911.",
+      },
+      {
+        q: "Where does this happen?",
+        a: "Usually in a public lot or in front of your own place. You choose whether to share more of your location after someone says yes.",
       },
     ],
   }),
   page({
     slug: "help/locked-out",
     kind: "help",
-    title: "Locked out in Fargo–Moorhead — neighbors, not locksmiths",
+    title: "Locked out in Fargo-Moorhead: neighbors, not locksmiths",
     description:
-      "Locked out of a car or building in Fargo? A neighbor might help. They are not a locksmith, and there is no promise they can get you in.",
+      "Locked out of a car or building in Fargo, West Fargo, or Moorhead? A neighbor might keep you company while you call. They are not a locksmith.",
     h1: "Locked out. A neighbor is not a locksmith.",
-    eyebrow: "cars",
-    lead: "Keys in the ignition, you on the sidewalk, Broadway going by like nothing happened. Someone nearby might have a spare minute. That is not the same thing as a licensed locksmith, and we will not pretend it is.",
-    keywords: ["locked out Fargo", "locked out of car Fargo", "locksmith vs neighbor", "keys locked in car ND"],
+    eyebrow: "The small stuff",
+    lead: "Keys in the ignition, you on the sidewalk, Broadway going by like nothing happened. Someone nearby might have a spare minute. That is not the same as a licensed locksmith, and nobody pretends it is.",
+    answer:
+      "If you are locked out in Fargo, West Fargo, or Moorhead, a neighbor on Help Me might keep you company, lend you a phone charger, or help you reach a locksmith, but cannot be expected to open your car or door. For a locked car with a child or pet inside, call 911 immediately.",
+    takeaways: [
+      "A neighbor is not a locksmith and should not force a lock.",
+      "Company, a charger, and a phone call are fair asks.",
+      "A child or pet in a locked car is a 911 call.",
+      "Apartment locks belong to the landlord or a locksmith.",
+    ],
+    priority: 0.55,
+    keywords: ["locked out Fargo", "locked out of car Fargo", "locksmith Fargo", "locked out Moorhead", "keys locked in car"],
     sections: [
       {
         heading: "Say the limitation before the hope",
         body: [
-          "A Help Me helper is an approved community member. They might hold a spare house key you already trusted them with. They might give you a ride to a spare. They might stand with you while you call a locksmith. They might have no way into that car, and that is the usual case. Do not post this ask expecting professional entry tools.",
+          "A helper on Help Me is a neighbor who applied and was reviewed by our team. They might hold a spare key you already gave them. They might stand with you while you call a locksmith. They might lend you a charger so your phone survives the wait. They probably cannot get into your car, and that is the usual case. Do not post this ask expecting professional tools.",
         ],
       },
       {
-        heading: "Car lots and apartments are different problems",
+        heading: "Cars and apartments are different problems",
         body: [
-          "A car in a West Acres lot is a public, visible problem — still not a license to force a door. An apartment lock is a landlord, a locksmith, or a person you already live with. Help Me is not a way around that. If a child or a pet is in danger inside a locked car, that is 911, immediately, not an app offer.",
+          "A car in a busy lot is a public, visible problem. It is still not a license to force a door. An apartment lock belongs to a landlord, a locksmith, or the person you live with. Help Me is not a way around that. If a child or a pet is in danger inside a locked car, call 911 immediately, not an app.",
+        ],
+        bullets: [
+          "A phone charger while you wait on a locksmith.",
+          "Company in a public lot until help arrives.",
+          "Directions to the nearest place with a spare key.",
         ],
       },
       {
-        heading: "How to ask without lying to yourself",
+        heading: "How to ask without fooling yourself",
         body: [
-          "Post locked out. Write the sentence: keys in the car, need a ride to a spare, need company while you wait. Meet in public. Chat is private. Exact location stays off until you consent. If the honest need is a locksmith, call a locksmith. The app will still be here for the jump start later.",
+          "Post locked out and write the honest sentence: keys in the car, need company and a charger while I wait. Meet in public. Chat is private, and exact location stays off until you agree. If the real need is a locksmith, call a locksmith. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["help/jump-start", "help/walk-to-car", "how-it-works", "safety", "not-911", "cities/fargo"],
+    related: ["help/jump-start", "help/walk-to-car", "how-it-works", "ground-rules", "not-911", "cities/fargo"],
     faqs: [
       {
-        q: "Will a helper open my car?",
+        q: "Will a neighbor open my car?",
         a: "Probably not, and they should not be asked to force a lock. They are neighbors, not locksmiths. Call a professional if you need the door opened.",
       },
       {
-        q: "What if a kid is locked in the car?",
-        a: "Call 911. Do not wait on an app match. Help Me is not emergency response.",
+        q: "What if a child is locked in the car?",
+        a: "Call 911 immediately. Do not wait on an app. Help Me is not emergency response.",
       },
       {
-        q: "Can I ask for a ride to my spare key?",
-        a: "You can ask. A helper may or may not be able to do that. There is no paid driver and no guaranteed yes.",
+        q: "Can I get a spare key from someone nearby?",
+        a: "Only from someone you already trust with one. Help Me does not hold keys, and a neighbor you just met should not be handed one.",
       },
     ],
   }),
   page({
-    slug: "help/safety-walk",
+    slug: "help/walk-with-someone",
     kind: "help",
-    title: "A safety walk in Fargo–Moorhead",
+    title: "A walk with someone in Fargo-Moorhead, at night or day",
     description:
-      "Ask an approved neighbor to walk with you in Fargo, Moorhead, or West Fargo. Public streets. Not police, not 911, not a campus escort.",
+      "Ask a neighbor to walk with you on a public route in Fargo, West Fargo, or Moorhead. Company, not a patrol. Not an official campus escort and not 911.",
     h1: "A walk with someone, on purpose",
-    eyebrow: "walking",
-    lead: "The block is lit enough and still feels too long. You want a second pair of feet, not a squad car. That is a safety walk: a neighbor, a public sidewalk, a destination you both understand.",
-    keywords: ["safety walk Fargo", "walk with me Fargo", "not 911 walk", "Broadway walk Fargo"],
+    eyebrow: "The small stuff",
+    lead: "The block is lit and still feels long. You want a second pair of feet, not a squad car. That is a walk with someone: a neighbor, a public sidewalk, a destination you both understand.",
+    answer:
+      "On Help Me you can ask a neighbor to walk with you on a public route in Fargo, West Fargo, or Moorhead. It is company, not a patrol. A neighbor is not a guard, an officer, or an official campus escort. If someone is in danger, call 911. Campus public safety offices run official escorts.",
+    takeaways: [
+      "It is company on a public route, not a patrol.",
+      "Meet in a public place and walk a public route.",
+      "Official campus escorts go through campus public safety.",
+      "In danger, call 911 or your local emergency number.",
+    ],
+    priority: 0.65,
+    keywords: ["walk with someone Fargo", "walk to car Fargo", "walking company Moorhead", "campus escort Fargo", "walk home Fargo"],
     sections: [
       {
         heading: "Public ground, two people, one destination",
         body: [
-          "Downtown Broadway. A stretch from a library to a lot. A walk from a bus stop to a well-lit door. You post the ask. An approved helper may accept. Chat is 1:1. You meet in a public place and you walk in a public place. If you are in danger, threatened, or watching a crime, that is 911 first. This app is the everyday version.",
+          "Downtown Broadway. A stretch from a library to a lot. A walk from a bus stop to a lit door. You post the ask and a neighbor can say yes. A private chat opens, you meet in a public place, and you walk a public route. If someone is following you or threatening you, call 911 first. Help Me is the everyday version of company.",
+        ],
+        bullets: [
+          "A walk from a library to a parking lot.",
+          "A stretch from a bus stop to your door.",
+          "Company on a long, dark block.",
         ],
       },
       {
         heading: "This is not a patrol",
         body: [
-          "Help Me does not dispatch security. Helpers are not guards, not off-duty police, not a neighborhood-watch franchise. They are approved community members who said they could walk with someone. Report and block exist because a walk can still go wrong. Leave if it feels wrong. You do not owe politeness to a sidewalk.",
+          "Help Me does not dispatch security. Helpers are not guards, not off-duty officers, and not a watch program. They are neighbors who applied and were reviewed by our team, and who said they could walk with someone. Helpers can apply to be reviewed by our team. Help Me does not run background checks. Leave if anything feels off. You can report or block any member at any time.",
         ],
       },
       {
         heading: "Campus walks have an official option",
         body: [
-          "NDSU Police, MSUM Public Safety, and Concordia Public Safety run official campus safety and escort programs. Use those when you want the institution. A Help Me safety walk is community help. The campus-escort page spells out the difference so nobody confuses a neighbor with campus police.",
+          "NDSU Police, MSUM Public Safety, and Concordia Public Safety run official campus escort programs. Use those when you want the institution. A walk with someone through Help Me is a neighbor favor, not campus police.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/walk-to-car",
-      "help/campus-escort",
-      "safety",
-      "not-911",
-      "how-it-works",
-      "cities/fargo",
-      "campuses/ndsu",
-    ],
+    related: ["help/walk-to-car", "ground-rules", "not-911", "how-it-works", "cities/fargo", "campuses/ndsu"],
     faqs: [
       {
-        q: "Is a safety walk an emergency response?",
-        a: "No. If you are in danger, call 911. A safety walk is everyday company on a public route.",
+        q: "Is a walk with someone an emergency response?",
+        a: "No. If you are in danger, call 911. A walk with someone is everyday company on a public route.",
       },
       {
-        q: "Can I see the helper’s exact location first?",
-        a: "The open map is coarse, about 500 meters. Exact sharing is opt-in after they accept, and only with that person.",
+        q: "Can I see the neighbor's exact location first?",
+        a: "The open map shows a rough area about 500 meters wide. Exact sharing is opt-in after someone says yes, and only with that person.",
       },
       {
-        q: "What if I want an official campus escort instead?",
+        q: "What if I want an official campus escort?",
         a: "Call NDSU Police, MSUM Public Safety, or Concordia Public Safety. Help Me is not those offices.",
       },
     ],
@@ -321,1110 +508,623 @@ export const HELP_PAGES: SeoPage[] = [
   page({
     slug: "help/walk-to-car",
     kind: "help",
-    title: "Walk to the car in Fargo–Moorhead",
+    title: "Walk to the car in Fargo-Moorhead: ramps, lots, malls",
     description:
-      "A walk from the library, the mall, or a ramp to your car in Fargo. Approved neighbor, public place. Not campus police, and not 911.",
+      "A walk from the library, the mall, or a ramp to your car in Fargo or Moorhead. Company from a neighbor in a public place. Not campus police, and not 911.",
     h1: "Walk me to the car",
-    eyebrow: "walking",
-    lead: "The building was full. The lot is not. NDSU ramps, West Acres after close, a Moorhead lot off campus — a walk to the car is the smallest ask that still changes the walk.",
-    keywords: ["walk to car Fargo", "parking ramp NDSU", "West Acres parking", "walk to car Moorhead"],
+    eyebrow: "The small stuff",
+    lead: "The building was full and the lot is not. A campus ramp after a late class, West Acres after the stores close, a Moorhead lot off campus. A walk to the car is the smallest ask that still changes the walk.",
+    answer:
+      "On Help Me you can ask a neighbor to walk with you to your car from a library, mall, or ramp in Fargo or Moorhead. Name a public meeting point, like the union doors or a mall entrance. It is company, not security. For an official campus escort, call campus public safety. In danger, call 911.",
+    takeaways: [
+      "Name a public meeting point, like an entrance or a lobby.",
+      "It is company on a short walk, not security.",
+      "Official campus escorts go through campus public safety.",
+      "In danger, call 911.",
+    ],
+    priority: 0.62,
+    keywords: ["walk to car Fargo", "ramp walk NDSU", "West Acres parking lot", "walk me to my car", "late class Moorhead"],
     sections: [
       {
         heading: "The lots this metro actually uses",
         body: [
-          "NDSU parking ramps after a late class. West Acres when the stores have thinned out. A Broadway garage. An MSUM or Concordia lot. 13th Avenue commercial. You want someone to walk the distance with you, not a debate about streetlights in a group chat.",
+          "Campus ramps after a late class. West Acres when the stores have thinned out. A Broadway garage. A lot at MSUM or Concordia. The commercial strip on 13th Avenue. You want someone to walk the distance with you, not a debate about streetlights in a group chat.",
+        ],
+        bullets: [
+          "A campus ramp after a late class.",
+          "A mall lot after closing.",
+          "A downtown garage after an event.",
+          "A library lot on a winter evening.",
         ],
       },
       {
         heading: "Ask it as a neighbor walk",
         body: [
-          "Post walk to the car. Name a public meeting point if you want — the union doors, the mall vestibule, the library steps. An approved helper may accept. Private chat. Coarse map until you consent. You walk together in public and you are done. They are not a driver, not a security guard, and not on a shift.",
+          "Post walk to the car and name a public meeting point if you want: the union doors, a mall entrance, the library steps. A neighbor can say yes, and a private chat opens. Your request shows as a rough area about 500 meters wide. You walk together in public and you are done. They are not a driver, a guard, or on a shift.",
         ],
       },
       {
-        heading: "If it is more than a walk, stop using the app",
+        heading: "If it is more than a walk",
         body: [
-          "Someone following you, a threat, a medical problem — 911 or campus police. NDSU, MSUM, and Concordia have official public safety numbers. Help Me will still be here tomorrow for the ordinary dark lot. It will not dispatch anyone tonight.",
+          "If someone is following you, a threat is involved, or someone needs medical help, call 911 or campus police. NDSU, MSUM, and Concordia each have an official public safety number. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/safety-walk",
-      "help/campus-escort",
-      "safety",
-      "not-911",
-      "how-it-works",
-      "cities/fargo",
-      "campuses/ndsu",
-      "campuses/msum",
-    ],
+    related: ["help/walk-with-someone", "ground-rules", "not-911", "how-it-works", "cities/fargo", "campuses/ndsu"],
     faqs: [
       {
-        q: "Can a helper walk me through a campus ramp?",
-        a: "Yes, as community help, if they accept. For an official campus escort, call campus public safety instead.",
+        q: "Can a neighbor walk me through a campus ramp?",
+        a: "Yes, if someone says yes. For an official campus escort, call campus public safety instead.",
       },
       {
         q: "Do I share my stall number?",
-        a: "Only if you want to, after someone accepts. A building entrance is a better default meeting label.",
+        a: "Only if you want to, after someone says yes. A building entrance is a better meeting label.",
       },
       {
         q: "What about West Acres specifically?",
-        a: "A mall lot is a common, public place for this ask. Meet inside a vestibule first if the lot feels empty.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/campus-escort",
-    kind: "help",
-    title: "Campus walk vs official escort in Fargo–Moorhead",
-    description:
-      "Help Me is a community walk with an approved neighbor — not NDSU Police, not MSUM Public Safety, not Concordia’s official escort.",
-    h1: "A community walk is not a campus escort",
-    eyebrow: "campus",
-    lead: "NDSU, MSUM, and Concordia already run official public safety and escort programs. Those are the institutions. Help Me is a neighbor who can walk with you. Mixing those up is how people get the wrong phone in their hand.",
-    keywords: [
-      "NDSU escort",
-      "MSUM public safety",
-      "Concordia escort",
-      "campus walk Fargo",
-      "not campus police",
-    ],
-    sections: [
-      {
-        heading: "Official escorts stay official",
-        body: [
-          "If you want a campus-employed safety walk, call the campus. NDSU Police, MSUM Public Safety, and Concordia Public Safety publish their own numbers and procedures. Help Me does not dispatch them, does not stand in for them, and does not see your campus ID as a helper badge.",
-        ],
-      },
-      {
-        heading: "What the app can actually do",
-        body: [
-          "An approved community helper may walk with you from a public place to another public place — a union to a ramp, a library to a lot. Chat is private. Location is coarse until you consent. They are not campus police, not a contracted escort, and not on duty because of a student fee. Use the official program when you want the official program.",
-        ],
-      },
-      {
-        heading: "Emergencies skip both and go to 911",
-        body: [
-          "Danger, crime, injury — 911, then campus police. Do not wait out a two-hour help request. The resource pages on this site point at official campus safety numbers. Bookmark those. Use this page to understand the difference, not to replace the office.",
-        ],
-      },
-    ],
-    related: [
-      "help/safety-walk",
-      "help/walk-to-car",
-      "resources/ndsu-safety",
-      "campuses/ndsu",
-      "campuses/msum",
-      "campuses/concordia",
-      "safety",
-      "not-911",
-      "how-it-works",
-    ],
-    faqs: [
-      {
-        q: "Does Help Me replace NDSU Police escorts?",
-        a: "No. Call NDSU Police for an official campus escort. Help Me is community help from an approved neighbor.",
-      },
-      {
-        q: "What about MSUM or Concordia?",
-        a: "Same split. MSUM Public Safety and Concordia Public Safety are official. The app is not their dispatch.",
-      },
-      {
-        q: "Can I request a campus walk in the app anyway?",
-        a: "You can ask an approved helper to walk with you in public. That is not an institutional escort and not a guarantee.",
-      },
-      {
-        q: "Is a .edu email a helper approval?",
-        a: "No. Helping requires a current staff review of identity evidence. A campus login is not a badge.",
+        a: "A mall lot is a common public place for this ask. Meet inside a vestibule first if the lot looks empty.",
       },
     ],
   }),
   page({
     slug: "help/study-buddy",
     kind: "help",
-    title: "Find a study buddy in Fargo–Moorhead",
+    title: "Find a study buddy in Fargo-Moorhead: library or union",
     description:
-      "Ask for a study session at NDSU, MSUM, or Concordia — Memorial Union, a library table. Not a paid tutor, and not a dating app.",
-    h1: "A study buddy, without the group chat of 200",
-    eyebrow: "campus",
-    lead: "You need another person at the table, not a performance in a class Discord. Help Me can ask approved people nearby for a study session. It cannot sell you a GPA.",
-    keywords: ["study buddy NDSU", "MSUM study", "Concordia study session", "study help Fargo"],
+      "Ask for a study session near NDSU, MSUM, or Concordia: a union table, a library floor, a coffee shop. Not paid tutoring, and not a dating app.",
+    h1: "A study buddy, without a group chat of 200",
+    eyebrow: "The small stuff",
+    lead: "You need another person at the table, not a performance in a class chat. Help Me can ask neighbors nearby for a study session. It cannot sell you a grade.",
+    answer:
+      "On Help Me you can ask for a study buddy in Fargo or Moorhead: post study buddy, add the subject in a sentence if you want, and meet in a public place like a union table or a library floor. It is not paid tutoring and not a dating app. Meet in public, and report or block anyone at any time.",
+    takeaways: [
+      "Meet at a union, a library, or a coffee shop.",
+      "It is a person at a table, not paid tutoring.",
+      "Help Me is for adults.",
+      "Report or block any member at any time.",
+    ],
+    priority: 0.55,
+    keywords: ["study buddy Fargo", "study partner NDSU", "study group Moorhead", "study session MSUM", "library study Fargo"],
     sections: [
       {
-        heading: "Campus tables this is built for",
+        heading: "The tables this is built for",
         body: [
-          "Memorial Union. A library floor. An MSUM building you can actually find. Concordia’s campus when you do not want to study in a room alone. Post study buddy, add the subject in a sentence if you want, meet in public. The point is a table with another adult, not a private apartment and not a paid tutoring shop.",
+          "A union. A library floor. A campus building you can actually find. A coffee shop on Broadway or Center Avenue. Post study buddy, add the subject in a sentence if you want, and meet in public. The point is a table with another adult, not a private apartment and not a paid tutoring shop.",
+          "Sometimes the goal is a person who knows the class. Sometimes the goal is just a person who is there, so you stay. Both are fine.",
         ],
       },
       {
         heading: "Not a tutor marketplace",
         body: [
-          "Helpers are community members with a current staff-reviewed approval. They might be good at the class. They might only be good at sitting there so you stay. They are not contractors. They are not a dating pool. If you want a professional tutor, hire one through official campus resources.",
+          "Helpers are neighbors who applied and were reviewed by our team. They might be good at the class, or they might only be good at sitting there so you stay. They are not contractors. If you want a professional tutor, use the official academic resources at your college. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
         ],
       },
       {
-        heading: "High school is a different sentence",
+        heading: "Adults, public places",
         body: [
-          "Help Me is an adult community app. It is not a K–12 homework network and not a way for high school students to meet strangers. College students and other adults can ask. Minors should use school and family channels. Public places, private chat, report and block — same rules as a jump start.",
+          "Help Me is an adult community app. It is not designed for children and it is not a homework network. Public places, private chat, report and block work the same way as every other ask. Your request shows as a rough area about 500 meters wide.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "for-students",
-      "campuses/ndsu",
-      "campuses/msum",
-      "campuses/concordia",
-      "help/tech-support",
-      "how-it-works",
-      "safety",
-    ],
+    related: ["campuses/ndsu", "campuses/msum", "campuses/concordia", "help/tech-support", "how-it-works", "ground-rules"],
     faqs: [
       {
         q: "Is this a paid tutor?",
-        a: "No. Help Me is not a gig marketplace. If you need professional tutoring, use campus academic resources.",
+        a: "No. Help Me is not a paid marketplace. If you need professional tutoring, use your college's academic resources.",
       },
       {
         q: "Where should we meet?",
-        a: "A public campus place: a union, a library, a coffee shop. Exact location is optional after someone accepts.",
+        a: "A public place like a union, a library, or a coffee shop. Exact location is optional after someone says yes.",
       },
       {
-        q: "Can high school students find a study partner here?",
-        a: "No. Help Me is not a K–12 student product. Use official school and family channels.",
+        q: "Can I ask for a specific subject?",
+        a: "Yes, in a sentence. A neighbor who knows it can say yes, but nobody is promised to be an expert.",
       },
     ],
   }),
   page({
     slug: "help/tech-support",
     kind: "help",
-    title: "Tech support from a neighbor in Fargo–Moorhead",
+    title: "Tech help from a neighbor in Fargo-Moorhead: Wi-Fi, printing",
     description:
-      "Phone, laptop, or printer settings — ask an approved neighbor at NDSU, MSUM, or in town. Not campus IT, and not a Genius Bar.",
-    h1: "Tech support, the neighbor kind",
-    eyebrow: "campus",
-    lead: "The laptop is a brick and the assignment is due. Someone nearby might know the setting. They are not Information Technology Services, and they are not Apple.",
-    keywords: ["tech support NDSU", "laptop help Fargo", "phone help Moorhead", "campus tech neighbor"],
+      "A Wi-Fi setting, a printer queue, a phone login: ask a neighbor in Fargo, West Fargo, or Moorhead. Meet in public. Not campus IT, and not a repair shop.",
+    h1: "Tech help, the neighbor kind",
+    eyebrow: "The small stuff",
+    lead: "The laptop is a brick and the assignment is due. Someone nearby might know the setting. They are not campus IT, and they are not a repair shop.",
+    answer:
+      "On Help Me you can ask a neighbor for small tech help in Fargo, West Fargo, or Moorhead: a Wi-Fi setting, a printer queue, a phone login. Meet in a public place and look at the screen together. Never share passwords. A neighbor is not campus IT or a repair shop, so hardware problems need a real fix.",
+    takeaways: [
+      "Meet in public and look at the screen together.",
+      "Never share passwords or install remote-control software for someone you just met.",
+      "Campus IT and repair shops still exist for bigger problems.",
+      "A hardware problem needs a shop.",
+    ],
+    priority: 0.55,
+    keywords: ["tech help Fargo", "printer help NDSU", "Wi-Fi help Moorhead", "laptop help Fargo", "phone help neighbor"],
     sections: [
       {
         heading: "What a neighbor can actually fix",
         body: [
-          "A Wi-Fi toggle. A printer queue. An iPhone setting. A login screen that looks haunted. Meet in a public place — a union, a library, a coffee shop on Broadway — and look at the thing together. Chat is private. They might solve it in ten minutes. They might tell you it is a hardware problem and walk away. Both are honest outcomes.",
+          "A Wi-Fi toggle. A printer queue that is stuck. An iPhone setting. A login screen that looks haunted. Meet in a public place like a union, a library, or a coffee shop and look at the thing together. A neighbor might solve it in ten minutes. They might tell you it is hardware and walk away. Both are honest outcomes.",
+          "Campus print stations and Wi-Fi networks cause a surprising share of the problems, and the fix is often one setting. Knowing which setting is the whole favor.",
+        ],
+        bullets: [
+          "A Wi-Fi or network setting.",
+          "A stuck print queue.",
+          "A phone or laptop login problem.",
+          "A second opinion on whether it needs a shop.",
         ],
       },
       {
         heading: "Campus IT still exists",
         body: [
-          "NDSU, MSUM, and Concordia run official technology help. Use those offices for accounts, campus systems, and anything that needs an employee. Help Me is community help. A helper’s current approval is identity evidence plus a staff decision, not a certification, not a background check, not a student-worker shift.",
+          "NDSU, MSUM, and Concordia run official technology help. Use those offices for accounts, campus systems, and anything that needs an employee. A neighbor on Help Me is not a trained technician, not a student worker on a shift, and not a replacement for the help desk.",
         ],
       },
       {
         heading: "Do not hand over the keys to your life",
         body: [
-          "Do not share passwords. Do not install remote-access tools for a stranger. Meet in public. Watch the screen. Report and block if it feels wrong. If the device is evidence in a crime or you are being scammed, that is official channels, not an app offer.",
+          "Do not share passwords. Do not install remote-access tools for someone you just met. Watch the screen together, in public. If it feels wrong, leave, and report or block the member. If you think you are being scammed, contact the official channels. Helpers can apply to be reviewed by our team. Help Me does not run background checks.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/campus-wifi",
-      "help/printing",
-      "campuses/ndsu",
-      "campuses/msum",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-    ],
+    related: ["campuses/ndsu", "campuses/msum", "how-it-works", "ground-rules", "cities/fargo", "help/study-buddy"],
     faqs: [
       {
-        q: "Will a helper fix my laptop for money?",
-        a: "Help Me is not paid tech support. If you need a shop, use a shop. A neighbor might look at a setting with you.",
+        q: "Will a neighbor fix my laptop for money?",
+        a: "No. Help Me is not paid tech support. A neighbor might look at a setting with you. For a real repair, use a shop.",
       },
       {
-        q: "Is this NDSU IT?",
-        a: "No. Campus technology offices remain official. This is community help.",
+        q: "Is this campus IT?",
+        a: "No. Campus technology offices stay the official source for campus accounts and systems.",
       },
       {
         q: "Should I give them my password?",
-        a: "No. Sit together in public. Keep your logins. If they ask for remote control of your whole life, leave and report.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/campus-wifi",
-    kind: "help",
-    title: "Campus Wi-Fi help in Fargo–Moorhead",
-    description:
-      "Cannot get on campus Wi-Fi at NDSU, MSUM, or Concordia? A neighbor might know the room that works. They are not campus IT.",
-    h1: "Campus Wi-Fi, when the network is a rumor",
-    eyebrow: "campus",
-    lead: "The syllabus assumed you were online. The union is a Faraday cage today. Someone who already fought this building might know which floor actually works. That is the ask. Admin access is not.",
-    keywords: ["NDSU wifi", "MSUM wifi", "Concordia wifi", "campus internet help Fargo"],
-    sections: [
-      {
-        heading: "The human version of “have you tried forgetting the network”",
-        body: [
-          "Post campus wifi. Add the building if you know it. An approved helper may accept and walk you to a place that actually has a signal, or sit with you while you toggle the obvious things. Meet in public. They cannot reset eduroam for you. They cannot see the campus controller. They are a person with a phone that connected last Tuesday.",
-        ],
-      },
-      {
-        heading: "Official IT is still the office",
-        body: [
-          "Account lockouts, registration holds, required device setup — campus IT. Help Me does not provision access and does not ingest outage status. If the whole campus is down, a neighbor will not magic a packet. If you just need a working corner and a second pair of eyes, that is closer to why this category exists.",
-        ],
-      },
-      {
-        heading: "Same safety as every other ask",
-        body: [
-          "Coarse map. Private chat after accept. Exact location only with consent. Report and block. This is not 911 and not campus police. iPhone, TestFlight, iOS 15+.",
-        ],
-      },
-    ],
-    related: [
-      "help/tech-support",
-      "help/printing",
-      "help/directions",
-      "campuses/ndsu",
-      "campuses/msum",
-      "campuses/concordia",
-      "how-it-works",
-      "safety",
-    ],
-    faqs: [
-      {
-        q: "Can a helper log into campus Wi-Fi as me?",
-        a: "They should not, and you should not hand them your credentials. Sit together. Keep your login.",
-      },
-      {
-        q: "What if the campus network is actually down?",
-        a: "Then you need official IT status, not a neighbor. Help Me does not publish outage boards.",
-      },
-      {
-        q: "Does this work off campus too?",
-        a: "The category is campus-flavored. A neighbor might still help you find working internet in a public place. They are not your ISP.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/printing",
-    kind: "help",
-    title: "Printing help on Fargo–Moorhead campuses",
-    description:
-      "The residence-hall printer failed and the paper is due. Ask a neighbor who knows the union queue. Not a copy shop, not campus IT.",
-    h1: "Printing, which is always due in twelve minutes",
-    eyebrow: "campus",
-    lead: "The job is in the queue. The queue is a myth. Someone on this campus has already lost a fight with that printer and might still help you win the next one.",
-    keywords: ["NDSU printing", "MSUM printer", "campus printing Fargo", "print help Concordia"],
-    sections: [
-      {
-        heading: "Union printers, hall printers, the last ten pages",
-        body: [
-          "NDSU, MSUM, Concordia — each has official print locations. Help Me is the neighbor who knows which one is actually working at 8:40 p.m., or who will walk with you to it. They are not a copy shop on 13th Avenue. They are not obligated to print your thesis on their own paper.",
-        ],
-      },
-      {
-        heading: "Ask clearly, meet in public",
-        body: [
-          "Post printing. “Need the union printer, job won’t release” is a better sentence than “help.” An approved helper may accept. Private chat. Public meeting place. If the real need is a paid print shop, go to a paid print shop. If the real need is campus IT, go to campus IT.",
-        ],
-      },
-      {
-        heading: "What we will not pretend",
-        body: [
-          "Help Me does not run print queues. It does not refund Bison Bucks or student print balances. It does not store your file. Do not send sensitive documents to a stranger. Stand there. Watch the pages come out. Report if anything feels off.",
-        ],
-      },
-    ],
-    related: [
-      "help/tech-support",
-      "help/campus-wifi",
-      "help/directions",
-      "campuses/ndsu",
-      "campuses/msum",
-      "how-it-works",
-      "safety",
-      "for-students",
-    ],
-    faqs: [
-      {
-        q: "Will a helper print it at their apartment?",
-        a: "Meet in public. A campus print station or a public business is the right default. Do not go to a stranger’s residence for a document.",
-      },
-      {
-        q: "Is this a print shop?",
-        a: "No. If you need copies bound by morning, use a shop. This is neighbor help around campus printers.",
-      },
-      {
-        q: "What if I cannot find the print room?",
-        a: "That is half directions, half printing. Ask in a sentence. A helper may walk you there.",
+        a: "No. Sit together in public and keep your logins to yourself. If someone asks for remote control of your device, leave and report.",
       },
     ],
   }),
   page({
     slug: "help/directions",
     kind: "help",
-    title: "Directions in Fargo–Moorhead",
+    title: "Directions in Fargo-Moorhead: campuses, Broadway, bridges",
     description:
-      "Lost on an NDSU campus, looking for Broadway, first week in Moorhead. Ask a neighbor. Not a tour company, and not campus police.",
+      "Lost on campus, looking for Broadway, or new to Moorhead? Ask a neighbor for directions. Not a tour company, and not campus police.",
     h1: "Directions, because this grid only looks simple",
-    eyebrow: "getting around",
-    lead: "North-south numbered streets, a river that is a state line, three campuses that all say “the union” like there is one. A person standing there is still better than a blue dot that thinks 12th is 13th.",
-    keywords: ["directions NDSU", "find Broadway Fargo", "MSUM directions", "lost in Fargo"],
+    eyebrow: "The small stuff",
+    lead: "Numbered streets, a river that is a state line, and several campuses that all have something called the union. A person standing there still beats a blue dot that thinks 12th is 13th.",
+    answer:
+      "On Help Me you can ask a neighbor for directions in Fargo, West Fargo, or Moorhead: the right hall on a campus, the right side of the river, the right door on Broadway. Meet in a public place, and a neighbor can walk you to the entrance. A neighbor is not a tour company or campus police.",
+    takeaways: [
+      "Directions are a classic small ask, answered in a minute.",
+      "Meet in a public, obvious place, like a union door.",
+      "A neighbor can point you or walk you to the entrance.",
+      "Help Me is not an emergency service.",
+    ],
+    priority: 0.55,
+    keywords: ["directions Fargo", "lost on campus NDSU", "find building Moorhead", "Broadway Fargo directions", "new in Fargo directions"],
     sections: [
       {
         heading: "The places people actually miss",
         body: [
-          "A lecture hall on the NDSU campus that is not where the map pin claimed. Concordia versus MSUM when you are new to Moorhead. Downtown Broadway versus a GPS that dumped you on a one-way. West Acres from campus without taking the scenic I-29 loop. Post directions. Meet in a public, obvious place — a union door, a coffee shop, a well-lit corner.",
+          "A lecture hall on a campus that is not where the map pin claimed. Concordia versus MSUM when you are new to Moorhead. Downtown Broadway when GPS drops you on a one-way. West Acres from campus without the scenic loop on I-29. Post directions and meet in a public, obvious place, like a union door, a coffee shop, or a well-lit corner.",
+          "Circling a building twice and walking in late is one of the most common small frustrations in the metro, and one of the easiest to fix with a person.",
         ],
       },
       {
         heading: "A neighbor is not a tour",
         body: [
-          "They might walk you a block. They might point and describe. They might ride the same MATBUS direction you need. They are not a paid guide and not campus orientation staff. If you want the official tour, the campuses run those. If you want a local-guide style hang, that is a different category with the same safety rules.",
+          "A neighbor can point, or walk with you to the entrance, which is often enough. They are not a tour guide, not campus staff, and not a paid service. If you need an official campus map, use the college's own site. If you are lost and in danger, call 911.",
+        ],
+        bullets: [
+          "The right hall or the right door on a campus.",
+          "Which side of the river an address is on.",
+          "Where to park for a Broadway event.",
+          "How to find a bus stop.",
         ],
       },
       {
-        heading: "Do not share a home pin to get un-lost",
+        heading: "Quick and public",
         body: [
-          "The live map is a coarse area until you consent after accept. A public meeting label is enough. Exact location is optional. Report and block if the help turns into something else. 911 if you are actually unsafe, not merely turned around.",
+          "This is the smallest ask there is. Your request shows as a rough area about 500 meters wide, and a neighbor can say yes in a minute. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/local-guide",
-      "help/transit-help",
-      "campuses/ndsu",
-      "campuses/msum",
-      "campuses/concordia",
-      "cities/fargo",
-      "how-it-works",
-      "safety",
-    ],
+    related: ["help/local-guide", "help/transit-help", "campuses/ndsu", "campuses/msum", "cities/fargo", "guides/new-to-fargo"],
     faqs: [
+      {
+        q: "Is a neighbor a better guide than a map app?",
+        a: "Sometimes. A neighbor knows which door is open and which entrance is locked, which no map can tell you.",
+      },
       {
         q: "Can someone walk me to the building?",
-        a: "They might. Ask in a sentence. Meet in public. That is still community help, not an official orientation.",
+        a: "Yes, if a neighbor says yes. Meet in a public place and walk a public route.",
       },
       {
-        q: "Is this only for campus?",
-        a: "No. Downtown Fargo, West Fargo commercial strips, Moorhead’s Center Avenue — anywhere a neighbor could reasonably point.",
-      },
-      {
-        q: "What if I am new to town?",
-        a: "Read the newcomers pages, then ask. A local-guide request is the broader version of this.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/lost-and-found",
-    kind: "help",
-    title: "Lost and found help in Fargo–Moorhead",
-    description:
-      "Lost keys, a wallet, a bag on campus or Broadway. Extra eyes from approved neighbors — not a recovery agency, and not police.",
-    h1: "Lost and found, extra eyes, not a detective",
-    eyebrow: "everyday",
-    lead: "The keys were in your hand on Broadway. They are not in your hand now. You want more people looking, not a case file. That is the size of this ask.",
-    keywords: ["lost keys Fargo", "lost and found NDSU", "lost wallet Moorhead", "found item Fargo"],
-    sections: [
-      {
-        heading: "What a neighbor can do",
-        body: [
-          "Walk a path you already walked. Check a union lost-and-found with you. Keep an eye out in a coarse area. Meet in public if they think they spotted it. They are not a recovery service, not a pawn-shop investigator, and not the police. Campus and city lost-and-found desks still exist — use those too.",
-        ],
-      },
-      {
-        heading: "What not to put in the ask",
-        body: [
-          "Do not publish account numbers, full IDs, or enough detail that a stranger can fake ownership. A category and a short sentence are enough. Chat is 1:1 after someone accepts. If the item is evidence, or you were robbed, that is police, not an app offer.",
-        ],
-      },
-      {
-        heading: "Found something instead?",
-        body: [
-          "You can still be a helper with a current approval and meet in public to return it. Or take it to official lost-and-found or the campus desk. Do not lure anyone to a private address. Exact location sharing stays consent-only. Report and block if the story feels like a setup.",
-        ],
-      },
-    ],
-    related: [
-      "help/directions",
-      "how-it-works",
-      "safety",
-      "not-911",
-      "cities/fargo",
-      "campuses/ndsu",
-      "campuses/msum",
-    ],
-    faqs: [
-      {
-        q: "Will Help Me track my phone?",
-        a: "No. We are not Find My. A neighbor might look with you in a public area. Use official device tools for tracking.",
-      },
-      {
-        q: "Should I post my address because I lost keys to it?",
-        a: "No. Meet in public. Tell the helper what they need and nothing extra. Change locks through official means if you must.",
-      },
-      {
-        q: "Is a stolen bike a Help Me ask?",
-        a: "Theft is police. Extra eyes after you have filed a report is optional community help, not an investigation.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/heavy-lifting",
-    kind: "help",
-    title: "Heavy lifting help in Fargo–Moorhead",
-    description:
-      "A sofa that will not turn the stair, a dresser, a campus mini-fridge in Fargo. Ask a neighbor. Not movers, and not a paid crew.",
-    h1: "Heavy lifting, the neighbor with gloves",
-    eyebrow: "hands",
-    lead: "The couch is in the hallway and physics has opinions. You need a second body, not a franchise with a truck and a rate card.",
-    keywords: ["help lifting Fargo", "move furniture Fargo", "heavy boxes NDSU", "sofa stairs Fargo"],
-    sections: [
-      {
-        heading: "The jobs that stall a Tuesday",
-        body: [
-          "A sofa in a downtown Fargo stair. A dresser in a south Fargo townhouse. A mini-fridge that seemed funny until the residence hall elevator. A table from a Broadway shop to a car. Post heavy lifting. Say the object in a sentence. Meet in public first if you do not already know the person, then decide how much access you actually grant.",
-        ],
-      },
-      {
-        heading: "This is not a moving company",
-        body: [
-          "No truck unless they happen to have one and offer it. No insurance. No crew of four. No piano down a spiral. If the thing needs professionals, hire professionals. Helpers are approved community members, not contractors. They can decline anything that looks like it will wreck a back or a doorway.",
-        ],
-      },
-      {
-        heading: "Houses, halls, and the consent line",
-        body: [
-          "Exact location is off until you say yes after accept. You can meet at the building entrance instead of posting a unit number on the open map. Chat is private. Report and block. If you are a student in a hall, follow the campus move-in rules — this app does not override them.",
-        ],
-      },
-    ],
-    related: [
-      "help/move-in",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-      "campuses/ndsu",
-      "campuses/msum",
-      "for-students",
-    ],
-    faqs: [
-      {
-        q: "Will a helper bring a truck?",
-        a: "Only if they offer. Do not assume a vehicle. Help Me is not U-Haul and not a paid moving crew.",
-      },
-      {
-        q: "Can they come inside?",
-        a: "That is your call after you have a private chat and a public-first meeting if you need one. You can stop sharing location. You can leave.",
-      },
-      {
-        q: "What if someone gets hurt lifting?",
-        a: "This is not insured labor. If it looks like a job for movers, call movers. If it is an emergency, call 911.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/move-in",
-    kind: "help",
-    title: "Move-in help in Fargo–Moorhead",
-    description:
-      "NDSU, MSUM, or Concordia move-in weekend — boxes, a mini-fridge, a third-floor carry. Neighbors with hands, not a moving company.",
-    h1: "Move-in weekend, extra hands",
-    eyebrow: "campus",
-    lead: "The street is cones and parents and a mattress that will not fold. Campuses expect the crush. Help Me is how you ask for one more pair of hands without turning it into a classified ad.",
-    keywords: ["NDSU move-in", "MSUM move-in", "Concordia move-in", "help moving Fargo campus"],
-    sections: [
-      {
-        heading: "The weekend the metro tilts toward campus",
-        body: [
-          "NDSU move-in fills north Fargo. MSUM and Concordia fill Moorhead the same week in spirit if not on the same day. Boxes, mini-fridges, the last awkward piece of furniture. Official campus move-in rules still win — loading zones, elevator hours, what you are allowed to prop open. The app does not waive those.",
-        ],
-      },
-      {
-        heading: "Ask for hands, not a crew",
-        body: [
-          "Post move-in. A sentence about the object and the building is enough. An approved helper may accept. Private chat. Meet in a public, obvious spot — a lot, a lobby, a marked unloading zone — before anyone follows you down a hall. They are not a moving company. They might carry a box. They might not have a truck.",
-        ],
-      },
-      {
-        heading: "Safety does not take a weekend off",
-        body: [
-          "Coarse map until consent. Report and block. High school students are not the audience; this is adult community help around college move-in and apartment weekends. If someone is injured, call 911. If you need a real mover, hire a real mover. The two-hour window still applies. Nobody is on a paid clock.",
-        ],
-      },
-    ],
-    related: [
-      "help/heavy-lifting",
-      "for-students",
-      "campuses/ndsu",
-      "campuses/msum",
-      "campuses/concordia",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-    ],
-    faqs: [
-      {
-        q: "Can I hire movers through Help Me?",
-        a: "No. It is not a paid marketplace. Helpers are neighbors. Hire a moving company if you need a crew and a truck.",
-      },
-      {
-        q: "Does this override campus loading rules?",
-        a: "No. Follow the campus move-in instructions. Help Me is extra hands, not a permit.",
-      },
-      {
-        q: "Is move-in only for students?",
-        a: "Students are the obvious weekend. Apartment move-ins in Fargo, Moorhead, and West Fargo are the same category of ask.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/snow-help",
-    kind: "help",
-    title: "Snow help in Fargo–Moorhead",
-    description:
-      "Shovel a walk, brush off a car, a little extra snow help from a Fargo–Moorhead neighbor. Not a plow service, not the city, not 911.",
-    h1: "Snow help, which is not a plow",
-    eyebrow: "winter",
-    lead: "The walk is a ridge. The car is a drift with a roof. You need a shovel and ten honest minutes, not a contract and a blade on a truck.",
-    keywords: ["snow shovel Fargo", "snow help Moorhead", "brush off car Fargo", "not a plow Fargo"],
-    sections: [
-      {
-        heading: "The human-scale storm",
-        body: [
-          "A sidewalk you cannot legally ignore. A car that has to move before a plow comes through and buries it twice. An older neighbor’s steps. A campus walk you cannot see. Post snow help. Say shovel, brush, or both. Meet in public if you do not already know them. This metro understands snow; it does not always have a spare pair of hands.",
-        ],
-      },
-      {
-        heading: "City plows and contractors still exist",
-        body: [
-          "Fargo, West Fargo, and Moorhead run street plows. Private lots hire services. Help Me does not. A helper might shovel a walk or knock snow off a car. They will not clear a commercial lot, and they should not be asked to. If the snow is an emergency — medical, trapped, dangerous — 911, not an app.",
-        ],
-      },
-      {
-        heading: "Winter, privacy, the usual tools",
-        body: [
-          "Approximate area on the map. Exact location after accept, only if you want. Private 1:1 chat. Current helper approval required. Report, block, delete by typing DELETE. The winter-car-help page covers the engine side of the same season.",
-        ],
-      },
-    ],
-    related: [
-      "help/winter-car-help",
-      "help/jump-start",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-      "cities/moorhead",
-      "cities/west-fargo",
-    ],
-    faqs: [
-      {
-        q: "Can I request a driveway plow?",
-        a: "You can ask. Do not expect a truck. Help Me is not a plow service. Hire one if that is the job.",
-      },
-      {
-        q: "Is this the city’s snow line?",
-        a: "No. Street plowing is the city. This is a neighbor with a shovel.",
-      },
-      {
-        q: "What if I cannot get out for a medical reason?",
-        a: "If it is an emergency, call 911. Do not wait on a two-hour community offer.",
+        q: "Is this an official campus service?",
+        a: "No. Campus offices have official maps and visitor information. Help Me is a neighbor favor.",
       },
     ],
   }),
   page({
     slug: "help/local-guide",
     kind: "help",
-    title: "A local guide in Fargo–Moorhead",
+    title: "A local guide in Fargo-Moorhead: ask someone who lives here",
     description:
-      "New to Fargo, NDSU, or Moorhead? Ask an approved neighbor to point at Broadway, West Acres, the river. Not a paid tour company.",
-    h1: "A local guide, not a tour bus",
-    eyebrow: "getting around",
-    lead: "You landed. The grid is numbered and still confusing. Someone who already bought groceries in this cold can walk a public stretch with you and name the places that matter.",
-    keywords: ["new to Fargo", "Fargo local guide", "NDSU new student", "Moorhead newcomer help"],
+      "New to Fargo, West Fargo, or Moorhead? Ask a neighbor where to park, where to eat, and which side of the river to be on. Not a tour, and not a review site.",
+    h1: "A local guide, for a minute",
+    eyebrow: "The small stuff",
+    lead: "You know the big names. You do not know where to park on Broadway on a game weekend, which entrance is open at night, or why everyone says the river is the line. Someone who lives here can tell you in a sentence.",
+    answer:
+      "On Help Me you can ask a neighbor for a quick local tip in Fargo, West Fargo, or Moorhead: where to park for an event, which entrance is open, where to find a pharmacy. It is a minute of local knowledge, not a tour or a review. For official information, use the city or the venue.",
+    takeaways: [
+      "A minute of local knowledge from someone who lives here.",
+      "Good for parking, entrances, and which side of the river to be on.",
+      "Not a tour, a review site, or official information.",
+      "For emergencies, call 911.",
+    ],
+    priority: 0.5,
+    keywords: ["local guide Fargo", "new to Fargo tips", "where to park Fargo", "Moorhead tips", "ask a local Fargo"],
     sections: [
       {
-        heading: "What “show me around” can honestly mean",
+        heading: "The kind of question this is for",
         body: [
-          "Broadway. The difference between Fargo and Moorhead. Where West Acres sits on the west side. Which union is which campus. How 13th Avenue relates to 19th. A public coffee shop, a walk, a few names. That is a local guide on Help Me. It is not a paid itinerary, not a bar crawl package, and not a promise they will spend the day.",
+          "Where to park downtown during a show. Which entrance is open after hours. Which pharmacy is open late. How the bridge works between Fargo and Moorhead. Which bus actually goes where you are headed. These are one-sentence answers for someone who lives here and a half-hour of confusion for someone who does not.",
+          "Everyone was new here once. Most people remember who helped them find their way, and are glad to pass it on.",
+        ],
+        bullets: [
+          "Where to park for an event.",
+          "Which entrance or door to use.",
+          "Which side of the river a place is on.",
+          "A quick tip on a bus stop or a route.",
         ],
       },
       {
-        heading: "Meet in public, keep it a neighbor",
+        heading: "What it is not",
         body: [
-          "Post local guide. Say what you actually need — “first week at NDSU, cannot find anything south of campus.” An approved helper may accept. Private chat. Public meeting place. They are not orientation staff. The campuses run official orientation. The newcomers pages on this site exist so you can read first and ask second.",
+          "A local guide is not a tour, a review site, or an official source. If you need hours, rates, or rules, check the venue or the city. If you need a map, use a map. Help Me is for a neighbor's minute of context, in a public place, at no cost.",
         ],
       },
       {
-        heading: "Two states, one metro, still not a date",
+        heading: "Quick, public, and free",
         body: [
-          "Cass County, North Dakota. Clay County, Minnesota. 911 works on both; county services do not copy-paste. A local guide can say that out loud. They should not be treated as a dating setup. Report and block if the walk turns. High school students are not this audience.",
+          "Ask in a sentence and meet in a public place if it needs a meeting at all. Your request shows as a rough area about 500 meters wide. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: [
-      "help/directions",
-      "help/transit-help",
-      "for-newcomers",
-      "guides/new-to-fargo",
-      "cities/fargo",
-      "campuses/ndsu",
-      "how-it-works",
-      "safety",
-    ],
+    related: ["help/directions", "help/transit-help", "guides/new-to-fargo", "for-newcomers", "lists/things-to-do-in-fargo", "cities/fargo"],
     faqs: [
       {
-        q: "Is this a paid tour?",
-        a: "No. Help Me is not a tour company. A neighbor might point and walk a public stretch with you.",
+        q: "Is this like a travel guide?",
+        a: "No. It is a minute of local knowledge from a neighbor, not a tour or a review.",
       },
       {
-        q: "Can they show me bars on Broadway?",
-        a: "Adults can meet in public. This is not a nightlife service and not a way to pressure anyone into a night out.",
+        q: "Can I ask where to eat?",
+        a: "Yes, as a casual question. A neighbor's opinion is just that, and Help Me does not rank businesses.",
       },
       {
-        q: "I am a new NDSU student. Is this for me?",
-        a: "If you are an adult looking for everyday orientation help, yes. Official campus orientation still matters more for the institution.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/community-watch",
-    kind: "help",
-    title: "Extra eyes in Fargo–Moorhead — not a neighborhood watch",
-    description:
-      "Ask an approved neighbor for extra eyes on a public Fargo lot or a walk after dark. Not police, not a watch program, and not 911.",
-    h1: "Extra eyes, not a neighborhood watch franchise",
-    eyebrow: "everyday",
-    lead: "You want someone to look. A lot after a game. A walk to a car. A second person on a public block. That is extra eyes. It is not a badge, not a patrol schedule, and not Fargo Police.",
-    keywords: ["extra eyes Fargo", "community watch Fargo", "not neighborhood watch", "public lot Fargo"],
-    sections: [
-      {
-        heading: "Say what you actually mean",
-        body: [
-          "Walk through a West Acres lot with me. Stand at a union door until my ride shows. Look at a bike rack on campus while I run inside. Those are neighbor-sized. “Patrol my block every night” is not, and Help Me will not pretend we run that.",
-        ],
-      },
-      {
-        heading: "Police remain police",
-        body: [
-          "Crime, threats, someone in danger — 911, Fargo Police, Moorhead Police, West Fargo Police, campus public safety. Community watch on this site is extra eyes from an approved helper who accepted a specific ask. It is not a neighborhood-watch organization, not a vigilante board, and not a substitute for a report to the city.",
-        ],
-      },
-      {
-        heading: "How the product still works",
-        body: [
-          "One request, two hours if nobody accepts, private chat if someone does. Coarse map. Public places. Report and block. Helpers need a current staff-reviewed approval of identity evidence — not a background check, not a security license. If what you want is official, use official.",
-        ],
-      },
-    ],
-    related: [
-      "help/safety-walk",
-      "help/walk-to-car",
-      "not-911",
-      "safety",
-      "resources/fargo-police",
-      "how-it-works",
-      "cities/fargo",
-    ],
-    faqs: [
-      {
-        q: "Is this an official neighborhood watch?",
-        a: "No. Help Me does not run a watch program. It is a one-off ask to an approved neighbor.",
-      },
-      {
-        q: "Can I report a crime here instead of to police?",
-        a: "No. Report crimes to police. You can also report and block people in the app for product safety.",
-      },
-      {
-        q: "Will helpers sit in a car outside my house?",
-        a: "Do not ask for that. Meet in public. Surveillance of a private home is not this product.",
+        q: "Who pays?",
+        a: "Nobody. There is no payment, tipping, or fee in the app.",
       },
     ],
   }),
   page({
     slug: "help/transit-help",
     kind: "help",
-    title: "Transit help in Fargo–Moorhead",
+    title: "Bus help in Fargo-Moorhead: MATBUS stops and routes",
     description:
-      "MATBUS questions, campus to West Acres, a walk to the right stop in Fargo–Moorhead. A neighbor, not a taxi, not a driver for hire.",
-    h1: "Transit help, which is not a ride service",
-    eyebrow: "getting around",
-    lead: "The bus is real here. The map is still a puzzle if you are new. Someone who already rides MATBUS might walk you to the stop or tell you which number actually goes to West Acres. That is the whole offer.",
-    keywords: ["MATBUS help", "bus Fargo NDSU", "West Acres bus", "transit help Moorhead"],
-    sections: [
-      {
-        heading: "What a neighbor can do with a bus map",
-        body: [
-          "Which stop. Which route toward NDSU, MSUM, Concordia, downtown Broadway, West Acres. How transfers feel in January. They might walk you to the shelter. They might ride the same direction because they were going anyway. They are not a taxi. Help Me is not a driver marketplace and not Uber inside a community app.",
-        ],
-      },
-      {
-        heading: "Official transit stays official",
-        body: [
-          "MATBUS publishes routes, fares, and alerts. Use that for the last word. Help Me does not ingest the bus feed and does not sell passes. If you need paratransit or a medical ride, that is an official service, not a stranger in the app.",
-        ],
-      },
-      {
-        heading: "If what you wanted was a car",
-        body: [
-          "Say so, and expect a maybe. A helper might offer a one-off neighbor lift. They might not. There is no fare, no ETA, no commercial driver. Meet in public. Do not get in a car with someone if it feels wrong. Report and block. 911 if you are in danger.",
-        ],
-      },
-    ],
-    related: [
-      "help/directions",
-      "help/local-guide",
-      "campuses/ndsu",
-      "campuses/msum",
-      "cities/fargo",
-      "how-it-works",
-      "safety",
-    ],
-    faqs: [
-      {
-        q: "Will someone drive me?",
-        a: "Do not count on it. This category is transit help — stops, routes, a walk to the bus. Help Me is not a ride-hailing app.",
-      },
-      {
-        q: "Can a helper explain MATBUS to West Acres?",
-        a: "That is a reasonable sentence to post. They still might be wrong, and the official MATBUS map wins.",
-      },
-      {
-        q: "Is this campus transportation?",
-        a: "No. Campus and city transit offices remain official. The app is a neighbor who might know the stop.",
-      },
-    ],
-  }),
-  page({
-    slug: "help/flat-tire",
-    kind: "help",
-    title: "Flat tire help in Fargo–Moorhead",
-    description:
-      "A neighbor with a jack and a spare in a Fargo lot — West Acres, an NDSU ramp, 13th Avenue. Not a tire shop, and not a tow truck.",
-    h1: "A flat tire, a spare, a neighbor — not a shop",
-    eyebrow: "cars",
-    lead: "The car lists. The lot is West Acres or an NDSU ramp or 13th Avenue in the wind. Someone nearby might have a jack and the patience to use yours. That is not a tire store, and it will not mount a new set.",
-    keywords: ["flat tire Fargo", "spare tire help", "West Acres flat", "tire help NDSU"],
-    sections: [
-      {
-        heading: "What a neighbor can actually do",
-        body: [
-          "Help you put on the spare you already have. Hold a flashlight. Lend a jack if theirs fits. Stand there so you are not alone in a commercial lot. They are not a mobile tire tech. They may not have a compressor. They should not be expected to plug a sidewall at night in January.",
-        ],
-      },
-      {
-        heading: "Shops and tows still exist",
-        body: [
-          "No spare, damaged rim, on a live roadway, in a blizzard — that is a shop or a tow. Help Me will not dispatch one. If the car is a hazard, if someone is hurt, 911. A public grocery lot is a better place to work than a travel lane. Say that in the sentence when you post.",
-        ],
-      },
-      {
-        heading: "Same product rules as a jump start",
-        body: [
-          "Approved helpers only. Coarse ~500 m area until you consent after accept. Private 1:1 chat. Meet in public. Two hours, then the request closes. Not a paid gig. Not a background-check company. iPhone TestFlight, iOS 15+. support@helpme.fyi if the problem is the app, not the tire.",
-        ],
-      },
-    ],
-    related: [
-      "help/jump-start",
-      "help/winter-car-help",
-      "help/dead-battery",
-      "how-it-works",
-      "safety",
-      "cities/fargo",
-      "campuses/ndsu",
-    ],
-    faqs: [
-      {
-        q: "Will a helper bring a new tire?",
-        a: "Do not expect that. A neighbor might help with your spare. A shop sells tires. Help Me is not a shop.",
-      },
-      {
-        q: "What if I have no spare?",
-        a: "Call a tow or a shop. A helper cannot invent a tire, and they are not on a commercial hook.",
-      },
-      {
-        q: "Is a flat on I-29 a Help Me ask?",
-        a: "A live highway is a hazard. Use official roadside help or 911 if you are in danger. A public lot is the right geography for a neighbor.",
-      },
-    ],
-  }),
-
-  page({
-    slug: "help/car-stuck-in-snow",
-    kind: "help",
-    title: "Car stuck in snow in Fargo–Moorhead",
-    description:
-      "Stuck in a drift, a berm, or an unplowed lot? What actually gets a car out, what makes it worse, and when it becomes a tow-truck problem.",
-    h1: "Stuck in the snow",
-    eyebrow: "help topic",
-    lead: "The wheels are spinning, the smell is getting worse, and every attempt is digging you further in.",
+      "Which bus, which stop, which side of the river? Ask a neighbor in Fargo, West Fargo, or Moorhead about MATBUS. Not the transit agency, and not a driver.",
+    h1: "Which bus, and where does it stop?",
+    eyebrow: "The small stuff",
+    lead: "MATBUS covers the metro and the campuses, and it is easy to use once you know it. The first week is the hard part. A neighbor can save you a missed bus.",
     answer:
-      "A car stuck in a lot or driveway usually needs traction and a push, not more throttle. Clear snow ahead of and behind the drive wheels, put sand, cat litter, or a floor mat down, and rock gently between forward and reverse. Two people make this easy. A car in a ditch or on a highway shoulder is a tow truck, not a neighbor.",
+      "On Help Me you can ask a neighbor about MATBUS in Fargo, West Fargo, or Moorhead: which route goes where, where a stop is, how a transfer works. It is local knowledge, not official schedule information. For current routes and times, use MATBUS directly. Help Me does not arrange transportation.",
     takeaways: [
-      "Spinning the tires polishes ice and digs deeper.",
-      "Traction material plus a gentle rock beats horsepower.",
-      "Clear the exhaust pipe before running the engine.",
-      "Ditches and highways are tow-truck territory.",
+      "A neighbor can tell you which bus and which stop.",
+      "MATBUS is the official source for routes and times.",
+      "Help Me does not arrange transportation.",
+      "Winter changes how long you can wait at a stop.",
     ],
-    keywords: ["car stuck in snow Fargo", "stuck in drift North Dakota", "get car unstuck"],
+    priority: 0.5,
+    keywords: ["MATBUS help", "bus stop Fargo", "MATBUS routes", "transit Moorhead", "bus campus Fargo"],
     sections: [
       {
-        heading: "What works",
+        heading: "The first-week questions",
         body: [
-          "Dig a short ramp in front of and behind the drive wheels. Put something gritty under them. Straighten the wheels. Ease between drive and reverse to build a rocking motion rather than flooring it. If two people can push while the driver feathers the throttle, most metro-lot situations resolve in a couple of minutes.",
+          "Which route goes to campus. Where the stop actually is. How to transfer between the Fargo and Moorhead sides. What the last bus is on a weeknight. These are small questions with big consequences for someone without a car, and a neighbor who takes the bus can answer them in a sentence.",
+        ],
+        bullets: [
+          "Which route to take to campus or work.",
+          "Where the stop actually is.",
+          "How to transfer across the river.",
+          "When the last bus of the evening runs.",
         ],
       },
       {
-        heading: "What makes it worse",
+        heading: "MATBUS is the official source",
         body: [
-          "Full throttle, spinning tires, and repeated attempts at the same angle. You melt snow into ice, dig a trench, and can cook a transmission doing it. Also: running the engine with a snow-packed exhaust, which pushes carbon monoxide back into the cabin.",
+          "MATBUS publishes routes, schedules, and updates. Check the official source for current information, especially in winter, when delays and detours happen. A neighbor can describe how a route feels in practice, but only MATBUS can tell you what it runs today.",
+          "Winter changes the calculation. A bus that runs every half hour is a real wait at fifteen below. Dress for the stop, not the trip.",
         ],
       },
       {
-        heading: "When to stop and call",
+        heading: "Not a driver",
         body: [
-          "In a ditch, off a rural road, on a highway shoulder, or high-centered on packed snow — that is a tow. If you are cold, exposed, or in traffic, call 911. Help Me is for the lot-and-driveway version of this problem, and only when someone nearby chooses to accept.",
+          "Help Me does not arrange transportation of any kind. A neighbor is not a driver, and asking for a lift is not what the app is for. Meet in a public place if the question needs a meeting at all. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["guides/digging-out-after-a-snowstorm", "help/snow-help", "seasons/winter-in-fargo-moorhead", "seasons/blizzard-day", "help/winter-car-help", "not-911"],
+    related: ["resources/matbus", "help/directions", "guides/how-to-use-matbus", "for-people-without-a-car", "cities/fargo", "cities/moorhead"],
     faqs: [
       {
-        q: "Can someone tow me out with a strap?",
-        a: "Strap recoveries can damage vehicles and injure people. That is a job for a tow service, not a favor between strangers.",
+        q: "Can a neighbor drive me somewhere?",
+        a: "No. Help Me does not arrange transportation. MATBUS and rideshare services cover that.",
       },
       {
-        q: "What should I keep in the trunk?",
-        a: "A small shovel and a bag of sand or cat litter. Both weigh little and solve most of these.",
+        q: "Is a neighbor's answer official?",
+        a: "No. MATBUS is the official source for routes and times. A neighbor can share what a route is like in practice.",
+      },
+      {
+        q: "Does MATBUS serve both Fargo and Moorhead?",
+        a: "Yes, MATBUS serves the metro. Check the official source for current routes and hours.",
       },
     ],
   }),
-
   page({
-    slug: "help/frozen-windshield",
+    slug: "help/lost-and-found",
     kind: "help",
-    title: "Frozen windshield and frozen car doors",
+    title: "Lost and found in Fargo-Moorhead: wallets, keys, phones",
     description:
-      "Ice on the glass, a door that will not open, a wiper welded down. What works in a Fargo–Moorhead deep freeze and what damages the car.",
-    h1: "Frozen shut",
-    eyebrow: "help topic",
-    lead: "It is not just the windshield. It is the door seal, the lock, the wipers, and the fifteen minutes you did not budget.",
+      "Left a wallet, keys, or a phone behind in Fargo, West Fargo, or Moorhead? Ask neighbors nearby. Not an official lost-and-found, and not a search party.",
+    h1: "Lost something? Ask the block.",
+    eyebrow: "The small stuff",
+    lead: "The wallet was on the table, and then it was not. The phone is somewhere between the library and the car. Someone nearby might have seen it, or might be holding it right now.",
     answer:
-      "Start the car, run the defroster on low heat first, and scrape mechanically while it warms. Never pour hot water on cold glass — the thermal shock can crack it. For a frozen door, press around the seal to break the ice rather than yanking the handle, and do not force a frozen wiper off the glass.",
+      "On Help Me you can ask neighbors nearby about a lost wallet, keys, or phone in Fargo, West Fargo, or Moorhead. Name the public place you were last, and a neighbor may be able to look. It is not an official lost-and-found, so also contact the venue, campus, or police non-emergency line.",
     takeaways: [
-      "Hot water on cold glass can crack a windshield.",
-      "Warm the defroster gradually rather than blasting heat.",
-      "Free a frozen door seal by pressing, not pulling.",
-      "Lifting wipers before a freeze saves the blades.",
+      "Name the public place you were last.",
+      "Also contact the venue, campus, or police non-emergency line.",
+      "Do not offer a reward or share more than you need to.",
+      "Help Me is not an emergency service.",
     ],
-    keywords: ["frozen windshield", "car door frozen shut", "ice scraper Fargo"],
+    priority: 0.5,
+    keywords: ["lost wallet Fargo", "lost keys Moorhead", "lost phone Fargo", "lost and found Fargo", "found phone West Fargo"],
     sections: [
       {
-        heading: "The right sequence",
+        heading: "Where things get lost here",
         body: [
-          "Start the engine, set the defroster to a moderate temperature, and begin scraping while it works from the inside out. Clear the whole windshield, not a porthole — clearing a small square is how people miss a pedestrian in a lot. Clear the rear glass, mirrors, headlights, and the roof, because roof snow becomes someone else’s windshield at fifty miles an hour.",
+          "A mall food court at West Acres. A campus library table. A coffee shop on Broadway. A bus seat. A parking lot after a game. Most lost items end up one of two places: with a venue that has a lost-and-found, or with a person who picked them up and wants to return them.",
+          "A request on Help Me can reach that second group, without posting your phone number or your wallet's contents to a public thread.",
         ],
       },
       {
-        heading: "Frozen doors and locks",
+        heading: "Do the official things too",
         body: [
-          "Push firmly along the door seam to crack the ice before pulling the handle; yanking tears rubber seals that then leak all winter. Try a different door. Do not use a lighter on a lock or force a key, and keep a de-icer product in your bag rather than in the locked car.",
+          "Contact the venue, the campus public safety office, or the police non-emergency line, and call your bank if a card is involved. Help Me is not an official lost-and-found, and a neighbor nearby cannot replace a call to the place that may actually be holding the item.",
+        ],
+        bullets: [
+          "Call the venue or campus lost-and-found.",
+          "Call the police non-emergency line for anything valuable.",
+          "Freeze a card if a wallet is gone.",
+          "Describe the item, not what is inside it.",
         ],
       },
       {
-        heading: "The part a neighbor can do",
+        heading: "Share the least you need to",
         body: [
-          "Lend a second scraper and five minutes. It is a small ask and it makes a genuine difference when you are late and your hands are already numb.",
+          "Describe the item and where you were. Do not post an ID number, a card number, or an address. Meet in a public place for any return. Your request shows as a rough area about 500 meters wide. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["seasons/winter-in-fargo-moorhead", "guides/what-to-keep-in-your-car-in-winter", "help/winter-car-help", "seasons/first-snow", "for-people-new-to-winter", "help/locked-out"],
+    related: ["help/directions", "neighborhoods/west-acres", "how-it-works", "ground-rules", "cities/fargo", "resources/fargo-police"],
     faqs: [
       {
-        q: "Is it fine to leave the car running to warm up?",
-        a: "Check that the exhaust is clear of snow first, never run it in a closed garage, and know that some cities have rules about unattended running vehicles.",
+        q: "Will someone find my lost item?",
+        a: "Maybe. A neighbor nearby might have seen it or might be holding it. Also contact the venue, campus, or police non-emergency line.",
       },
       {
-        q: "Do windshield covers help?",
-        a: "They save real time on frost. In freezing rain they can freeze down themselves, so they are not magic.",
+        q: "Should I offer a reward?",
+        a: "No. Rewards attract the wrong attention. Ask in a sentence and meet in public for a return.",
+      },
+      {
+        q: "What if my phone is lost?",
+        a: "Use your phone's own find-my feature first, and contact your carrier. A neighbor can look around the last public place you were.",
       },
     ],
   }),
-
+  page({
+    slug: "help/heavy-lifting",
+    kind: "help",
+    title: "Heavy lifting help in Fargo-Moorhead: couches and boxes",
+    description:
+      "Two more hands for a couch, a box of books, or a flat-pack desk in Fargo, West Fargo, or Moorhead. Neighbors, not movers. Meet at a public entrance.",
+    h1: "Two more hands for something heavy",
+    eyebrow: "The small stuff",
+    lead: "The couch will not turn the corner. The desk is flat-packed and the instructions are in a language that is mostly arrows. Almost anything gets easier with a second person.",
+    answer:
+      "On Help Me you can ask a neighbor for two more hands with something heavy in Fargo, West Fargo, or Moorhead: a couch, a box of books, a flat-pack desk. Meet at a public entrance or a ground floor, not inside a unit. A neighbor is not a mover, so large or fragile jobs need professionals.",
+    takeaways: [
+      "A few heavy items, not a whole move.",
+      "Meet at a public entrance or the ground floor, not inside a unit.",
+      "A neighbor is not a mover, and nobody covers damage to your things.",
+      "Hire movers for fragile or very large jobs.",
+    ],
+    priority: 0.6,
+    keywords: ["heavy lifting help Fargo", "couch move Fargo", "furniture assembly Fargo", "two hands help Moorhead", "carry help West Fargo"],
+    sections: [
+      {
+        heading: "What two hands changes",
+        body: [
+          "A couch on a narrow stairwell. A mattress in a hallway. A box of books that is heavier than it looks. A flat-pack desk that needs someone to hold the other end. A fridge that needs a dolly and a second set of arms. Most of these are ten-minute jobs for two people and an hour-long argument for one.",
+          "In a metro where everyone moves at the same time of year, the person with a free ten minutes is probably already carrying something nearby.",
+        ],
+        bullets: [
+          "A couch or chair on stairs.",
+          "A box of books or a heavy bag.",
+          "A flat-pack desk, shelf, or bed frame.",
+          "A mattress in a tight hallway.",
+        ],
+      },
+      {
+        heading: "Keep it small and public",
+        body: [
+          "Meet at the building entrance or the ground floor, not inside a unit, until you both decide otherwise. Name the public place in your request. A neighbor is not a mover, and nobody covers damage to your things, so for a whole apartment, a fridge on an upper floor, or anything fragile, hire professionals.",
+        ],
+      },
+      {
+        heading: "Be kind to backs",
+        body: [
+          "Heavy lifting hurts people. Bend your knees, use a dolly if you have one, and stop if something feels wrong. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
+    ],
+    related: ["help/move-in", "help/carrying-groceries", "for-renters", "seasons/fall-move-in-season", "cities/fargo", "how-it-works"],
+    faqs: [
+      {
+        q: "Can someone help me move out?",
+        a: "A hand with a few heavy items, yes. A full move is movers and friends.",
+      },
+      {
+        q: "Does anyone cover damage to my things?",
+        a: "No. Help Me does not cover damage to belongings. For valuable or fragile items, hire professional movers.",
+      },
+      {
+        q: "Should I invite them inside?",
+        a: "Meet at the entrance or ground floor first. Go inside only if you both decide it makes sense.",
+      },
+    ],
+  }),
+  page({
+    slug: "help/move-in",
+    kind: "help",
+    title: "Move-in weekend help in Fargo-Moorhead: stairs and boxes",
+    description:
+      "Moving into a Fargo, West Fargo, or Moorhead apartment, house, or residence hall? Two more hands for a few heavy items. Neighbors, not a moving company.",
+    h1: "Move-in weekend, and everyone needs the same elevator",
+    eyebrow: "The small stuff",
+    lead: "The metro moves on a calendar. Late August, the first of the month, the end of a lease in May. Everyone needs the same two hands at the same time.",
+    answer:
+      "On Help Me you can ask a neighbor for a few extra hands during a move in Fargo, West Fargo, or Moorhead: a box-laden stairwell, a heavy bookshelf, a futon that will not fit. It is not a moving company. Meet at the building entrance, and keep the job small. For a full move, hire movers.",
+    takeaways: [
+      "Late August and the first of the month are the busiest move days.",
+      "A neighbor helps with a few heavy items, not a whole move.",
+      "Meet at the entrance, not inside a unit.",
+      "A full move needs movers, friends, or both.",
+    ],
+    priority: 0.55,
+    keywords: ["move-in help Fargo", "move in weekend NDSU", "apartment move Moorhead", "move help West Fargo", "residence hall move in"],
+    sections: [
+      {
+        heading: "The calendar everyone shares",
+        body: [
+          "Move-in weekend at a campus. The first of the month. May, when leases end. The metro's rental calendar is tight, so everyone is moving at once, and the elevator has a line. A second person for twenty minutes is the difference between a day and a mess.",
+          "The small jobs add up: a bookshelf to carry up, a futon frame that needs turning, a mini-fridge that needs two sets of hands.",
+        ],
+        bullets: [
+          "A few boxes up a stairwell.",
+          "A bookshelf or a futon frame.",
+          "A mini-fridge to a residence hall.",
+          "A door held while you carry.",
+        ],
+      },
+      {
+        heading: "Keep it small and public",
+        body: [
+          "Meet at the building entrance or a ground-floor door. Name the public place in your request. A neighbor is not a moving company, and nobody covers damage to your things, so for a full apartment, call movers or ask friends. The map shows a rough area about 500 meters wide until someone says yes.",
+        ],
+      },
+      {
+        heading: "Two states, same chaos",
+        body: [
+          "Moving across the river changes more than the address. Fargo and West Fargo are in North Dakota and Moorhead and Dilworth are in Minnesota, with different rules for deposits and notices. Tenant resources in each state can tell you what applies. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
+    ],
+    related: ["help/heavy-lifting", "for-renters", "seasons/fall-move-in-season", "seasons/move-out-week", "cities/fargo"],
+    faqs: [
+      {
+        q: "Can someone help me move out?",
+        a: "A hand with a few heavy items, yes. A full move is movers and friends.",
+      },
+      {
+        q: "When is the busiest move weekend?",
+        a: "Late August around campuses, and the first of each month across the metro. Ask early if you need an extra pair of hands.",
+      },
+      {
+        q: "Where do I meet someone at a residence hall?",
+        a: "At the entrance or a lobby, not in a room. Keep the first meeting public.",
+      },
+    ],
+  }),
   page({
     slug: "help/carrying-groceries",
     kind: "help",
-    title: "A hand carrying groceries in Fargo–Moorhead",
+    title: "Help carrying groceries in Fargo-Moorhead, in any weather",
     description:
-      "Stairs, ice, a trunk full of bags, and two arms. When a second set of hands is the whole solution — and why this is not a delivery service.",
-    h1: "A hand with the bags",
-    eyebrow: "help topic",
-    lead: "Nobody wants to make four trips up an icy stairwell, and nobody should have to.",
+      "Groceries from the trunk to the landing when your hands are full: a neighbor in Fargo, West Fargo, or Moorhead can help. Meet at the lot. Not delivery.",
+    h1: "Groceries up the stairs, from the trunk",
+    eyebrow: "The small stuff",
+    lead: "The bags are in the trunk, the stairs are not shoveled, and you cannot carry everything and a baby. A second pair of hands makes it one trip instead of four.",
     answer:
-      "Carrying help is a small, finishable request: someone meets you at your car and helps move bags to a door or a landing. It is not grocery shopping, not delivery, and not a paid service. Help Me has no payments, so nobody is buying anything for anyone or being reimbursed for a trip.",
+      "On Help Me you can ask a neighbor for a hand carrying groceries in Fargo, West Fargo, or Moorhead: from the trunk to a landing, up a flight of stairs, across an icy lot. Meet at the store lot or your building entrance. It is a hand, not a delivery service, and nobody is on a clock.",
     takeaways: [
-      "Carrying, not shopping and not delivery.",
-      "No payments — nobody buys groceries for anyone.",
-      "Best when stairs, ice, or an injury make trips hard.",
-      "Meet at the vehicle in a public, lit spot.",
+      "A hand from the trunk to the landing, not a delivery service.",
+      "Meet at the store lot or the building entrance.",
+      "Winter ice makes carrying harder, so ask early.",
+      "Help Me is not an emergency service.",
     ],
-    keywords: ["help carrying groceries", "grocery help Fargo", "carry bags upstairs"],
+    priority: 0.45,
+    keywords: ["carrying groceries help Fargo", "groceries up stairs Moorhead", "grocery help neighbor", "icy parking lot help"],
     sections: [
       {
-        heading: "When it makes sense",
+        heading: "The smallest favor",
         body: [
-          "A third-floor walk-up in February. A recent surgery. A stroller in one hand and a week of groceries in the other. A parking lot that has turned into a rink between you and your door. These are ten-minute problems with an obvious solution.",
+          "Carrying groceries is the oldest favor between neighbors, and the easiest to do. It is also the one people hesitate to ask for, because it feels too small to bother anyone with. It is exactly the size Help Me is for.",
+          "In winter, a short walk from the lot to the building can be an icy gauntlet. In summer, it is just hot and heavy. In both, a second pair of hands is a gift.",
+        ],
+        bullets: [
+          "From the trunk to a landing.",
+          "Up a flight of stairs.",
+          "Across an icy lot.",
+          "With a stroller or a baby in tow.",
         ],
       },
       {
-        heading: "Where the line is",
+        heading: "Where to meet",
         body: [
-          "Nobody shops for you, nobody fronts money, and nobody delivers. Grocery delivery services exist and they are the right tool for that. If food itself is the problem rather than the carrying, food assistance resources are listed under Resources and they are a better answer than a stranger.",
+          "Meet at the store lot or at your building's entrance, not inside your home. A neighbor does not need to come in. Set the bags down at the door and say thanks. Your request shows as a rough area about 500 meters wide, and you decide when to share more.",
+        ],
+      },
+      {
+        heading: "What this is not",
+        body: [
+          "It is not delivery, and nobody is paid or on call. For groceries delivered to your door, use a store's own service. For ongoing help, county aging services and 211 can connect you. Helpers can apply to be reviewed by our team. Help Me does not run background checks. You can report or block any member at any time.",
+          "Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["help/heavy-lifting", "for-seniors", "for-new-parents", "resources/food-assistance-fargo", "questions/what-should-i-not-ask-for", "help/move-in"],
+    related: ["help/heavy-lifting", "help/snow-help", "for-new-parents", "for-seniors", "cities/fargo", "how-it-works"],
     faqs: [
       {
-        q: "Can someone bring me groceries?",
-        a: "No. There is no payment or delivery in Help Me. Use a delivery service, or food assistance if cost is the issue.",
+        q: "Do I have to let someone into my home?",
+        a: "No. Meet at the entrance and set the bags at the door. A doorstep is never required for a handoff.",
       },
       {
-        q: "Do I have to let them inside?",
-        a: "No. A door or a landing is a completely normal stopping point, and public-by-default is the standard here.",
-      },
-    ],
-  }),
-
-  page({
-    slug: "help/furniture-assembly",
-    kind: "help",
-    title: "Help assembling furniture in Fargo–Moorhead",
-    description:
-      "A second pair of hands for the step that needs two people. Not a paid handyman service, and not anything requiring a licensed trade.",
-    h1: "The step that needs two people",
-    eyebrow: "help topic",
-    lead: "Most flat-pack furniture is a one-person job with exactly one two-person moment, usually near the end.",
-    answer:
-      "Assembly help means someone holding the other end while you attach it — a bed frame, a bookshelf being stood up, a table being flipped. It is a short, everyday favor with no payment involved. Anything mounted to a wall, wired, plumbed, or structural should go to a licensed professional instead.",
-    takeaways: [
-      "Best for the specific step that needs two sets of hands.",
-      "No payment and no handyman services.",
-      "Nothing electrical, plumbed, or structurally mounted.",
-      "Keep it short and keep the request specific.",
-    ],
-    keywords: ["furniture assembly help", "two person lift", "flat pack help Fargo"],
-    sections: [
-      {
-        heading: "Ask for the moment, not the project",
-        body: [
-          "Standing a tall bookshelf up. Flipping a table without cracking a leg. Holding a bed rail square while bolts go in. If you ask for the specific moment, it takes ten minutes and everyone leaves happy. If you ask for an evening of assembly, you are asking for unpaid labor and it will not get accepted.",
-        ],
+        q: "Is this a delivery service?",
+        a: "No. Nobody is paid and nobody promises to come. It is a neighbor with a free few minutes.",
       },
       {
-        heading: "What to route elsewhere",
-        body: [
-          "Anchoring heavy furniture into a wall, TV mounts, anything involving wiring, and anything that could fall on a child later. Those are worth a professional, and a rented apartment adds a landlord permission question on top.",
-        ],
-      },
-    ],
-    related: ["help/heavy-lifting", "help/move-in", "for-renters", "seasons/fall-move-in-season", "questions/what-should-i-not-ask-for", "questions/can-i-pay-a-helper"],
-    faqs: [
-      {
-        q: "Can I ask someone to mount my TV?",
-        a: "No. Wall mounting is a job with real consequences if it fails. Hire someone who does it professionally.",
-      },
-      {
-        q: "Is this a paid task?",
-        a: "No. Help Me has no payments at all, and helping is not gig work.",
-      },
-    ],
-  }),
-
-  page({
-    slug: "help/tire-pressure",
-    kind: "help",
-    title: "Low tire pressure help in Fargo–Moorhead",
-    description:
-      "Cold weather drops tire pressure fast and lights up the dash. What the warning means, what to do about it, and when the tire is actually flat.",
-    h1: "The tire light came on",
-    eyebrow: "help topic",
-    lead: "Every year, the first cold snap turns on a few thousand tire warning lights across this metro on the same morning.",
-    answer:
-      "Cold air lowers tire pressure measurably, so a sharp temperature drop commonly triggers the warning light on otherwise healthy tires. Check pressure when the tires are cold, fill to the number on the driver’s door jamb — not the number on the tire — and watch for a tire that keeps losing air, which means a leak and a repair shop.",
-    takeaways: [
-      "Cold snaps trigger warning lights across the metro at once.",
-      "Correct pressure is on the driver’s door jamb sticker.",
-      "Check when the tires are cold, before driving far.",
-      "A tire that repeatedly goes low has a leak — get it repaired.",
-    ],
-    keywords: ["tire pressure light cold", "low tire pressure Fargo", "winter tire psi"],
-    sections: [
-      {
-        heading: "Why it happens here",
-        body: [
-          "Air contracts as it cools, so a thirty or forty degree overnight drop takes a noticeable amount of pressure out of every tire in the parking lot. That is normal physics rather than a failure. Topping them up is a five-minute job at any station with a working air pump.",
-        ],
-      },
-      {
-        heading: "When it is more than cold",
-        body: [
-          "If one tire is the only one low, or it goes low again within a few days, there is a puncture or a bad valve. Driving on a genuinely underinflated tire ruins it and handles badly on ice. Get it looked at rather than topping it up every week.",
-        ],
-      },
-    ],
-    related: ["help/flat-tire", "help/winter-car-help", "seasons/first-snow", "guides/what-to-keep-in-your-car-in-winter", "seasons/winter-in-fargo-moorhead", "for-commuters"],
-    faqs: [
-      {
-        q: "Should I use the number printed on the tire?",
-        a: "No. That is the maximum for the tire, not the correct pressure for your car. Use the door jamb sticker.",
-      },
-      {
-        q: "Can a helper change my tire?",
-        a: "Some people will help with a spare in a safe lot. On a road shoulder, call roadside assistance instead — that is not a place to kneel next to traffic.",
-      },
-    ],
-  }),
-
-  page({
-    slug: "help/bike-help",
-    kind: "help",
-    title: "Bike help in Fargo–Moorhead",
-    description:
-      "A flat on the trail, a chain off, a bike that needs to get home. What a neighbor can help with and where the metro’s bike shops and trails come in.",
-    h1: "Stuck with a bike",
-    eyebrow: "help topic",
-    lead: "The Red River trails are genuinely good, right up until a tube goes on the far end of one.",
-    answer:
-      "Bike help on Help Me means small, immediate things: a hand getting a chain back on, a pump, or company walking a bike back to a road. Repairs belong at a bike shop, and Help Me is not a rideshare — nobody is arranging a vehicle to come collect you or your bike.",
-    takeaways: [
-      "Small trailside help only: a pump, a chain, a hand.",
-      "Repairs go to a bike shop, not a stranger.",
-      "Not a rideshare — no vehicle pickups are arranged.",
-      "Carry a tube and a pump on the longer trail sections.",
-    ],
-    keywords: ["bike flat tire Fargo", "Red River trail bike", "Moorhead bike help"],
-    sections: [
-      {
-        heading: "The trail reality",
-        body: [
-          "The paved trail system along the Red River is long, pleasant, and in places genuinely remote from a parking lot. A flat two miles in means a long walk. Carrying a spare tube, a pump, and a multi-tool is the difference between an annoyance and an afternoon.",
-        ],
-      },
-      {
-        heading: "Winter and shoulder season",
-        body: [
-          "Bike commuting happens here year-round for a determined minority, and the hazards change: black ice, plowed windrows blocking crossings, and dark by five. Lights and studded tires do more for you than any app can.",
-        ],
-      },
-    ],
-    related: ["help/directions", "help/local-guide", "for-people-without-a-car", "lists/things-to-do-in-fargo", "help/transit-help", "questions/what-can-i-ask-for"],
-    faqs: [
-      {
-        q: "Can someone drive my bike home?",
-        a: "No. Help Me does not arrange rides or transport for people or property.",
-      },
-      {
-        q: "Can I ask for a repair?",
-        a: "A chain or a tube with your own tools, maybe. Actual repair work belongs at a shop.",
+        q: "What about regular help with groceries?",
+        a: "County aging services and 211 can connect you with programs for ongoing help.",
       },
     ],
   }),

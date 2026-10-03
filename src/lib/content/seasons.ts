@@ -56,7 +56,7 @@ export const SEASON_PAGES: SeoPage[] = [
     kind: "season",
     title: "Winter in Fargo–Moorhead: what actually goes wrong",
     description:
-      "Dead batteries, frozen locks, cars stuck in unplowed lots, and dark at five. What neighbors can help with in a Fargo–Moorhead winter and what needs a tow truck.",
+      "Dead batteries, frozen locks, cars stuck in unplowed lots, and dark at five. What neighbors can help with in a Fargo-Moorhead winter, and what needs a tow.",
     h1: "Winter here is a logistics problem",
     eyebrow: "season",
     lead: "Five months where an ordinary errand can end with you standing in a parking lot doing math about how far you can walk.",
@@ -95,6 +95,13 @@ export const SEASON_PAGES: SeoPage[] = [
           "It is not roadside assistance. A car in a ditch, a car on I-94 or I-29, a car stuck in a snowbank at the shoulder of a highway — those are tow trucks and, if you are exposed to traffic or cold, 911. Do not sit and wait for an app offer when you are cold and the shoulder is dark.",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "Winter is when a neighbor with cables, a shovel, and ten minutes is worth the most. Ask in a lit, plowed, public place, keep both people outside the car, and go inside if the wait gets cold. A neighbor is not a plow, a tow, or a heater.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["guides/winter-help-fargo", "help/jump-start", "help/winter-car-help", "help/snow-help", "seasons/polar-vortex-cold-snap", "resources/fargo-emergency"],
     faqs: [
@@ -103,8 +110,12 @@ export const SEASON_PAGES: SeoPage[] = [
         a: "Subzero stretches are normal in January and February, and wind chill makes exposure a real risk rather than a complaint.",
       },
       {
-        q: "Should I ask for a ride in a storm?",
+        q: "Should I ask someone to drive me in a storm?",
         a: "No. Help Me is not a rideshare and nobody should be driving a stranger around in bad conditions. Stay put and use official services.",
+      },
+      {
+        q: "What should I keep in the car?",
+        a: "A jump pack, a scraper with a brush, real gloves, a blanket, and a charged phone with roadside assistance saved. The winter kit guide has the full list.",
       },
     ],
   }),
@@ -137,7 +148,14 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         heading: "Parking is a city rule, not a neighbor rule",
         body: [
-          "Fargo, West Fargo, and Moorhead each declare snow emergencies and residential plow schedules, and they tow cars that ignore them. Check your own city’s alerts. No approved helper can move a car for you, and none can tell you where the plow is going next.",
+          "Fargo, West Fargo, and Moorhead each declare snow emergencies and residential plow schedules, and they tow cars that ignore them. Check your own city’s alerts. No neighbor can move a car for you, and none can tell you where the plow is going next.",
+        ],
+      },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "The first snow is a good time to ask a neighbor for a small hand: a push, a shovel, or a jump. Name a public place, and expect that everyone else is digging out too, so be patient and specific.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
@@ -150,6 +168,10 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         q: "Can someone shovel my driveway through the app?",
         a: "A neighbor might help with a walk or the berm behind a car. It is not a paid snow-removal service and nobody is obligated.",
+      },
+      {
+        q: "What should I do before the first snow?",
+        a: "Put a scraper with a brush in every car, check tire pressure, replace worn wipers, and charge a jump pack. Then read your city's snow emergency rules.",
       },
     ],
   }),
@@ -197,6 +219,13 @@ export const SEASON_PAGES: SeoPage[] = [
           "That is when neighbor help is worth something: berms behind cars, batteries that gave up in the cold, walks that need clearing, a hand for someone who cannot shovel. Ask then.",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "After the storm is when neighbors can help: a berm behind a car, a dead battery, a walk that needs clearing. During it, stay where you are. If you are stranded and exposed, call 911.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["seasons/winter-in-fargo-moorhead", "not-911", "resources/fargo-emergency", "help/snow-help", "help/winter-car-help", "seasons/polar-vortex-cold-snap"],
     faqs: [
@@ -207,6 +236,10 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         q: "What closes during a blizzard?",
         a: "Campuses, schools, and businesses each decide, and the state closes highways. Check the official source for each rather than assuming.",
+      },
+      {
+        q: "When should I ask for help after a blizzard?",
+        a: "Once roads are open and plowed. Ask in a public lot, name the place, and do not wait outside in the cold for an answer.",
       },
     ],
   }),
@@ -242,16 +275,27 @@ export const SEASON_PAGES: SeoPage[] = [
           "Cold snaps are dangerous for anyone without stable housing, without heat, or walking a route they normally drive. That is a 211 and shelter conversation, and an emergency one if someone is disoriented or unresponsive. Do not route that into a help app.",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "In deep cold, a neighbor can jump a car in a lit, plowed lot, quickly, with both people dressed for it. Keep it short and go inside. If anyone is getting cold, stop and call a service or 911.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["seasons/winter-in-fargo-moorhead", "help/jump-start", "resources/winter-shelters-fargo", "resources/211-north-dakota", "resources/homeless-services-fargo", "not-911"],
     faqs: [
       {
-        q: "Is it safe to jump a car at thirty below?",
+        q: "Is it okay to jump a car at thirty below?",
         a: "It can be, in a plowed public lot, quickly, with both people dressed for it. If either of you is getting cold, stop and call a service.",
       },
       {
         q: "Where do warming shelters get listed?",
         a: "Through 211 and local shelter providers. Hours and locations change, so confirm with the source before sending anyone.",
+      },
+      {
+        q: "How long can I stay outside at thirty below?",
+        a: "Not long. At very low wind chills, exposed skin can freeze in under half an hour. Cover up, keep moving, and go inside early.",
       },
     ],
   }),
@@ -293,6 +337,13 @@ export const SEASON_PAGES: SeoPage[] = [
           "Potholes that eat a tire on a Thursday. Gravel lots that turn into soup. Cars sunk to the rims in a thawed shoulder. Those are normal requests, and a neighbor with ten minutes is still the right answer for them.",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "Spring is when a neighbor can help with a tire, a stuck car, or a heavy box, and when the cities lead on anything to do with water. Follow city announcements for flood information and volunteer calls.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["cities/fargo", "cities/moorhead", "resources/cass-county-resources", "resources/clay-county-resources", "help/flat-tire", "not-911"],
     faqs: [
@@ -303,6 +354,10 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         q: "Are roads closed every spring?",
         a: "Rural and low-lying roads close in higher-water years. Check 511 and city notices rather than driving out to see.",
+      },
+      {
+        q: "Where do I find flood information?",
+        a: "On the city and county websites for Fargo, West Fargo, Moorhead, and the counties, and on 511 for road closures.",
       },
     ],
   }),
@@ -344,6 +399,13 @@ export const SEASON_PAGES: SeoPage[] = [
           "Licensed contractors for roofs, trees at height, and wiring",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "After a storm, a neighbor with a few minutes can help with a branch, a fence, or a heavy lift. Anything involving a line, a roof, or a tree at height belongs to a licensed professional or the utility.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
     related: ["help/heavy-lifting", "resources/fargo-emergency", "cities/west-fargo", "seasons/spring-thaw-and-flooding", "not-911", "resources"],
     faqs: [
@@ -354,6 +416,10 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         q: "Who do I call about a downed line?",
         a: "911 and your electric utility. Stay far back and keep others away.",
+      },
+      {
+        q: "What do I do during a tornado warning?",
+        a: "Go to a basement or an interior room on the lowest floor, away from windows. Do not wait to see it. Sirens mean go inside.",
       },
     ],
   }),
@@ -395,8 +461,15 @@ export const SEASON_PAGES: SeoPage[] = [
           "Each campus publishes its own move-in windows, routes, and rules, and they change year to year. Check the official page for your campus. Help Me links official campus calendars with attribution; it does not run move-in and is not affiliated with any university.",
         ],
       },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "Late August is when a neighbor on the heavy end of a couch is a gift. Name the building and the entrance, meet at the door, and keep the favor to ten minutes. Move-in rules come from the campus.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
+        ],
+      },
     ],
-    related: ["guides/move-in-weekend-ndsu", "help/move-in", "help/heavy-lifting", "campuses/ndsu", "campuses/msum", "seasons/back-to-school-august"],
+    related: ["help/move-in", "help/heavy-lifting", "campuses/ndsu", "campuses/msum"],
     faqs: [
       {
         q: "Are helpers available during move-in?",
@@ -406,53 +479,13 @@ export const SEASON_PAGES: SeoPage[] = [
         q: "Can someone help me move an entire apartment?",
         a: "No. That is a movers-and-friends job. Requests should be small and finishable in one meeting.",
       },
+      {
+        q: "Where do I find the official move-in schedule?",
+        a: "On each college's own housing or student life page. Dates and rules change by year.",
+      },
     ],
   }),
 
-  page({
-    slug: "seasons/back-to-school-august",
-    kind: "season",
-    title: "Back to school in Fargo–Moorhead",
-    description:
-      "August in the metro: new students, new commutes, full stores, and a week where nobody knows where anything is. What helps and what to read first.",
-    h1: "August, when the metro repopulates",
-    eyebrow: "season",
-    lead: "Traffic patterns change overnight, the grocery stores near campus turn into a scrum, and thousands of people are navigating by screenshot.",
-    answer:
-      "Back-to-school in Fargo–Moorhead reshapes the metro in a single week: four college campuses and every K–12 district start within days, commutes get slower, and neighborhoods near campus fill up. For newcomers it is the highest-value week to ask a local a simple question — directions, a building, which lot is legal.",
-    takeaways: [
-      "Traffic and parking near campuses change abruptly in late August.",
-      "Newcomers benefit most from small, local knowledge.",
-      "Official campus calendars are the authority on dates.",
-      "High-school pages here describe adult neighbors, not students.",
-    ],
-    keywords: ["back to school Fargo", "August Fargo Moorhead", "new student Fargo", "campus traffic Fargo"],
-    sections: [
-      {
-        heading: "What changes in a week",
-        body: [
-          "University Drive and the streets around NDSU stop being quick. Moorhead fills around MSUM and Concordia. Every apartment complex within walking distance of a campus turns over. And a few thousand people who have never seen a North Dakota winter arrive with summer clothes and confidence.",
-        ],
-      },
-      {
-        heading: "The best question to ask a local",
-        body: [
-          "Where should I park, and which door do I actually use. Not glamorous, and it saves more time than any orientation slide. Local-guide and directions requests exist for exactly this.",
-        ],
-      },
-    ],
-    related: ["for-newcomers", "for-students", "guides/new-to-fargo", "help/directions", "help/local-guide", "seasons/fall-move-in-season"],
-    faqs: [
-      {
-        q: "Is Help Me part of orientation?",
-        a: "No. It is not affiliated with or endorsed by any campus. Official calendars are linked with attribution, which is a different thing.",
-      },
-      {
-        q: "What should a new student read first?",
-        a: "The campus page for where you actually are, then the winter guide before October rather than after.",
-      },
-    ],
-  }),
 
   page({
     slug: "seasons/game-day-fargo",
@@ -482,11 +515,18 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         heading: "Where help fits",
         body: [
-          "A walk back to a car after a night event. Directions for someone who parked by landmark and lost it. A jump start in a lot that has emptied around a car that will not start. Ordinary things, more likely on a day when twenty thousand people are doing the same thing at once.",
+          "A walk back to a car after a night event. Directions for someone who parked by landmark and lost it. A jump start in a lot that has emptied around a car that will not start. Ordinary things, more likely on a day when twenty thousand people are doing the same thing at once. Leave early, walk with a friend if you can, and know which lot you parked in before the game starts.",
+        ],
+      },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "After a game, a walk back to a distant lot or directions to a car you parked by landmark are classic small asks. Meet at a lit, public place near the lot. Official schedules and parking rules come from the venue and NDSU.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
-    related: ["campuses/ndsu", "help/safety-walk", "help/walk-to-car", "help/directions", "events", "neighborhoods/north-fargo"],
+    related: ["campuses/ndsu", "help/walk-with-someone", "help/walk-to-car", "help/directions", "events", "neighborhoods/north-fargo"],
     faqs: [
       {
         q: "Does Help Me sell tickets or list game times?",
@@ -496,143 +536,15 @@ export const SEASON_PAGES: SeoPage[] = [
         q: "Is Help Me affiliated with NDSU athletics?",
         a: "No. Linking a public calendar is not sponsorship or endorsement.",
       },
-    ],
-  }),
-
-  page({
-    slug: "seasons/finals-week",
-    kind: "season",
-    title: "Finals week in Fargo–Moorhead",
-    description:
-      "Libraries fill, sleep disappears, and campus lots empty late at night. What helps during finals at NDSU, MSUM, Concordia, and M State — and what needs real support.",
-    h1: "Finals week runs on caffeine and bad parking",
-    eyebrow: "season",
-    lead: "Two weeks where the libraries are full at midnight and the parking lots are empty at two.",
-    answer:
-      "During finals at NDSU, MSUM, Concordia, and M State, study spaces fill, hours run late, and students walk to cars in the dark far more often than usual. Practical requests spike: study company, printing, a walk across a lot at midnight. Mental-health crises are not a neighbor task — campus counseling, 988, and 911 exist for that.",
-    takeaways: [
-      "Late-night walks across empty campus lots are the common risk.",
-      "Printing failures spike at exactly the worst hour.",
-      "Campus counseling centers exist and are the right first call.",
-      "988 for a mental-health crisis; 911 for danger.",
-    ],
-    keywords: ["finals week NDSU", "MSUM finals", "study spots Fargo", "late night campus safety"],
-    sections: [
       {
-        heading: "The practical asks",
-        body: [
-          "Someone to sit across a table so you actually stay. A working printer an hour before a deadline. A walk to a car parked much further away than it was at ten in the morning. Small, real, and easy for a neighbor to solve.",
-        ],
-      },
-      {
-        heading: "The asks that are not practical",
-        body: [
-          "If finals week has moved past stress into something heavier — not sleeping, not eating, thoughts of hurting yourself — that is not something to route to a stranger with an app. Campus counseling services exist at every campus in this metro. 988 is the crisis line. 911 is for immediate danger. Use them, and tell someone who can stay with you.",
-        ],
-      },
-    ],
-    related: ["help/study-buddy", "help/printing", "help/safety-walk", "resources/mental-health-fargo", "lists/study-spots-fargo", "campuses"],
-    faqs: [
-      {
-        q: "Can I ask someone to tutor me?",
-        a: "Study company is a normal request. Actual tutoring belongs to campus tutoring centers, which are free at every campus here.",
-      },
-      {
-        q: "Are campus escorts available?",
-        a: "Where a campus offers a safety escort, that is the right first call on campus property. Campus safety pages here point at each one.",
+        q: "Where do I find parking rules for an event?",
+        a: "On the official event page or the venue's site. Posted event parking rules are enforced.",
       },
     ],
   }),
 
-  page({
-    slug: "seasons/holiday-break-empty-campus",
-    kind: "season",
-    title: "Holiday break in Fargo–Moorhead",
-    description:
-      "Campuses empty, buildings close, and the people still here are the ones who could not travel. What changes over winter break and what still helps.",
-    h1: "The quiet weeks",
-    eyebrow: "season",
-    lead: "Between mid-December and January, this metro gets very cold and very empty at the same time.",
-    answer:
-      "Over winter break the Fargo–Moorhead campuses empty out, many buildings and services run reduced hours, and the people still around are often international students, workers on shift, and anyone who could not travel. Cars still die in the cold, but there are fewer people nearby to help, so plan earlier and lean on official services.",
-    takeaways: [
-      "Campus buildings, dining, and services cut hours over break.",
-      "Fewer people nearby means thinner help coverage.",
-      "Cold-weather car failures continue regardless.",
-      "211 and shelter resources matter most in these weeks.",
-    ],
-    keywords: ["winter break Fargo", "campus closed holidays Fargo", "December Fargo Moorhead"],
-    sections: [
-      {
-        heading: "Who is still here",
-        body: [
-          "International students who did not fly home. Nurses, retail workers, plow drivers, and everyone whose job does not observe a break. People without family to go to. The metro does not empty so much as thin, and the thin version is colder and darker.",
-        ],
-      },
-      {
-        heading: "Plan for thinner coverage",
-        body: [
-          "Ask earlier in the day. Be specific about a public meeting place that is actually open. Confirm hours before you drive somewhere — a campus building that is normally open until midnight may be locked at four. And keep roadside assistance information somewhere you can reach it with cold hands.",
-        ],
-      },
-    ],
-    related: ["seasons/winter-in-fargo-moorhead", "for-international-students", "resources/211-north-dakota", "resources/winter-shelters-fargo", "help/jump-start", "campuses"],
-    faqs: [
-      {
-        q: "Are there fewer helpers over break?",
-        a: "Realistically yes, especially near campuses. Coverage follows people.",
-      },
-      {
-        q: "What is open?",
-        a: "Confirm with the place itself. Campus and city hours over the holidays change every year.",
-      },
-    ],
-  }),
 
-  page({
-    slug: "seasons/spring-break-fargo",
-    kind: "season",
-    title: "Spring break in Fargo–Moorhead",
-    description:
-      "Campuses thin out in March while winter is still going. What spring break changes for the people who stay, and what still helps.",
-    h1: "Spring break, still with snow on the ground",
-    eyebrow: "season",
-    lead: "March here is not spring. It is winter with better lighting and a week off.",
-    answer:
-      "Spring break thins the Fargo–Moorhead campuses in March, but the weather has usually not turned yet — icy lots, slush, and cold mornings continue. For students staying in town, campus services run reduced hours and neighborhoods near campus get quiet, which means asking earlier and meeting somewhere that is actually open.",
-    takeaways: [
-      "March is still winter conditions in this metro.",
-      "Campus services and dining reduce hours during break.",
-      "Fewer people nearby near campus neighborhoods.",
-      "Refreezing overnight makes morning lots genuinely slick.",
-    ],
-    keywords: ["spring break Fargo", "March weather Fargo", "campus break MSUM"],
-    sections: [
-      {
-        heading: "The freeze-thaw trap",
-        body: [
-          "March days get above freezing and March nights do not. Meltwater refreezes into sheets across lots and sidewalks by morning. It is the classic season for a fall in a parking lot and for tires spinning in a puddle that turned into a rink overnight.",
-        ],
-      },
-      {
-        heading: "If you stayed in town",
-        body: [
-          "It is a good week to actually see the metro — downtown Fargo, the Moorhead side, the trails when they clear. Local-guide requests are what this week is for, and asking a resident beats guessing from a search result.",
-        ],
-      },
-    ],
-    related: ["seasons/spring-thaw-and-flooding", "help/local-guide", "lists/things-to-do-in-fargo", "guides/downtown-fargo-at-night", "for-students", "campuses"],
-    faqs: [
-      {
-        q: "Is the weather nice by spring break?",
-        a: "Usually not. Assume winter conditions and be pleasantly surprised.",
-      },
-      {
-        q: "Do campus services close?",
-        a: "Hours typically reduce. Check the campus’s own announcement rather than assuming.",
-      },
-    ],
-  }),
+
 
   page({
     slug: "seasons/move-out-week",
@@ -656,13 +568,20 @@ export const SEASON_PAGES: SeoPage[] = [
       {
         heading: "The bottleneck is always the stairs",
         body: [
-          "Elevators, loading zones, and dumpsters are the constraint, not the volume of stuff. Ten minutes from a second pair of arms at the right moment saves an hour of trips. That is exactly the size of request this app is for.",
+          "Elevators, loading zones, and dumpsters are the constraint, not the volume of stuff. Ten minutes from a second pair of arms at the right moment saves an hour of trips. That is exactly the size of request this app is for. Name the building and the entrance, and keep the favor to what two people can finish in one meeting.",
         ],
       },
       {
         heading: "Do not dumpster the good stuff",
         body: [
-          "Working furniture, kitchenware, and clothing have real destinations in this metro through thrift and donation programs. Check what an organization actually accepts and when they take drop-offs before loading a truck — capacity in May is tight everywhere.",
+          "Working furniture, kitchenware, and clothing have real destinations in this metro through thrift and donation programs. Check what an organization actually accepts and when they take drop-offs before loading a truck — capacity in May is tight everywhere. Call ahead, and take photos of what you are donating if a program asks for a list.",
+        ],
+      },
+      {
+        heading: "Where a neighbor fits",
+        body: [
+          "In May, two more hands on a stairwell can save an hour. Meet at the building entrance, name the favor, and keep it small. For a whole move, use movers or friends, and donate what is still good.",
+          "Helpers can apply to be reviewed by our team. Help Me does not run background checks. Help Me is not an emergency service. If someone is in immediate danger, call 911 or your local emergency number.",
         ],
       },
     ],
@@ -676,51 +595,11 @@ export const SEASON_PAGES: SeoPage[] = [
         q: "When exactly does campus housing close?",
         a: "Each university sets and publishes its own date. Use the campus’s own announcement.",
       },
+      {
+        q: "Where can I donate furniture?",
+        a: "Local thrift and donation programs take usable furniture and clothing. Check what each one accepts and when, because May capacity is tight.",
+      },
     ],
   }),
 
-  page({
-    slug: "seasons/graduation-weekend",
-    kind: "season",
-    title: "Graduation weekend in Fargo–Moorhead",
-    description:
-      "Four campuses graduate within days. Hotels fill, parking disappears, and families arrive from out of town — what to expect and where help fits.",
-    h1: "Graduation weekend fills the metro",
-    eyebrow: "season",
-    lead: "Every hotel between West Fargo and Dilworth is booked, and everyone is looking for the same parking ramp.",
-    answer:
-      "Graduation ceremonies at NDSU, MSUM, Concordia, and M State fall within a short window each spring. Hotels book out, campus parking fills, and thousands of out-of-town visitors navigate the metro at once. Ceremony details and parking rules come from each university; a neighbor is useful for directions and a hand with logistics.",
-    takeaways: [
-      "Ceremonies cluster across four campuses in a few days.",
-      "Hotels and parking are the constraints, not the ceremonies.",
-      "Official times and venues come from each university.",
-      "Common asks: directions, a walk, a hand with a car.",
-    ],
-    keywords: ["NDSU graduation", "Concordia commencement", "graduation weekend Fargo hotels"],
-    sections: [
-      {
-        heading: "For visiting families",
-        body: [
-          "Assume traffic near the campus takes longer than the map says, arrive earlier than feels necessary, and confirm the venue — commencement is not always in the building you assume. Someone who lives here can answer a parking question in one sentence that would take you three searches.",
-        ],
-      },
-      {
-        heading: "For the graduate",
-        body: [
-          "It usually collides with move-out, which means furniture, a truck, and family in town on the same weekend. Small requests, early in the day, with a specific meeting place.",
-        ],
-      },
-    ],
-    related: ["seasons/move-out-week", "help/directions", "help/local-guide", "campuses/ndsu", "campuses/concordia", "lists/things-to-do-in-fargo"],
-    faqs: [
-      {
-        q: "Where is commencement held?",
-        a: "Each university announces its own venue and time. Check the campus source rather than a secondhand listing.",
-      },
-      {
-        q: "Is Help Me involved in graduation events?",
-        a: "No. Official campus calendars are linked with attribution, which is not affiliation.",
-      },
-    ],
-  }),
 ];

@@ -1,194 +1,273 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 /*
- * Help Me — "See Beyond"
+ * Help Me — "It starts with me."
  *
- * Dark first, because the app is dark first. The palette is pulled straight out
- * of the product: near-black chrome, iOS system blue for anything actionable,
- * and the deep green of the home card for the human, hopeful notes.
+ * One theme. Ember, Paper, and Ink carry the brand; Sunbeam, Teal, and Navy
+ * play small supporting roles. Solid fills only: no gradients, glows, blur,
+ * or see-through layers. Text on Ember is always black. Ember is used as
+ * text only at display sizes. Source: Help Me brand identity package v1.
  */
 
 @theme inline {
-  --color-bg: var(--bg);
-  --color-bg-2: var(--bg-2);
-  --color-surface: var(--surface);
-  --color-raised: var(--raised);
-  --color-line: var(--line);
-  --color-line-strong: var(--line-strong);
-  --color-ink: var(--fg);
+  --color-ember: var(--ember);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-sunbeam: var(--sunbeam);
+  --color-teal: var(--teal);
+  --color-navy: var(--navy);
   --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-ink: var(--accent-ink);
-  --color-forest: var(--forest);
-  --color-forest-deep: var(--forest-deep);
+  --color-line: var(--ink);
 
-  --font-display: var(--font-inter-tight);
+  /* Semantic aliases kept so older utility classes still compile. */
+  --color-bg: var(--paper);
+  --color-bg-2: var(--paper-2);
+  --color-surface: var(--paper);
+  --color-raised: var(--paper);
+  --color-line-strong: var(--ink);
+  --color-accent: var(--ember);
+  --color-accent-ink: var(--ink);
+
+  --font-display: var(--font-archivo);
   --font-body: var(--font-inter);
-
-  --shadow-lift: 0 30px 70px -32px rgba(0, 0, 0, 0.55);
-  --shadow-lift-sm: 0 14px 34px -18px rgba(0, 0, 0, 0.45);
 }
 
-/* Dark is the default. Light is a deliberate, equally finished alternative. */
 :root {
-  color-scheme: dark;
-  --bg: #08090b;
-  --bg-2: #0d0f13;
-  --surface: #121419;
-  --raised: #171a20;
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --fg: #f4f6f8;
-  --muted: #9aa3af;
-  --accent: #0a84ff;
-  --accent-ink: #ffffff;
-  --forest: #2e8b72;
-  --forest-deep: #14483d;
-  --grid: rgba(255, 255, 255, 0.055);
-  --theme-color: #08090b;
-}
-
-html.light {
   color-scheme: light;
-  --bg: #fbfbfc;
-  --bg-2: #f1f2f5;
-  --surface: #ffffff;
-  --raised: #ffffff;
-  --line: rgba(10, 12, 15, 0.09);
-  --line-strong: rgba(10, 12, 15, 0.16);
-  --fg: #0a0c0f;
-  --muted: #5b636e;
-  --accent: #0a6cff;
-  --accent-ink: #ffffff;
-  --forest: #17705c;
-  --forest-deep: #0e4a3c;
-  --grid: rgba(10, 12, 15, 0.05);
-  --theme-color: #fbfbfc;
-  --shadow-lift: 0 30px 70px -34px rgba(10, 12, 15, 0.22);
-  --shadow-lift-sm: 0 14px 34px -20px rgba(10, 12, 15, 0.18);
+
+  --ember: #ff5a36;
+  --paper: #f8f6f0;
+  --paper-2: #efece3;
+  --ink: #000000;
+  --sunbeam: #ffc53d;
+  --teal: #0d9488;
+  --navy: #12305c;
+  --muted: #45433e;
+
+  /* transitions.dev motion tokens — every duration and easing reads from here. */
+  --duration-stagger: 40ms;
+  --duration-micro: 80ms;
+  --duration-quick: 150ms;
+  --duration-fast: 250ms;
+  --duration-medium: 350ms;
+  --duration-slow: 400ms;
+  --duration-very-slow: 500ms;
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: ease-in-out;
+  --ease-out: ease-out;
+  --ease-linear: linear;
+  --ease-bounce: cubic-bezier(0.34, 1.36, 0.64, 1);
+  --distance-micro: 4px;
+  --distance-small: 6px;
+  --distance-base: 8px;
+  --distance-medium: 12px;
+  --distance-large: 30px;
 }
 
-html,
-body {
-  height: 100%;
-  scroll-behavior: smooth;
+html {
+  background: var(--paper);
 }
 
 body {
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
+
+::selection {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+.on-ink :focus-visible,
+.bg-ink :focus-visible {
+  outline-color: var(--paper);
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── Type ─────────────────────────────────────────────────────────── */
 
 .font-display {
-  font-family: var(--font-inter-tight), system-ui, sans-serif;
-  letter-spacing: -0.03em;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: 88%;
+  letter-spacing: -0.035em;
 }
 
-/* Headline sizes that stay confident on a phone and enormous on a desktop. */
+.display-hero {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: 88%;
+  letter-spacing: -0.045em;
+  font-size: clamp(3.5rem, 13.5vw, 12rem);
+  line-height: 0.86;
+}
 .display-xl {
-  font-size: clamp(3rem, 11vw, 8.5rem);
-  line-height: 0.9;
-  font-weight: 700;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: 88%;
+  letter-spacing: -0.04em;
+  font-size: clamp(2.75rem, 9vw, 8rem);
+  line-height: 0.88;
 }
 .display-lg {
-  font-size: clamp(2.1rem, 5.6vw, 4rem);
-  line-height: 1.02;
-  font-weight: 700;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: 88%;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.25rem, 5.6vw, 4.5rem);
+  line-height: 0.9;
 }
 .display-md {
-  font-size: clamp(1.75rem, 3.6vw, 2.75rem);
-  line-height: 1.08;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: 88%;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 0.95;
+}
+.subhead {
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-weight: 800;
+  font-stretch: 92%;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Sentence-case label with a short bar, as on the decks. */
+.dash-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.dash-label::before {
+  content: "";
+  width: 1.75rem;
+  height: 0.25rem;
+  background: currentColor;
+}
+
+.rule {
+  border-top: 2px solid currentColor;
+}
+
+/* Long-form text inside content and legal pages. */
+.seo-prose {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.seo-prose p + p {
+  margin-top: 1rem;
+}
+.seo-prose a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.seo-prose a:hover {
+  text-decoration-color: var(--ember);
+}
+
+/* ── Motion ───────────────────────────────────────────────────────── */
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee {
+  animation: marquee 40s linear infinite;
+}
+.marquee-slow {
+  animation: marquee 70s linear infinite;
+}
+.marquee:hover,
+.marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+/* transitions.dev #24 — learn-more hover. The chevron slides and opens into an arrow. */
+.t-learn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
 }
-
-.eyebrow {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.t-learn svg {
+  transition: transform var(--duration-fast) var(--ease-smooth-out);
+}
+.t-learn .t-learn-stem {
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform var(--duration-fast) var(--ease-smooth-out);
+}
+.t-learn:hover svg,
+.t-learn:focus-visible svg {
+  transform: translateX(var(--distance-micro));
+}
+.t-learn:hover .t-learn-stem,
+.t-learn:focus-visible .t-learn-stem {
+  transform: scaleX(1);
 }
 
-/* Faint surveyor's grid — the world you walk past, mapped. */
-.grid-field {
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 64px 64px;
+/* transitions.dev #21 — accordion via grid rows. */
+.t-acc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-slow) var(--ease-smooth-out);
 }
-
-.spot-top {
-  background:
-    radial-gradient(ellipse 60% 45% at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 70%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+.t-acc > div {
+  overflow: hidden;
 }
-
-.spot-forest {
-  background:
-    radial-gradient(ellipse 70% 60% at 15% 0%, color-mix(in srgb, var(--forest) 22%, transparent) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 50% at 100% 100%, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 65%),
-    var(--bg-2);
+details[open] .t-acc,
+.t-acc[data-open="true"] {
+  grid-template-rows: 1fr;
 }
-
-.hairline {
-  border-color: var(--line);
+.t-chev {
+  transition: transform var(--duration-fast) var(--ease-smooth-out);
 }
-
-.rail::-webkit-scrollbar {
-  height: 6px;
-}
-.rail::-webkit-scrollbar-thumb {
-  background: var(--line-strong);
-  border-radius: 999px;
-}
-
-@keyframes rise {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-.rise {
-  animation: rise 6s ease-in-out infinite;
-}
-
-@keyframes beacon {
-  0% {
-    transform: scale(0.75);
-    opacity: 0.7;
-  }
-  70%,
-  100% {
-    transform: scale(2.4);
-    opacity: 0;
-  }
-}
-.beacon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: var(--accent);
-  animation: beacon 2.8s ease-out infinite;
+details[open] .t-chev {
+  transform: rotate(45deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rise,
-  .beacon::after {
+  .marquee,
+  .marquee-slow {
     animation: none;
   }
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-    transition-duration: 0.15s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
